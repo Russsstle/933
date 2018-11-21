@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -11,5 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-   .sass('resources/sass/app.scss', 'public/css');
+mix.combine(['resources/css/packages/materialize.min.css'], 'public/css/packages.css')
+mix.combine(['resources/css/style.css'], 'public/css/app.css')
+
+mix.combine(
+  ['resources/js/packages/jquery.min.js', 'resources/js/packages/materialize.min.js'],
+  'public/js/packages.js'
+)
+mix.babel(['resources/js/script.js'], 'public/js/app.js')
