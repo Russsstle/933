@@ -1,3 +1,6 @@
 {
+    "/css/packages.css": "/css/packages.css",
+    "/css/app.css": "/css/app.css",
+    "/js/packages.js": "/js/packages.js",
     "/js/app.js": "/js/app.js"
 }
