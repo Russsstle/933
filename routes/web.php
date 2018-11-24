@@ -10,17 +10,22 @@
 | contains the "web" middleware group. Now create something great!
 |
  */
-Route::get('/home', function () {
+Route::get('/', function () {
   return view('home');
 });
 Route::get('/blog', function () {
   return view('blog');
 });
-Route::get('933main', function () {
-  return view('933main');
-});
-Route::get('933creatives', function () {
-  return view('933creatives');
+Route::prefix('/rates')->group(function () {
+  Route::get('/', function () {
+    return redirect()->route('rates.main');
+  });
+  Route::get('main', function () {
+    return view('rates.main');
+  })->name('rates.main');
+  Route::get('creatives', function () {
+    return view('rates.creatives');
+  })->name('rates.creatives');
 });
 Route::get('/blog', function () {
   return view('blog');
@@ -31,8 +36,8 @@ Route::get('/feature', function () {
 Route::get('/about', function () {
   return view('about');
 });
-Route::get('/contactus', function () {
-  return view('contactus');
+Route::get('/contact', function () {
+  return view('contact');
 });
 Route::get('/termsofuse', function () {
   return view('termsofuse');
@@ -46,4 +51,3 @@ Route::get('/faqs', function () {
 Route::get('/feedback', function () {
   return view('feedback');
 });
-// Route::get('/', "NavbarController@show");

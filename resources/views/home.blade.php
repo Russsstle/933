@@ -1,26 +1,275 @@
-@extends("navbar")
+@extends("layout")
+
 @section("body")
-<div class="carousel carousel-slider center">
-    <div class="carousel-fixed-item center">
-      <a class="btn waves-effect white grey-text darken-text-2">Learn more</a>
+<div class="slider">
+  <ul class="slides">
+    <li>
+      <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> <!-- random image -->
+      <div class="caption center-align">
+        <h3>This is our big Tagline!</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7"> <!-- random image -->
+      <div class="caption left-align">
+        <h3>Left Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+    <li>
+      <img src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5"> <!-- random image -->
+      <div class="caption right-align">
+        <h3>Right Aligned Caption</h3>
+        <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
+      </div>
+    </li>
+  </ul>
+</div>
+<div class="home-content center-align" style="padding-top:0">
+  <h4 class="text-bold">Benefits of Studying in Co-working Spaces</h4>
+  <br>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.<br>
+    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+  </p>
+  <br>
+  <div class="row">
+    <div class="col m4">
+      <img class="shadow" src="{{ url('public/img/sample.png') }}" height="100%" width="95%">
+      <br>
+      <h6 class="text-bold">
+        Benefits of Studying in<br>
+        Co-working Spaces
+      </h6>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
+      </p>
     </div>
-    <div class="carousel-item  white-text" style="background-image: url(../images/test-background.gif); href="#one!">
-      <h2>First Panel</h2>
-      <p class="white-text">Affortd</p>
+    <div class="col m4">
+      <img class="shadow" src="{{ url('public/img/sample.png') }}" height="100%" width="95%">
+      <br>
+      <h6 class="text-bold">
+        Benefits of Studying in<br>
+        Co-working Spaces
+      </h6>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
+      </p>
     </div>
-    <div class="carousel-item amber white-text" href="#two!">
-      <h2>Second Panel</h2>
-      <p class="white-text">This is your second panel</p>
-    </div>
-    <div class="carousel-item green white-text" href="#three!">
-      <h2>Third Panel</h2>
-      <p class="white-text">This is your third panel</p>
-    </div>
-    <div class="carousel-item blue white-text" href="#four!">
-      <h2>Fourth Panel</h2>
-      <p class="white-text">This is your fourth panel</p>
+    <div class="col m4">
+      <img class="shadow" src="{{ url('public/img/sample.png') }}" height="100%" width="95%">
+      <br>
+      <h6 class="text-bold">
+        Benefits of Studying in<br>
+        Co-working Spaces
+      </h6>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
+      </p>
     </div>
   </div>
-
-@include('footer')
+</div>
+<div class="home-content">
+  <div class="row">
+    <div class="col m5">
+      <h4 class="text-bold">
+        Budget-friendly<br>
+        to students
+      </h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+    </div>
+    <div class="col m6 offset-m1">
+      <div class="row white center-align">
+        <div class="col m4">
+          <h5>1 hour</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+          <h5>₱ 50</h5>
+        </div>
+        <div class="col m4">
+          <h5>4 hours</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+          <h5>₱ 100</h5>
+        </div>
+        <div class="col m4">
+          <h5>Day Pass</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur</p>
+          <h5>₱ 250</h5>
+        </div>
+      </div>
+      <a class="dark-underline" href="{{ url('rates/main') }}">Check Rates for 933 Main Branch >></a><br>
+      <a class="dark-underline" href="{{ url('rates/creatives') }}">Check Rates for 933 Creatives Branch >></a>
+    </div>
+  </div>
+</div>
+<div class="home-content">
+  <div class="center-align">
+    <h4 class="text-bold">
+      Amenities for our Valued Clients
+    </h4>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    </p>
+  </div>
+  <br>
+  <div class="row center-align amenities-card">
+    <div class="col m3">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Booking meeting<br>
+        room and conference
+      </div>
+    </div>
+    <div class="col m3">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Comfortable &<br>
+        professional office<br>
+        furniture
+      </div>
+    </div>
+    <div class="col m3">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Fiber optics Internet<br>
+        connection
+      </div>
+    </div>
+    <div class="col m3">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Audiovisual<br>
+        equipment
+      </div>
+    </div>
+    <div class="col m4">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Toilet with amenities
+      </div>
+    </div>
+    <div class="col m4">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Napping area
+      </div>
+    </div>
+    <div class="col m4">
+      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <div>
+        Printing
+      </div>
+    </div>
+  </div>
+</div>
+<div class="home-content">
+  <div class="row">
+    <div class="col m7">
+      <div class="row" style="margin-top:50px">
+        <div class="col m4">
+          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        </div>
+        <div class="col m4">
+          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        </div>
+        <div class="col m4">
+          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        </div>
+        <div class="col m4">
+          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        </div>
+        <div class="col m4">
+          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        </div>
+        <div class="col m4">
+          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        </div>
+      </div>
+    </div>
+    <div class="col m5 right-align">
+      <h4 class="text-bold">
+        Our Partners in<br>
+        Business
+      </h4>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="home-content">
+  <h4 class="text-bold center-align">
+    What our happy clients<br>
+    say about us
+  </h4>
+  <br><br>
+  <div class="row">
+    <div class="col m5">
+      <div class="client-message-left-card">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
+        <br><br>
+        <b>Juan Dela Cruz,</b><br>
+        University of Sto. Tomas
+      </div>
+    </div>
+    <div class="col m7">
+      <div class="client-message-right-card">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        <br>
+        <b>Juan Dela Cruz,</b>
+        University of Sto. Tomas
+      </div>
+      <div class="client-message-right-card">
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        <br>
+        <b>Juan Dela Cruz,</b>
+        University of Sto. Tomas
+      </div>
+    </div>
+  </div>
+  <h4 class="text-bold center-align">
+    Latest Updates
+  </h4>
+  <div class="row">
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url('public/img/sample.png') }}">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url('public/img/sample.png') }}">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <div class="card-image">
+          <img src="{{ url('public/img/sample.png') }}">
+          <span class="card-title">Card Title</span>
+        </div>
+        <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a class="dark-underline right" href="#">See All Posts >></a>
+</div>
 @endsection

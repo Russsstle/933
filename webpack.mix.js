@@ -10,7 +10,15 @@ const mix = require('laravel-mix')
  |
  */
 mix.combine(['resources/css/packages/materialize.min.css'], 'public/css/packages.css')
-mix.combine(['resources/css/style.css'], 'public/css/app.css')
+mix.sass('resources/sass/style.scss', 'public/css/app.css')
+mix.sass('resources/sass/style-responsive.scss', 'public/css/app-responsive.css')
+
 mix.combine(
-  ['resources/js/packages/jquery.min.js', 'resources/js/packages/materialize.min.js'], 'public/js/packages.js')
+  ['resources/js/packages/jquery.min.js', 'resources/js/packages/materialize.min.js'],
+  'public/js/packages.js'
+)
 mix.babel(['resources/js/script.js'], 'public/js/app.js')
+
+mix.copyDirectory('resources/img', 'public/img')
+
+mix.extract(['vue'], 'public/js/vendor.js')

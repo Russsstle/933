@@ -1,16 +1,25 @@
-@extends("navbar")
+@extends("layout")
+
 @section("body")
 <div class="header">
-  <h4><b>Share us your Feedback</b></h4>
+  Share us your Feedback
 </div>
-<div class="content" >
+<div class="content" style="overflow:hidden">
   <form method="POST">
     @csrf
-    Name <input type="text" name="user">
-    Email <input type="text" name="user">
-    <textarea name="message" style="height:100px"></textarea>
+    <div class="input-field">
+      <input id="name" type="text" class="validate">
+      <label for="name">Name</label>
+    </div>
+    <div class="input-field">
+      <input id="email" type="email" class="validate">
+      <label for="email">Email</label>
+    </div>
+    <div class="input-field">
+      <textarea id="message" class="materialize-textarea"></textarea>
+      <label for="message">Message</label>
+    </div>
     <button class="waves-effect waves-light btn right" type="submit">Send</button>
   </form>
 </div>
-@include('footer')
 @endsection
