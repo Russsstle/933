@@ -35,7 +35,7 @@
   </p>
   <br>
   <div class="row">
-    <div class="col m4">
+    <div class="col s12 m4">
       <img class="shadow" src="{{ url('public/img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
@@ -46,7 +46,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
       </p>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <img class="shadow" src="{{ url('public/img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
@@ -57,7 +57,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
       </p>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <img class="shadow" src="{{ url('public/img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
@@ -72,7 +72,7 @@
 </div>
 <div class="home-content">
   <div class="row">
-    <div class="col m5">
+    <div class="col s12 m5">
       <h4 class="text-bold">
         Budget-friendly<br>
         to students
@@ -81,19 +81,19 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
       </p>
     </div>
-    <div class="col m6 offset-m1">
+    <div class="col s12 m6 offset-m1">
       <div class="row white center-align">
-        <div class="col m4">
+        <div class="col s12 m4">
           <h5>1 hour</h5>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
           <h5>₱ 50</h5>
         </div>
-        <div class="col m4">
+        <div class="col s12 m4">
           <h5>4 hours</h5>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
           <h5>₱ 100</h5>
         </div>
-        <div class="col m4">
+        <div class="col s12 m4">
           <h5>Day Pass</h5>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
           <h5>₱ 250</h5>
@@ -115,14 +115,14 @@
   </div>
   <br>
   <div class="row center-align amenities-card">
-    <div class="col m3">
+    <div class="col s12 m3">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Booking meeting<br>
         room and conference
       </div>
     </div>
-    <div class="col m3">
+    <div class="col s12 m3">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Comfortable &<br>
@@ -130,33 +130,33 @@
         furniture
       </div>
     </div>
-    <div class="col m3">
+    <div class="col s12 m3">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Fiber optics Internet<br>
         connection
       </div>
     </div>
-    <div class="col m3">
+    <div class="col s12 m3">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Audiovisual<br>
         equipment
       </div>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Toilet with amenities
       </div>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Napping area
       </div>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Printing
@@ -166,29 +166,29 @@
 </div>
 <div class="home-content">
   <div class="row">
-    <div class="col m7">
+    <div class="col s12 m7">
       <div class="row" style="margin-top:50px">
-        <div class="col m4">
-          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        <div class="col s12 m4">
+          <img src="{{ url('public/img/sample.png') }}" width="100%">
         </div>
-        <div class="col m4">
-          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        <div class="col s12 m4">
+          <img src="{{ url('public/img/sample.png') }}" width="100%">
         </div>
-        <div class="col m4">
-          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        <div class="col s12 m4">
+          <img src="{{ url('public/img/sample.png') }}" width="100%">
         </div>
-        <div class="col m4">
-          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        <div class="col s12 m4">
+          <img src="{{ url('public/img/sample.png') }}" width="100%">
         </div>
-        <div class="col m4">
-          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        <div class="col s12 m4">
+          <img src="{{ url('public/img/sample.png') }}" width="100%">
         </div>
-        <div class="col m4">
-          <img src="{{ url('public/img/sample.png') }}" height="70px">
+        <div class="col s12 m4">
+          <img src="{{ url('public/img/sample.png') }}" width="100%">
         </div>
       </div>
     </div>
-    <div class="col m5 right-align">
+    <div class="col s12 m5 right-align">
       <h4 class="text-bold">
         Our Partners in<br>
         Business
@@ -206,7 +206,7 @@
   </h4>
   <br><br>
   <div class="row">
-    <div class="col m5">
+    <div class="col s12 m5">
       <div class="client-message-left-card">
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
         <br><br>
@@ -214,7 +214,7 @@
         University of Sto. Tomas
       </div>
     </div>
-    <div class="col m7">
+    <div class="col s12 m7">
       <div class="client-message-right-card">
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         <br>
@@ -233,7 +233,7 @@
     Latest Updates
   </h4>
   <div class="row">
-    <div class="col m4">
+    <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
           <img src="{{ url('public/img/sample.png') }}">
@@ -245,7 +245,7 @@
         </div>
       </div>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
           <img src="{{ url('public/img/sample.png') }}">
@@ -257,7 +257,7 @@
         </div>
       </div>
     </div>
-    <div class="col m4">
+    <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
           <img src="{{ url('public/img/sample.png') }}">
