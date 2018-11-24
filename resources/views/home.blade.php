@@ -144,7 +144,7 @@
         equipment
       </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12 m3 offset-m1">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Toilet with amenities
@@ -156,7 +156,7 @@
         Napping area
       </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12 m3 offset-m1">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Printing

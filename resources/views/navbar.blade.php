@@ -12,9 +12,9 @@
   </div>
 </nav>
 <ul id='dropdown2' class='dropdown-content'>
-  <li><a href="{{ url('rates/main') }}">933 MAIN</a></li>
+  <li><a href="{{ url('services/main') }}">933 MAIN</a></li>
   <li class="divider" tabindex="-1"></li>
-  <li><a href="{{ url('rates/creatives') }}">933 CREATIVES</a></li>
+  <li><a href="{{ url('services/creatives') }}">933 CREATIVES</a></li>
 </ul>
 <ul class="sidenav" id="mobile-demo">
   <li><a href="{{ url('/') }}">Home</a></li>

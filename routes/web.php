@@ -16,16 +16,16 @@ Route::get('/', function () {
 Route::get('/blog', function () {
   return view('blog');
 });
-Route::prefix('/rates')->group(function () {
+Route::prefix('/services')->group(function () {
   Route::get('/', function () {
-    return redirect()->route('rates.main');
+    return redirect()->route('services.main');
   });
   Route::get('main', function () {
-    return view('rates.main');
-  })->name('rates.main');
+    return view('services.main');
+  })->name('services.main');
   Route::get('creatives', function () {
-    return view('rates.creatives');
-  })->name('rates.creatives');
+    return view('services.creatives');
+  })->name('services.creatives');
 });
 Route::get('/blog', function () {
   return view('blog');
