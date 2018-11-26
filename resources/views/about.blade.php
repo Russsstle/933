@@ -108,7 +108,7 @@
   </div>
   <br><br>
   <div class="center-align">
-    <a class="waves-effect waves-light btn center-align"  href="#" style="background-color:#d3d2d2;color:black">Partner with us!</a>
+    <a class="waves-effect waves-light btn center-align"  href="{{url('partnerships')}}" style="background-color:#d3d2d2;color:black">Partner with us!</a>
   </div>
 </div>
 @endsection

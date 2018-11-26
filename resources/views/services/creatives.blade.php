@@ -14,34 +14,36 @@
       <div class="title">Rates</div>
       <div class="subtitle">9 hours and above = whole day</div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         1 hour
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 50
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         4 hours
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 100
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         4 hours for Dedicated Desk / Drafting Table
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 250
       </div>
-      <div class="col m9" style="font-style:italic;font-size:12px">
+      <div class="col s8 m9 left-align" style="font-style:italic;font-size:12px">
         * Exceeding Hours
       </div>
-      <div class="col m3 right-align" style="font-size:12px">
+      <div class="col s4 m3 right-align" style="font-size:12px">
         ₱ 75/hr
       </div>
     </div>
-    <div class="col m5 rates-card rates-text">
+  </div>
+  <div class="row flex-s">
+    <div class="col m5 rates-card rates-text box-a">
       <div class="title">Prepaid Rates</div>
       <div class="subtitle">whole day pass = 18 hours</div>
       <br><br>
@@ -84,10 +86,12 @@
         ₱ 10,000
       </div>
     </div>
-    <div class="col m7 rates-card">
+    <div class="col m7 rates-card box-b">
       <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
     </div>
-    <div class="rates-title">Private Room Rates</div>
+  </div>
+  <div class="rates-title">Private Room Rates</div>
+  <div class="row">
     <div class="col m7 rates-card">
       <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
     </div>
@@ -95,95 +99,99 @@
       <div class="title">Film Room</div>
       <div class="subtitle">Good for 20 pax</div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         1 hour (₱ 60/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 1,200
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         3 hours (₱ 144/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 2,880
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         6 hours (₱ 252/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 5,040
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         8 hours (₱ 288/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 5,760
       </div>
     </div>
-    <div class="col m5 rates-card rates-text">
+  </div>
+  <div class="row flex-s">
+    <div class="col m5 rates-card rates-text box-a">
       <div class="title">Seminar Room</div>
       <div class="subtitle">Good for 24 pax</div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         1 hour (₱ 60/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 1,440
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         3 hours (₱ 144/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 3,456
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         6 hours (₱ 252/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 6,048
       </div>
       <br><br>
-      <div class="col m9">
+      <div class="col s8 m9 left-align">
         8 hours (₱ 288/pax)
       </div>
-      <div class="col m3 right-align">
+      <div class="col s4 m3 right-align">
         ₱ 6,912
       </div>
     </div>
     <div class="col m7 rates-card">
       <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
     </div>
-    <div class="rates-title">All our clients can enjoy the following</div>
-    <div class="col m5ths center-align">
+  </div>
+  <div class="rates-title">All our clients can enjoy the following</div>
+  <div class="row">
+    <div class="col s12 m5ths center-align">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Unlimited Coffee<br>&amps; Juice
       </div>
     </div>
-    <div class="col m5ths center-align">
+    <div class="col s12 m5ths center-align">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Power Outlets
       </div>
     </div>
-    <div class="col m5ths center-align">
+    <div class="col s12 m5ths center-align">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Napping Area
       </div>
     </div>
-    <div class="col m5ths center-align">
+    <div class="col s12 m5ths center-align">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Shower<br>(₱ 75.00)
       </div>
     </div>
-    <div class="col m5ths center-align">
+    <div class="col s12 m5ths center-align">
       <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
       <div>
         Free<br>Wi-Fi

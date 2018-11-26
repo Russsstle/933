@@ -1,12 +1,15 @@
 $(document).ready(function() {
   $('ul.tabs').tabs()
   $('.sidenav').sidenav()
-  $('.dropdown-trigger').dropdown()
+  $('.collapsible').collapsible()
+  $('.dropdown-trigger').dropdown({
+    coverTrigger: false
+  })
   $('.carousel').carousel({
     indicators: true
   })
   $('.slider').slider({
-    height: $(window).height() - 90
+    height: $(window).height() - (isMobile() ? 56 : 90)
   })
   $('.moveNextCarousel').click(function(e) {
     e.preventDefault()
@@ -24,3 +27,7 @@ $(document).ready(function() {
 $(window).on('load', function() {
   $('.loader-wrapper').fadeOut()
 })
+
+function isMobile() {
+  return typeof window.orientation !== 'undefined' || navigator.userAgent.indexOf('IEMobile') !== -1
+}

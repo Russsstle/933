@@ -14,6 +14,13 @@ nav {
   height: 90px;
 }
 
+nav,
+nav .nav-wrapper i,
+nav a.sidenav-trigger,
+nav a.sidenav-trigger i {
+  line-height: 90px;
+}
+
 .loader-wrapper {
   position: fixed;
   background-color: white;
@@ -54,22 +61,14 @@ nav {
   padding-left: 15%;
   padding-right: 15%;
 }
-
 .nav-wrapper > ul > li > a {
   color: black;
   text-transform: uppercase;
 }
 
-nav,
-nav .nav-wrapper i,
-nav a.sidenav-trigger,
-nav a.sidenav-trigger i {
-  line-height: 90px;
-}
-
 .header {
   background-color: $nav-color;
-  padding: 10px 15% 5%;
+  padding: 10px 15% 3%;
   font-size: 30px;
   font-weight: bold;
 }
@@ -105,7 +104,7 @@ img.circle {
 }
 
 .rates-card {
-  margin-bottom: 50px;
+  margin-bottom: 25px;
   height: 380px;
 }
 
@@ -193,4 +192,23 @@ img.shadow {
 
 .blog-content {
   padding: 5% 0;
+}
+
+.blog-tabs {
+  padding-left: 18% !important;
+}
+
+.sidebar-header {
+  font-size: 18px;
+  text-align: center;
+  line-height: 56px !important;
+}
+
+.sidenav .divider {
+  margin: 0;
+}
+
+.footer .box-c > i {
+  color: $nav-color;
+  user-select: none;
 }

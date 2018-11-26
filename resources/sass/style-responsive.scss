@@ -2,15 +2,67 @@
   padding: 0;
   text-align: center;
 }
+
 .nav-wrapper {
   padding: 0;
 }
+
+nav {
+  height: 56px;
+}
+
+nav,
+nav .nav-wrapper i,
+nav a.sidenav-trigger,
+nav a.sidenav-trigger i {
+  line-height: 56px;
+}
+
 .client-message-left-card,
 .client-message-right-card {
   height: 100px;
   margin-bottom: 15px;
 }
+
 .home-content,
 .home-content .right-align {
   text-align: center;
+}
+
+.flex-s {
+  display: flex;
+  flex-direction: column;
+}
+.box-a {
+  order: 3;
+}
+.box-b {
+  order: 2;
+}
+.box-c {
+  order: 1;
+}
+
+.rates-card {
+  text-align: center;
+  margin-bottom: 0;
+  height: auto;
+}
+
+.sidenav .collapsible-header,
+.sidenav.fixed .collapsible-header {
+  padding: 0 30px;
+}
+
+.collapsible-body li {
+  padding: 0 10px !important;
+}
+
+.blog-tabs {
+  padding-left: 0 !important;
+}
+
+.footer .box-b,
+.footer .box-c {
+  margin-bottom: 10px;
 }

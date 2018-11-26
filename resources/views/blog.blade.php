@@ -4,7 +4,7 @@
 <div class="header">
   Blogs
 </div>
-<ul class="tabs " style="padding-left: 18%;">
+<ul class="blog-tabs tabs">
   <li class="tab col s3"><a href="#test1">All</a></li>
   <li class="tab col s3"><a href="#test2">News</a></li>
   <li class="tab col s3"><a class="active" href="#test3">Features</a></li>
@@ -25,7 +25,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="#">See More</a>
+        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
       </div>
       <div class="col m7">
         <img src="{{ url('public/img/sample.png') }}" width="100%">
@@ -36,7 +36,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="#">See More</a>
+        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
       </div>
       <div class="col m7">
         <img src="{{ url('public/img/sample.png') }}" width="100%">
@@ -47,7 +47,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="#">See More</a>
+        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
       </div>
       <div class="col m7">
         <img src="{{ url('public/img/sample.png') }}" width="100%">
@@ -58,7 +58,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="#">See More</a>
+        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
       </div>
     </div>
   </div>
