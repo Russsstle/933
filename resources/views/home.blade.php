@@ -4,21 +4,21 @@
 <div class="slider">
   <ul class="slides">
     <li>
-      <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop="> <!-- random image -->
+      <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
       <div class="caption center-align">
         <h3>This is our big Tagline!</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
       </div>
     </li>
     <li>
-      <img src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7"> <!-- random image -->
+      <img src="https://ununsplash.imgix.net/photo-1414849424631-8b18529a81ca?q=75&fm=jpg&s=0e993004a2f3704e8f2ad5469315ccb7">
       <div class="caption left-align">
         <h3>Left Aligned Caption</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
       </div>
     </li>
     <li>
-      <img src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5"> <!-- random image -->
+      <img src="https://ununsplash.imgix.net/uploads/1413259835094dcdeb9d3/6e609595?q=75&fm=jpg&s=6a4fc66161293fc4a43a6ca6f073d1c5">
       <div class="caption right-align">
         <h3>Right Aligned Caption</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -26,6 +26,9 @@
     </li>
   </ul>
 </div>
+<svg height="200" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:white">
+  <path d='M0 32 C52 16 36 40 100 32 L100 38 L0 38 Z' />
+</svg>
 <div class="home-content center-align" style="padding-top:0">
   <h4 class="text-bold">Benefits of Studying in Co-working Spaces</h4>
   <br>
@@ -99,8 +102,15 @@
           <h5>₱ 250</h5>
         </div>
       </div>
-      <a class="dark-underline" href="{{ url('rates/main') }}">Check Rates for 933 Main Branch >></a><br>
-      <a class="dark-underline" href="{{ url('rates/creatives') }}">Check Rates for 933 Creatives Branch >></a>
+      <a class="waves-effect btn-flat" href="{{ url('services/main') }}">
+        <span class="icon-title text-underline">Check Rates for 933 Main Branch</span>
+        <i class=" material-icons left">chevron_right</i>
+      </a>
+      <br>
+      <a class="waves-effect btn-flat" href="{{ url('services/creatives') }}">
+        <span class="icon-title text-underline">Check Rates for 933 Creatives Branch</span>
+        <i class=" material-icons left">chevron_right</i>
+      </a>
     </div>
   </div>
 </div>
@@ -205,29 +215,67 @@
     say about us
   </h4>
   <br><br>
-  <div class="row">
-    <div class="col s12 m5">
-      <div class="client-message-left-card">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
-        <br><br>
-        <b>Juan Dela Cruz,</b><br>
-        University of Sto. Tomas
+  <div class="carousel carousel-slider carousel-client-message">
+    <div class="carousel-fixed-item center middle-indicator">
+      <div class="left">
+        <a href="#" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left middle-indicator-text">chevron_left</i></a>
+      </div>
+      <div class="right">
+        <a href="#" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
       </div>
     </div>
-    <div class="col s12 m7">
-      <div class="client-message-right-card">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        <br>
-        <b>Juan Dela Cruz,</b>
-        University of Sto. Tomas
+    <a class="carousel-item" href="#one!">
+      <div class="row">
+        <div class="col s12 m5">
+          <div class="client-message-left-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
+            <br><br>
+            <b>Juan Dela Cruz,</b><br>
+            University of Sto. Tomas
+          </div>
+        </div>
+        <div class="col s12 m7">
+          <div class="client-message-right-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            <br>
+            <b>Juan Dela Cruz,</b>
+            University of Sto. Tomas
+          </div>
+          <div class="client-message-right-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            <br>
+            <b>Juan Dela Cruz,</b>
+            University of Sto. Tomas
+          </div>
+        </div>
       </div>
-      <div class="client-message-right-card">
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        <br>
-        <b>Juan Dela Cruz,</b>
-        University of Sto. Tomas
+    </a>
+    <a class="carousel-item" href="#two!">
+      <div class="row">
+        <div class="col s12 m5">
+          <div class="client-message-left-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
+            <br><br>
+            <b>Juan Dela Cruz,</b><br>
+            University of Sto. Tomas
+          </div>
+        </div>
+        <div class="col s12 m7">
+          <div class="client-message-right-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            <br>
+            <b>Juan Dela Cruz,</b>
+            University of Sto. Tomas
+          </div>
+          <div class="client-message-right-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            <br>
+            <b>Juan Dela Cruz,</b>
+            University of Sto. Tomas
+          </div>
+        </div>
       </div>
-    </div>
+    </a>
   </div>
   <h4 class="text-bold center-align">
     Latest Updates
@@ -235,11 +283,16 @@
   <div class="row">
     <div class="col s12 m4">
       <div class="card">
-        <div class="card-image">
-          <img src="{{ url('public/img/sample.png') }}">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class='activator'src="{{ url('public/img/sample.png') }}">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
+          <p>I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
           <p>I am a very simple card. I am good at containing small bits of information.
           I am convenient because I require little markup to use effectively.</p>
         </div>
@@ -270,6 +323,11 @@
       </div>
     </div>
   </div>
-  <a class="dark-underline right" href="#">See All Posts >></a>
+  <div class="right-align">
+    <a class="waves-effect btn-flat" href="#">
+      <span class="icon-title">See All Posts</span>
+      <i class=" material-icons right">chevron_right</i>
+    </a>
+  </div>
 </div>
 @endsection

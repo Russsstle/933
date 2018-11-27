@@ -5,8 +5,12 @@ $(document).ready(function() {
   $('.dropdown-trigger').dropdown({
     coverTrigger: false
   })
-  $('.carousel').carousel({
+  $('.carousel-about').carousel({
     indicators: true
+  })
+  $('.carousel-client-message').carousel({
+    indicators: false,
+    fullWidth: true
   })
   $('.slider').slider({
     height: $(window).height() - (isMobile() ? 56 : 90)
@@ -14,16 +18,14 @@ $(document).ready(function() {
   $('.moveNextCarousel').click(function(e) {
     e.preventDefault()
     e.stopPropagation()
-    $('.carousel').carousel('next')
+    $('.carousel.carousel-slider').carousel('next')
   })
-
   $('.movePrevCarousel').click(function(e) {
     e.preventDefault()
     e.stopPropagation()
-    $('.carousel').carousel('prev')
+    $('.carousel.carousel-slider').carousel('prev')
   })
 })
-
 $(window).on('load', function() {
   $('.loader-wrapper').fadeOut()
 })

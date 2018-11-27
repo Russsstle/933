@@ -13,9 +13,6 @@
 Route::get('/', function () {
   return view('home');
 });
-Route::get('/blog', function () {
-  return view('blog');
-});
 Route::prefix('/services')->group(function () {
   Route::get('/', function () {
     return redirect()->route('services.main');
@@ -27,8 +24,13 @@ Route::prefix('/services')->group(function () {
     return view('services.creatives');
   })->name('services.creatives');
 });
-Route::get('/blog', function () {
-  return view('blog');
+Route::prefix('blog')->group(function () {
+  Route::get('/', function () {
+    return view('blog.index');
+  })->name('blog');
+  Route::get('feature', function () {
+    return view('blog.feature');
+  })->name('blog.feature');
 });
 Route::get('/feature', function () {
   return view('feature');

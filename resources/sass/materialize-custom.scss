@@ -87,8 +87,45 @@ ul.dashed > li:before {
   font-weight: bold;
 }
 
+.text-underline {
+  text-decoration: underline;
+}
+
 /* slider indicator */
 .slider .indicators {
   bottom: 60px;
   z-index: 2;
+}
+
+/* carousel arrow */
+.middle-indicator {
+  position: absolute;
+  top: 30%;
+}
+.middle-indicator-text {
+  font-size: 4.2rem;
+}
+a.middle-indicator-text {
+  color: black !important;
+}
+.content-indicator {
+  width: 64px;
+  height: 64px;
+  background: none;
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
+.bullet-color {
+  color: $bullet-color;
+}
+
+img.circle {
+  border-radius: 50%;
+  margin: 0 5px;
+}
+
+img.shadow {
+  box-shadow: $box-shadow;
 }

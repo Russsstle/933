@@ -4,8 +4,8 @@
     <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li class="{{ active('/') }}"><a href="{{ url('/') }}">Home</a></li>
-      <li class="{{ active('services') }}"><a class="dropdown-trigger" href="#" data-target='dropdown2'>Services<i class="material-icons right">arrow_drop_down</i></a></li>
-      <li class="{{ active('blog') }}"><a  href="{{ url('blog') }}">Blog</a></li>
+      <li class="{{ active('services/*') }}"><a class="dropdown-trigger" href="#" data-target='dropdown2'>Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li class="{{ active('blog/*') }}"><a  href="{{ url('blog') }}">Blog</a></li>
       <li class="{{ active('about') }}"><a  href="{{ url('about') }}">About</a></li>
       <li class="{{ active('contact') }}"><a  href="{{ url('contact') }}">Contact</a></li>
     </ul>

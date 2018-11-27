@@ -44,7 +44,7 @@
     </div>
   </div>
   <h4 class="center-align text-bold">Gallery</h4>
-  <div class="carousel">
+  <div class="carousel carousel-about">
     <a class="carousel-item" href="#one!"><img src="{{ url('public/img/sample.png') }}"></a>
     <a class="carousel-item" href="#two!"><img src="{{ url('public/img/sample.png') }}"></a>
     <a class="carousel-item" href="#three!"><img src="{{ url('public/img/sample.png') }}"></a>
