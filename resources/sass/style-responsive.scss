@@ -66,4 +66,16 @@ nav a.sidenav-trigger i {
 .footer .box-c {
   margin-bottom: 10px;
 }
-
+.slider{
+  z-index:-1;
+}
+svg{
+  margin-top:-180px;
+  position:absolute;
+}
+.bubble{
+  border-radius:50% 50% 0% 0% / 20% 19% 0% 0%; 
+}
+.white-text{
+  color:#ffffff;
+}

@@ -26,7 +26,7 @@
         <a class="collapsible-header">Services<i class="material-icons right">arrow_drop_down</i></a>
         <div class="collapsible-body">
           <ul>
-            <li><a href="{{ url('services/main') }}">933 MAIN</a></li>
+            <li><a href="{{ url('services/main') }}" >933 MAIN</a></li>
             <li><a href="{{ url('services/creatives') }}">933 CREATIVES</a></li>
           </ul>
         </div>
