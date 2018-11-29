@@ -26,12 +26,7 @@
     </li>
   </ul>
 </div>
-<div style="margin-top:-200px">
-  <svg height="100" width="100%" viewBox="0 0 100 100" preserveAspectRatio="none" style="fill:white">
-    <path d='M0 32 C46 16 38 44 100 32 L100 100 L0 100 Z' />
-  </svg>
-</div>
-<div class="home-content center-align" style="padding-top:0">
+<div class="home-content center-align wave" style="padding-top:0;">
   <h4 class="text-bold">Benefits of Studying in Co-working Spaces</h4>
   <br>
   <p>
@@ -75,9 +70,9 @@
     </div>
   </div>
 </div>
-<div class="home-content">
+<div class="home-content bubble">
   <div class="row">
-    <div class="col s12 m5">
+    <div class="col s12 m5 white-text">
       <h4 class="text-bold">
         Budget-friendly<br>
         to students
@@ -104,12 +99,12 @@
           <h5>₱ 250</h5>
         </div>
       </div>
-      <a class="waves-effect btn-flat" href="{{ url('services/main') }}">
+      <a class="waves-effect btn-flat white-text" href="{{ url('services/main') }}">
         <span class="icon-title text-underline">Check Rates for 933 Main Branch</span>
         <i class=" material-icons left">chevron_right</i>
       </a>
       <br>
-      <a class="waves-effect btn-flat" href="{{ url('services/creatives') }}">
+      <a class="waves-effect btn-flat white-text" href="{{ url('services/creatives') }}">
         <span class="icon-title text-underline">Check Rates for 933 Creatives Branch</span>
         <i class=" material-icons left">chevron_right</i>
       </a>
@@ -200,7 +195,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m5 right-align">
+    <div class="col s12 m5 right-align white-text">
       <h4 class="text-bold">
         Our Partners in<br>
         Business

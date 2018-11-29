@@ -1,263 +1,230 @@
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
-
 @import 'variables';
 @import 'materialize-custom';
 @import 'margin_padding_helper_mixin';
-
 body {
-  font-family: 'Segoe UI';
+    font-family: 'Segoe UI';
 }
-
 nav {
-  width: auto;
-  background-color: $nav-color;
-  height: 90px;
-  line-height: 90px;
-
-  .nav-wrapper i,
-  a.sidenav-trigger,
-  a.sidenav-trigger i {
+    width: auto;
+    background-color: $nav-color;
+    height: 90px;
     line-height: 90px;
-  }
+    .nav-wrapper i, a.sidenav-trigger, a.sidenav-trigger i {
+        line-height: 90px;
+    }
 }
-
 .loader-wrapper {
-  position: fixed;
-  background-color: white;
-  height: 100%;
-  width: 100%;
-  z-index: 9999;
+    position: fixed;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    z-index: 9999;
 }
-
 .loader {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
 }
-
 .tabs {
-  .tab {
-    a {
-      color: $tabs-font-color;
+    .tab {
+        a {
+            color: $tabs-font-color;
+        }
+        a:hover, a.active {
+            background-color: transparent;
+            color: $tabs-active-font-color;
+        }
+        a:focus, a:focus.active {
+            background-color: $tabs-color;
+        }
     }
-    a:hover,
-    a.active {
-      background-color: transparent;
-      color: $tabs-active-font-color;
+    .indicator {
+        background-color: $tabs-indicator-color;
     }
-    a:focus,
-    a:focus.active {
-      background-color: $tabs-color;
-    }
-  }
-  .indicator {
-    background-color: $tabs-indicator-color;
-  }
 }
 
 .nav-wrapper {
-  padding-left: 15%;
-  padding-right: 15%;
+    padding-left: 15%;
+    padding-right: 15%;
+    ul>li>a {
+        color: white;
+        text-transform: uppercase;
 
-  ul > li > a {
-    color: black;
-    text-transform: uppercase;
-  }
+    }
 }
 
 .header {
-  background-color: $nav-color;
-  padding: 10px 15% 3%;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-.footer {
-  padding: 20px 0;
-  text-align: center;
-  border-top: 1px solid #ccc;
-
-  .row {
-    margin-bottom: 0;
-  }
-
-  a {
-    color: black;
-  }
-}
-
-.content {
-  padding: 30px 15%;
-  height: 100%;
-}
-
-.dropdown-content li {
-  a,
-  span {
-    color: black;
-    font-size: 12px;
-  }
-}
-
-.rates-card {
-  margin-bottom: 25px;
-  height: 380px;
-
-  .title {
+    background-color: $nav-color;
+    padding: 10px 15% 3%;
     font-size: 30px;
     font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .subtitle {
-    font-size: 18px;
-    font-style: italic;
-    color: gray;
-  }
+    color:white;
 }
-
-.rates-text {
-  padding: 5% !important;
+.footer {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #ccc;
+    .row {
+        margin-bottom: 0;
+    }
+    a {
+        color: black;
+    }
 }
-
-.rates-title {
-  font-size: 30px;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 40px;
+.content {
+    padding: 30px 15%;
+    height: 100%;
 }
-
-.home-content {
-  padding: 40px 15%;
+.dropdown-content li {
+    a, span {
+        color: black;
+        font-size: 12px;
+    }
 }
-
-.home-content:nth-child(even) {
-  background-color: $home-content-alternative-color;
-} 
-
-a.dark-underline {
-  color: black;
-  text-decoration: underline;
-  text-decoration-color: black;
-}
-
-.amenities-card > .col {
-  height: 170px;
-}
-
-.client-message-left-card,
-.client-message-right-card {
-  padding: 5% !important;
-  background-color: $client-message-card-color;
-  box-shadow: $box-shadow;
-  color: black;
-}
-
-.client-message-left-card {
-  height: 215px;
-}
-
-.client-message-right-card {
-  height: 100px;
-  margin-bottom: 15px;
-}
-
-.blog-card {
-  padding: 20px !important;
-
-  .title {
-    font-size: 22px;
-    text-transform: uppercase;
-  }
-  .subtitle {
-    color: gray;
-    font-style: italic;
-    font-size: 18px;
-    text-transform: uppercase;
-  }
-}
-
-.blog-content {
-  padding: 5% 0;
-}
-
-.blog-tabs {
-  padding-left: 18% !important;
-}
-
-.sidebar-header {
-  font-size: 18px;
-  text-align: center;
-  line-height: 56px !important;
-}
-
-.sidenav .divider {
-  margin: 0;
-}
-
-.footer .box-c > i {
-  color: $nav-color;
-  user-select: none;
-}
-
-.slider .indicators .indicator-item.active {
-  background-color: #696969;
-}
-
-.carousel-client-message {
-  height: 250px !important;
-
-  .carousel-item > div {
-    margin: 0 50px;
-  }
-}
-
-.back-indicator {
-  font-size: 22px;
-  color: black;
-}
-
-.feature {
-  .feature-card {
-    padding: 15px 0;
-
+.rates-card {
+    margin-bottom: 25px;
+    height: 380px;
     .title {
-      margin-top: 15px;
-      font-style: italic;
-      color: gray;
-      text-transform: uppercase;
+        font-size: 30px;
+        font-weight: bold;
+        text-transform: uppercase;
     }
     .subtitle {
-      font-style: italic;
-      color: gray;
+        font-size: 18px;
+        font-style: italic;
+        color: gray;
     }
-    p {
-      text-indent: 2em;
-      text-align: justify;
-    }
-  }
-  & > .title {
+}
+.rates-text {
+    padding: 5% !important;
+}
+.rates-title {
     font-size: 30px;
     font-weight: bold;
-    margin: 20px auto;
-  }
+    text-align: center;
+    margin-bottom: 40px;
 }
-
+.home-content {
+    padding: 40px 15%;
+}
+.home-content:nth-child(even) {
+    background-color: $home-content-alternative-color;
+}
+a.dark-underline {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: black;
+}
+.amenities-card>.col {
+    height: 170px;
+}
+.client-message-left-card, .client-message-right-card {
+    padding: 5% !important;
+    background-color: $client-message-card-color;
+    box-shadow: $box-shadow;
+    color: black;
+}
+.client-message-left-card {
+    height: 215px;
+}
+.client-message-right-card {
+    height: 100px;
+    margin-bottom: 15px;
+}
+.blog-card {
+    padding: 20px !important;
+    .title {
+        font-size: 22px;
+        text-transform: uppercase;
+    }
+    .subtitle {
+        color: gray;
+        font-style: italic;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+}
+.blog-content {
+    padding: 5% 0;
+}
+.blog-tabs {
+    padding-left: 18% !important;
+}
+.sidebar-header {
+    font-size: 18px;
+    text-align: center;
+    line-height: 56px !important;
+}
+.sidenav .divider {
+    margin: 0;
+}
+.footer .box-c>i {
+    color: $nav-color;
+    user-select: none;
+}
+.slider{
+  z-index:-1
+}
+.slider .indicators .indicator-item.active {
+    background-color: #696969;
+}
+.carousel-client-message {
+    height: 250px !important;
+    .carousel-item>div {
+        margin: 0 50px;
+    }
+}
+.back-indicator {
+    font-size: 22px;
+    color: black;
+}
+.feature {
+    .feature-card {
+        padding: 15px 0;
+        .title {
+            margin-top: 15px;
+            font-style: italic;
+            color: gray;
+            text-transform: uppercase;
+        }
+        .subtitle {
+            font-style: italic;
+            color: gray;
+        }
+        p {
+            text-indent: 2em;
+            text-align: justify;
+        }
+    }
+    &>.title {
+        font-size: 30px;
+        font-weight: bold;
+        margin: 20px auto;
+    }
+}
 .icon-wrapper {
-  .icon-title {
-    vertical-align: text-top;
-  }
-  i {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    vertical-align: middle;
-  }
+    .icon-title {
+        vertical-align: text-top;
+    }
+    i {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        vertical-align: middle;
+    }
+}
+.slides li img {
+    background-attachment: fixed;
 }
 
-.slides li img {
-  background-attachment: fixed;
+svg{
+  margin-top:-620px;
+  position:relative;
+}
+.bubble{
+  border-radius:50% 50% 0% 0% / 36% 26% 0% 0% 
 }
