@@ -45,52 +45,52 @@
   </div>
   <h4 class="center-align text-bold">Gallery</h4>
   <div class="carousel carousel-about">
-    <a class="carousel-item" href="#one!"><img src="{{ url('public/img/sample.png') }}"></a>
-    <a class="carousel-item" href="#two!"><img src="{{ url('public/img/sample.png') }}"></a>
-    <a class="carousel-item" href="#three!"><img src="{{ url('public/img/sample.png') }}"></a>
-    <a class="carousel-item" href="#four!"><img src="{{ url('public/img/sample.png') }}"></a>
-    <a class="carousel-item" href="#five!"><img src="{{ url('public/img/sample.png') }}"></a>
+    <a class="carousel-item" href="#one!"><img src="{{ asset('img/sample.png') }}"></a>
+    <a class="carousel-item" href="#two!"><img src="{{ asset('img/sample.png') }}"></a>
+    <a class="carousel-item" href="#three!"><img src="{{ asset('img/sample.png') }}"></a>
+    <a class="carousel-item" href="#four!"><img src="{{ asset('img/sample.png') }}"></a>
+    <a class="carousel-item" href="#five!"><img src="{{ asset('img/sample.png') }}"></a>
   </div>
   <h4 class="center-align text-bold">Meet the Team</h4>
   <br><br>
   <div class="row" style="width:80%">
     <div class="col m4 center-align mb-30">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" width="120px" height="120px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" width="120px" height="120px">
       <div>
         Name<br>
         Position
       </div>
     </div>
     <div class="col m4 center-align mb-30">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" width="120px" height="120px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" width="120px" height="120px">
       <div>
         Name<br>
         Position
       </div>
     </div>
     <div class="col m4 center-align mb-30">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" width="120px" height="120px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" width="120px" height="120px">
       <div>
         Name<br>
         Position
       </div>
     </div>
     <div class="col m4 center-align mb-30">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" width="120px" height="120px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" width="120px" height="120px">
       <div>
         Name<br>
         Position
       </div>
     </div>
     <div class="col m4 center-align mb-30">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" width="120px" height="120px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" width="120px" height="120px">
       <div>
         Name<br>
         Position
       </div>
     </div>
     <div class="col m4 center-align mb-30">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" width="120px" height="120px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" width="120px" height="120px">
       <div>
         Name<br>
         Position
@@ -100,15 +100,15 @@
   <h4 class="center-align text-bold">Our Amazing Partners</h4>
   <br><br>
   <div class="row">
-    <img class="col m5ths" src="{{ url('public/img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths" src="{{ url('public/img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths" src="{{ url('public/img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths" src="{{ url('public/img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths" src="{{ url('public/img/sample.png') }}" height="70px" width="140px">
+    <img class="col m5ths" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
+    <img class="col m5ths" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
+    <img class="col m5ths" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
+    <img class="col m5ths" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
+    <img class="col m5ths" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
   </div>
   <br><br>
   <div class="center-align">
-    <a class="waves-effect waves-light btn center-align"  href="{{url('partnerships')}}" style="background-color:#d3d2d2;color:black">Partner with us!</a>
+    <a class="waves-effect waves-light btn center-align"  href="{{ url('partnerships') }}" style="background-color:#d3d2d2;color:black">Partner with us!</a>
   </div>
 </div>
 @endsection

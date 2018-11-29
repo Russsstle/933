@@ -17,7 +17,7 @@
   <div class="container blog-content">
     <div class="row">
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -25,10 +25,10 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
+        <a class="waves-effect waves-light btn" href="{{asset('feature')}}">See More</a>
       </div>
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -36,10 +36,10 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
+        <a class="waves-effect waves-light btn" href="{{asset('feature')}}">See More</a>
       </div>
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -47,10 +47,10 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
+        <a class="waves-effect waves-light btn" href="{{asset('feature')}}">See More</a>
       </div>
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -58,7 +58,7 @@
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
         </p>
-        <a class="waves-effect waves-light btn" href="{{url('feature')}}">See More</a>
+        <a class="waves-effect waves-light btn" href="{{asset('feature')}}">See More</a>
       </div>
     </div>
   </div>

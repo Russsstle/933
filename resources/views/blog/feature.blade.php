@@ -11,7 +11,7 @@
     </a>
   </div>
   <div class="feature-card">
-    <img src="{{ url('public/img/sample.png') }}" height="350px" width="100%">
+    <img src="{{ asset('img/sample.png') }}" height="350px" width="100%">
     <div class="title">FEATURE</div>
     <div class="subtitle">By Juan Dela Cruz</div>
     <p>
@@ -33,7 +33,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ url('public/img/sample.png') }}">
+          <img class="activator" src="{{ asset('img/sample.png') }}">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4"><b>Board Exam Passers</b><i class="material-icons right">more_vert</i></span>
@@ -48,7 +48,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ url('public/img/sample.png') }}">
+          <img class="activator" src="{{ asset('img/sample.png') }}">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4"><b>Board Exam Passers</b><i class="material-icons right">more_vert</i></span>
@@ -63,7 +63,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class="activator" src="{{ url('public/img/sample.png') }}">
+          <img class="activator" src="{{ asset('img/sample.png') }}">
         </div>
         <div class="card-content">
           <span class="card-title activator grey-text text-darken-4"><b>Board Exam Passers</b><i class="material-icons right">more_vert</i></span>

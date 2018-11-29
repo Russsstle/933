@@ -17,7 +17,7 @@
   <div class="container blog-content">
     <div class="row">
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -28,7 +28,7 @@
         <a class="waves-effect waves-light btn" href="{{ url('blog/feature') }}">See More</a>
       </div>
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -39,7 +39,7 @@
         <a class="waves-effect waves-light btn" href="{{ url('blog/feature') }}">See More</a>
       </div>
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>
@@ -50,7 +50,7 @@
         <a class="waves-effect waves-light btn" href="{{ url('blog/feature') }}">See More</a>
       </div>
       <div class="col m7">
-        <img src="{{ url('public/img/sample.png') }}" width="100%">
+        <img src="{{ asset('img/sample.png') }}" width="100%">
       </div>
       <div class="col m5 blog-card">
         <div class="subtitle">Feature</div>

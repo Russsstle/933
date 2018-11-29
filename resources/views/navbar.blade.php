@@ -1,6 +1,6 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="{{ url('/') }}" class="brand-logo"><img src="{{ url('public/img/logo.png') }}"></a>
+    <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('img/logo.png') }}"></a>
     <a href="#" data-target="mobile-sidebar" class="sidenav-trigger"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li class="{{ active('/') }}"><a href="{{ url('/') }}">Home</a></li>

@@ -8,7 +8,7 @@
 <div class="content">
   <div class="row">
     <div class="col m7 rates-card">
-      <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
+      <img src="{{ asset('img/sample.png') }}" width="100%" height="100%">
     </div>
     <div class="col m5 rates-card rates-text">
       <div class="title">Rates</div>
@@ -87,13 +87,13 @@
       </div>
     </div>
     <div class="col m7 rates-card box-b">
-      <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
+      <img src="{{ asset('img/sample.png') }}" width="100%" height="100%">
     </div>
   </div>
   <div class="rates-title">Private Room Rates</div>
   <div class="row">
     <div class="col m7 rates-card">
-      <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
+      <img src="{{ asset('img/sample.png') }}" width="100%" height="100%">
     </div>
     <div class="col m5 rates-card rates-text">
       <div class="title">Film Room</div>
@@ -162,37 +162,37 @@
       </div>
     </div>
     <div class="col m7 rates-card">
-      <img src="{{ url('public/img/sample.png') }}" width="100%" height="100%">
+      <img src="{{ asset('img/sample.png') }}" width="100%" height="100%">
     </div>
   </div>
   <div class="rates-title">All our clients can enjoy the following</div>
   <div class="row">
     <div class="col s12 m5ths center-align">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
       <div>
         Unlimited Coffee<br>&amps; Juice
       </div>
     </div>
     <div class="col s12 m5ths center-align">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
       <div>
         Power Outlets
       </div>
     </div>
     <div class="col s12 m5ths center-align">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
       <div>
         Napping Area
       </div>
     </div>
     <div class="col s12 m5ths center-align">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
       <div>
         Shower<br>(₱ 75.00)
       </div>
     </div>
     <div class="col s12 m5ths center-align">
-      <img class="circle" src="{{ url('public/img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
       <div>
         Free<br>Wi-Fi
       </div>
