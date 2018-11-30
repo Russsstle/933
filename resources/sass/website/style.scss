@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+@import 'variables';
+@import '../fonts';
+@import '../margin_padding_helper_mixin';
+@import 'materialize-custom';
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Proxima Nova', 'Segoe UI';
+}
+
+nav {
+  width: auto;
+  background-color: $nav-color;
+  height: 90px;
+  line-height: 90px;
+  .nav-wrapper i,
+  a.sidenav-trigger,
+  a.sidenav-trigger i {
+    line-height: 90px;
+  }
+}
+
+a.brand-logo {
+  padding: 7px 0;
+
+  img {
+    height: 74px;
+    width: 130px;
+  }
+}
+
+.login {
+  height: 100%;
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-bottom: 0px;
+}
+
+.dropdown-content {
+  background-color: $nav-color;
+}
+
+.loader-wrapper {
+  position: fixed;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+}
+
+.loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.tabs {
+  .tab {
+    a {
+      color: $tabs-font-color;
+    }
+    a:hover,
+    a.active {
+      background-color: transparent;
+      color: $tabs-active-font-color;
+    }
+    a:focus,
+    a:focus.active {
+      background-color: $tabs-color;
+    }
+  }
+  .indicator {
+    background-color: $tabs-indicator-color;
+  }
+}
+
+.nav-wrapper {
+  padding: 0 288px;
+  ul > li > a {
+    color: white;
+    text-transform: uppercase;
+  }
+}
+
+nav ul li.active {
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: white;
+    height: 3px;
+    width: 100%;
+  }
+}
+
+.header {
+  background-color: $nav-color;
+  padding: 10px 288px 3%;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+}
+
+.footer {
+  padding: 20px 288px;
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid #ccc;
+  background-color: $nav-color;
+  color: white;
+
+  .row {
+    margin-bottom: 0;
+  }
+  a {
+    color: white;
+  }
+  .box-a,
+  .box-b {
+    line-height: 25px;
+  }
+  .box-c > i {
+    color: $nav-color;
+    user-select: none;
+  }
+}
+
+.content,
+.home-content,
+.blog-content {
+  padding: 40px 288px;
+  z-index: -1;
+}
+
+.dropdown-content li {
+  a,
+  span {
+    color: black;
+    font-size: 12px;
+  }
+}
+
+.rates-card {
+  margin-bottom: 25px;
+  height: 380px;
+
+  .title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    font-size: 18px;
+    font-style: italic;
+    color: gray;
+  }
+}
+
+.rates-text {
+  padding: 5% !important;
+}
+
+.rates-title {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.home-content {
+  &:nth-child(even) {
+    background-color: $home-content-alternative-color;
+  }
+
+  &:first-child {
+    margin-top: -65px;
+  }
+}
+
+a.dark-underline {
+  color: black;
+  text-decoration: underline;
+  text-decoration-color: black;
+}
+
+.amenities-card > .col {
+  height: 170px;
+}
+
+.client-message-left-card,
+.client-message-right-card {
+  padding: 5% !important;
+  background-color: $client-message-card-color;
+  box-shadow: $box-shadow;
+  color: black;
+}
+
+.client-message-left-card {
+  height: 215px;
+}
+
+.client-message-right-card {
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.blog-card {
+  padding: 20px !important;
+  .title {
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  .subtitle {
+    color: gray;
+    font-style: italic;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+}
+
+.blog-tabs {
+  padding-left: 288px !important;
+}
+
+.sidebar-header {
+  font-size: 18px;
+  text-align: center;
+  line-height: 56px !important;
+}
+
+.sidenav .divider {
+  margin: 0;
+}
+
+.slider {
+  z-index: -1;
+}
+
+.slider .indicators .indicator-item.active {
+  background-color: #696969;
+}
+
+.carousel-client-message {
+  height: 250px !important;
+  .carousel-item > div {
+    margin: 0 50px;
+  }
+}
+
+.back-indicator {
+  font-size: 22px;
+  color: black;
+}
+
+.feature {
+  .feature-card {
+    padding: 15px 0;
+    .title {
+      margin-top: 15px;
+      font-style: italic;
+      color: gray;
+      text-transform: uppercase;
+    }
+    .subtitle {
+      font-style: italic;
+      color: gray;
+    }
+    p {
+      text-indent: 2em;
+      text-align: justify;
+    }
+  }
+  & > .title {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 20px auto;
+  }
+}
+
+.icon-wrapper {
+  .icon-title {
+    vertical-align: text-top;
+  }
+  i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+  }
+}
+
+.slides li img {
+  background-attachment: fixed;
+}
+
+svg.waves {
+  margin-top: -480px;
+  z-index: -1;
+
+  path {
+    fill: white;
+  }
+}
+
+.bubble {
+  border-radius: 50% 50% 0% 0% / 36% 26% 0% 0%;
+}

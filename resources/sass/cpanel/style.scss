@@ -1,0 +1,15 @@
+@import 'variables';
+@import '../fonts';
+@import '../margin_padding_helper_mixin';
+@import 'template/fontastic.css';
+@import 'template/style.sea.css';
+
+nav.navbar,
+nav.side-navbar ul li.active > a,
+footer.main-footer {
+  background: $nav-color;
+}
+
+nav.side-navbar ul li a:hover {
+  background: $nav-color;
+}

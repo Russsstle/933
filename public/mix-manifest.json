@@ -1,9 +1,12 @@
 {
-    "/js/vendor.js": "/js/vendor.js",
-    "/css/app.css": "/css/app.css",
-    "/css/app-responsive.css": "/css/app-responsive.css",
-    "/manifest.js": "/manifest.js",
-    "/css/packages.css": "/css/packages.css",
-    "/js/packages.js": "/js/packages.js",
-    "/js/app.js": "/js/app.js"
+    "/css/website/app.css": "/css/website/app.css",
+    "/css/website/app-responsive.css": "/css/website/app-responsive.css",
+    "/css/cpanel/app.css": "/css/cpanel/app.css",
+    "/css/cpanel/app-responsive.css": "/css/cpanel/app-responsive.css",
+    "/css/website/packages.css": "/css/website/packages.css",
+    "/js/website/packages.js": "/js/website/packages.js",
+    "/js/website/app.js": "/js/website/app.js",
+    "/css/cpanel/packages.css": "/css/cpanel/packages.css",
+    "/js/cpanel/packages.js": "/js/cpanel/packages.js",
+    "/js/cpanel/app.js": "/js/cpanel/app.js"
 }

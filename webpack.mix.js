@@ -9,16 +9,34 @@ const mix = require('laravel-mix')
  | file for the application as well as bundling up all the JS files.
  |
  */
-mix.combine(['resources/css/packages/materialize.min.css'], 'public/css/packages.css')
-mix.sass('resources/sass/style.scss', 'public/css/app.css')
-mix.sass('resources/sass/style-responsive.scss', 'public/css/app-responsive.css')
 
+/* WEBSITE */
+mix.combine(['resources/css/packages/materialize.min.css'], 'public/css/website/packages.css')
+mix.sass('resources/sass/website/style.scss', 'public/css/website/app.css').options({
+  processCssUrls: false
+})
+mix.sass('resources/sass/website/style-responsive.scss', 'public/css/website/app-responsive.css')
 mix.combine(
   ['resources/js/packages/jquery.min.js', 'resources/js/packages/materialize.min.js'],
-  'public/js/packages.js'
+  'public/js/website/packages.js'
 )
-mix.babel(['resources/js/script.js'], 'public/js/app.js')
+mix.babel(['resources/js/website/script.js'], 'public/js/website/app.js')
 
+/* CPANEL */
+mix.combine(
+  ['resources/css/packages/bootstrap.min.css', 'resources/css/packages/font-awesome.min.css'],
+  'public/css/cpanel/packages.css'
+)
+mix.sass('resources/sass/cpanel/style.scss', 'public/css/cpanel/app.css').options({
+  processCssUrls: false
+})
+mix.sass('resources/sass/cpanel/style-responsive.scss', 'public/css/cpanel/app-responsive.css')
+mix.combine(
+  ['resources/js/packages/jquery.min.js', 'resources/js/packages/bootstrap.min.js'],
+  'public/js/cpanel/packages.js'
+)
+mix.babel(['resources/js/cpanel/template.js', 'resources/js/cpanel/script.js'], 'public/js/cpanel/app.js')
+
+/* ASSETS */
 mix.copyDirectory('resources/img', 'public/img')
-
-mix.extract(['vue'], 'public/js/vendor.js')
+mix.copyDirectory('resources/fonts', 'public/fonts')
