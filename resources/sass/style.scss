@@ -111,7 +111,7 @@ nav {
 .home-content {
     padding: 40px 15%;
 }
-.home-content:nth-child(even) {
+.home-content:nth-child(odd) {
     background-color: $home-content-alternative-color;
 }
 a.dark-underline {

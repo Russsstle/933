@@ -1,10 +1,9 @@
 @extends("layout")
-
 @section("body")
-<div class="slider" style="z-index:-1">
+<div class="slider">
   <ul class="slides">
     <li>
-      <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+         <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
       <div class="caption center-align">
         <h3>This is our big Tagline!</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -26,6 +25,10 @@
     </li>
   </ul>
 </div>
+
+<svg  width="100%" viewBox="0 0 100 40"  preserveAspectRatio="none">
+    <path d='M0,32 C52 16 36 40 100 32 L100 100 L0 100 Z' style='stroke: none; fill:white;'></path>
+</svg>
 <div class="home-content center-align wave" style="padding-top:0;">
   <h4 class="text-bold">Benefits of Studying in Co-working Spaces</h4>
   <br>
@@ -36,7 +39,7 @@
   <br>
   <div class="row">
     <div class="col s12 m4">
-      <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
+      <img class="shadow" src="{{ url('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
         Benefits of Studying in<br>
@@ -47,7 +50,7 @@
       </p>
     </div>
     <div class="col s12 m4">
-      <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
+      <img class="shadow" src="{{ url('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
         Benefits of Studying in<br>
@@ -58,7 +61,7 @@
       </p>
     </div>
     <div class="col s12 m4">
-      <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
+      <img class="shadow" src="{{ url('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
         Benefits of Studying in<br>
@@ -123,14 +126,14 @@
   <br>
   <div class="row center-align amenities-card">
     <div class="col s12 m3">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Booking meeting<br>
         room and conference
       </div>
     </div>
     <div class="col s12 m3">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Comfortable &<br>
         professional office<br>
@@ -138,33 +141,33 @@
       </div>
     </div>
     <div class="col s12 m3">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Fiber optics Internet<br>
         connection
       </div>
     </div>
     <div class="col s12 m3">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Audiovisual<br>
         equipment
       </div>
     </div>
     <div class="col s12 m4 push-m1">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Toilet with amenities
       </div>
     </div>
     <div class="col s12 m4">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Napping area
       </div>
     </div>
     <div class="col s12 m4 pull-m1">
-      <img class="circle" src="{{ asset('img/sample.png') }}" height="70px" width="70px">
+      <img class="circle" src="{{ url('img/sample.png') }}" height="70px" width="70px">
       <div>
         Printing
       </div>
@@ -176,22 +179,22 @@
     <div class="col s12 m7">
       <div class="row" style="margin-top:50px">
         <div class="col s12 m4">
-          <img src="{{ asset('img/sample.png') }}" width="100%">
+          <img src="{{ url('img/sample.png') }}" width="100%">
         </div>
         <div class="col s12 m4">
-          <img src="{{ asset('img/sample.png') }}" width="100%">
+          <img src="{{ url('img/sample.png') }}" width="100%">
         </div>
         <div class="col s12 m4">
-          <img src="{{ asset('img/sample.png') }}" width="100%">
+          <img src="{{ url('img/sample.png') }}" width="100%">
         </div>
         <div class="col s12 m4">
-          <img src="{{ asset('img/sample.png') }}" width="100%">
+          <img src="{{ url('img/sample.png') }}" width="100%">
         </div>
         <div class="col s12 m4">
-          <img src="{{ asset('img/sample.png') }}" width="100%">
+          <img src="{{ url('img/sample.png') }}" width="100%">
         </div>
         <div class="col s12 m4">
-          <img src="{{ asset('img/sample.png') }}" width="100%">
+          <img src="{{ url('img/sample.png') }}" width="100%">
         </div>
       </div>
     </div>
@@ -281,7 +284,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class='activator'src="{{ asset('img/sample.png') }}">
+          <img class='activator'src="{{ url('img/sample.png') }}">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -298,7 +301,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ asset('img/sample.png') }}">
+          <img src="{{ url('img/sample.png') }}">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
@@ -310,7 +313,7 @@
     <div class="col s12 m4">
       <div class="card">
         <div class="card-image">
-          <img src="{{ asset('img/sample.png') }}">
+          <img src="{{ url('img/sample.png') }}">
           <span class="card-title">Card Title</span>
         </div>
         <div class="card-content">
