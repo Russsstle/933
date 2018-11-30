@@ -45,4 +45,7 @@ class ViewController extends Controller {
 	protected function feedback() {
 		return view('website.feedback');
 	}
+	protected function cpanel() {
+		return view('cpanel.index');
+	}
 }

@@ -32,9 +32,7 @@ Route::prefix('cpanel')->group(function () {
 	Route::get('login', 'ViewController@login')->name('login');
 	Route::post('login', 'AuthController@login');
 	Route::middleware('auth')->group(function () {
-		Route::get('/', function () {
-			return view('cpanel.index');
-		});
+		Route::get('/', 'ViewController@cpanel');
 		Route::get('logout', 'AuthController@logout');
 	});
 });

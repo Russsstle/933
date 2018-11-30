@@ -170,6 +170,9 @@
     </div>
   </div>
 </div>
+@foreach($users as $user)
+  <li>{{$user}}</li>
+@endforeach
 <div class="home-content">
   <div class="row flex-s">
     <div class="col s12 m7 box-a">
