@@ -26,7 +26,7 @@
   </ul>
 </div>
 <div class="home-content center-align" style="padding-top:0">
-  <h4 class="text-bold">Benefits of Studying in Co-working Spaces</h4>
+  <h4 class="text-bold ">Benefits of Studying in Co-working Spaces</h4>
   <br>
   <p>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.<br>
@@ -69,33 +69,33 @@
     </div>
   </div>
 </div>
-<div class="home-content">
+<div class="home-content home-padding">
   <div class="row">
     <div class="col s12 m5 white-text">
-      <h4 class="text-bold">
+      <span class="text-bold title-size">
         Budget-friendly<br>
         to students
-      </h4>
-      <p>
+      </span>
+      <p class="content-size">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
       </p>
     </div>
     <div class="col s12 m6 offset-m1">
-      <div class="row white center-align">
-        <div class="col s12 m4">
-          <h5>1 hour</h5>
+      <div class="row white center-align home-price-time">
+        <div class="col s12 m4 ">
+          <span>1 hour</span>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
-          <h5>₱ 50</h5>
+          <span>₱ 50</span>
         </div>
         <div class="col s12 m4">
-          <h5>4 hours</h5>
+          <span>4 hours</span>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
-          <h5>₱ 100</h5>
+          <span>₱ 100</span>
         </div>
         <div class="col s12 m4">
-          <h5>Day Pass</h5>
+          <span>Day Pass</span>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
-          <h5>₱ 250</h5>
+          <span>₱ 250</span>
         </div>
       </div>
       <a class="waves-effect btn-flat white-text" href="{{ url('services/main') }}">

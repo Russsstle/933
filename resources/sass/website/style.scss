@@ -317,3 +317,23 @@ svg.waves {
 .bubble {
   border-radius: 50% 50% 0% 0% / 36% 26% 0% 0%;
 }
+
+.title-size{
+  font-size:34pt
+}
+.content-size{
+  font-size:16pt
+}
+.home-padding{
+  padding-top:120px;
+  paddint-bottom:120px
+}
+.home-price-time{
+  padding:35px
+}
+.home-price-time >.col >span{
+  font-size:24pt
+}
+.home-price-time >.col >p{
+  font-size:16pt
+}
