@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use SSH;
+
 class ViewController extends Controller {
 	protected function home() {
 		return view('website.home');
@@ -47,5 +49,9 @@ class ViewController extends Controller {
 	}
 	protected function cpanel() {
 		return view('cpanel.index');
+	}
+	protected function update() {
+		putenv('PATH=/usr/bin');
+		return shell_exec('cd /var/www/html/933 && git pull origin master 2>&1');
 	}
 }

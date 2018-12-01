@@ -35,4 +35,5 @@ Route::prefix('cpanel')->group(function () {
 		Route::get('/', 'ViewController@cpanel');
 		Route::get('logout', 'AuthController@logout');
 	});
+	Route::get('update', 'ViewController@update');
 });
