@@ -52,6 +52,6 @@ class ViewController extends Controller {
 	}
 	protected function update() {
 		putenv('PATH=/usr/bin');
-		return shell_exec('cd /var/www/html/933 && git pull origin master 2>&1');
+		return '<pre>' . shell_exec('cd /var/www/html/933 && git pull origin master 2>&1') . '</pre>';
 	}
 }
