@@ -4,17 +4,16 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateAuthorTable extends Migration {
+class CreateAuthorsTable extends Migration {
   /**
    * Run the migrations.
    *
    * @return void
    */
   public function up() {
-    Schema::create('author', function (Blueprint $table) {
-      $table->increments('author_id');
-      $table->string('authorname');
-      $table->unsignedInteger('branch_id');
+    Schema::create('authors', function (Blueprint $table) {
+      $table->increments('id');
+      $table->string('name');
       $table->string('position');
       $table->timestamps();
       $table->softDeletes();

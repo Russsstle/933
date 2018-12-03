@@ -12,13 +12,13 @@
  */
 Route::get('/', 'ViewController@home')->name('home');
 Route::prefix('/services')->group(function () {
-	Route::get('/', 'ViewController@redirectServices }');
-	Route::get('main', 'ViewController@servicesMain')->name('services.main');
-	Route::get('creatives', 'ViewController@servicesCreatives')->name('services.creatives');
+  Route::get('/', 'ViewController@redirectServices }');
+  Route::get('main', 'ViewController@servicesMain')->name('services.main');
+  Route::get('creatives', 'ViewController@servicesCreatives')->name('services.creatives');
 });
 Route::prefix('blog')->group(function () {
-	Route::get('/', 'ViewController@blog')->name('blog');
-	Route::get('feature', 'ViewController@blogFeature')->name('blog.feature');
+  Route::get('/', 'ViewController@blog')->name('blog');
+  Route::get('feature', 'ViewController@blogFeature')->name('blog.feature');
 });
 Route::get('feature', 'ViewController@feature')->name('feature');
 Route::get('about', 'ViewController@about')->name('about');
@@ -29,11 +29,11 @@ Route::get('faqs', 'ViewController@faqs')->name('faqs');
 Route::get('feedback', 'ViewController@feedback')->name('feedback');
 
 Route::prefix('cpanel')->group(function () {
-	Route::get('login', 'ViewController@login')->name('login');
-	Route::post('login', 'AuthController@login');
-	Route::middleware('auth')->group(function () {
-		Route::get('/', 'ViewController@cpanel');
-		Route::get('logout', 'AuthController@logout');
-	});
-	Route::get('update', 'ViewController@update');
+  Route::get('login', 'ViewController@login')->name('login');
+  Route::post('login', 'AuthController@login');
+  Route::middleware('auth')->group(function () {
+    Route::get('/', 'ViewController@cpanel');
+    Route::get('logout', 'AuthController@logout');
+  });
+  Route::get('update', 'ViewController@update');
 });
