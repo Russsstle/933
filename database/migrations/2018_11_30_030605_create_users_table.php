@@ -5,30 +5,30 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
 class CreateUsersTable extends Migration {
-	/**
-	 * Run the migrations.
-	 *
-	 * @return void
-	 */
-	public function up() {
-		Schema::create('users', function (Blueprint $table) {
-			$table->increments('id');
-			$table->string('username');
-			$table->string('password');
-			$table->string('remember_token')->nullable();
-			$table->timestamps();
-			$table->softDeletes();
-		});
+  /**
+   * Run the migrations.
+   *
+   * @return void
+   */
+  public function up() {
+    Schema::create('users', function (Blueprint $table) {
+      $table->increments('id');
+      $table->string('username');
+      $table->string('password');
+      $table->string('remember_token')->nullable();
+      $table->timestamps();
+      $table->softDeletes();
+    });
+    \App\User::create(['username' => 'neonspectrum', 'password' => '1234']);
+    \App\User::create(['username' => 'rustle', 'password' => '123']);
+  }
 
-		\App\User::create(['username' => 'neonspectrum', 'password' => '1234']);
-	}
-
-	/**
-	 * Reverse the migrations.
-	 *
-	 * @return void
-	 */
-	public function down() {
-		Schema::dropIfExists('user');
-	}
+  /**
+   * Reverse the migrations.
+   *
+   * @return void
+   */
+  public function down() {
+    Schema::dropIfExists('user');
+  }
 }

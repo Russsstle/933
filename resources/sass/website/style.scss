@@ -331,9 +331,17 @@ svg.waves {
 .home-price-time{
   padding:35px
 }
-.home-price-time >.col >span{
-  font-size:24pt
+.home-price-time >.col {
+  span{
+    font-size:24pt
+  } 
+  p{
+    font-size:16pt
+  }
 }
-.home-price-time >.col >p{
+.margin-top{
+  margin-top:35px
+}
+.link-font-size{
   font-size:16pt
 }

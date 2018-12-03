@@ -98,12 +98,12 @@
           <span>₱ 250</span>
         </div>
       </div>
-      <a class="waves-effect btn-flat white-text" href="{{ url('services/main') }}">
+      <a class="waves-effect btn-flat white-text margin-top link-font-size" href="{{ url('services/main') }}">
         <span class="icon-title text-underline">Check Rates for 933 Main Branch</span>
         <i class=" material-icons left">chevron_right</i>
       </a>
       <br>
-      <a class="waves-effect btn-flat white-text" href="{{ url('services/creatives') }}">
+      <a class="waves-effect btn-flat white-text link-font-size" href="{{ url('services/creatives') }}">
         <span class="icon-title text-underline">Check Rates for 933 Creatives Branch</span>
         <i class=" material-icons left">chevron_right</i>
       </a>
