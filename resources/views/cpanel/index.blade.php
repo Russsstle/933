@@ -1,7 +1,7 @@
 @extends("cpanel.layouts.app")
 
 @section("body")
-<table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
+<!-- <table id="dtBasicExample" class="table table-striped table-bordered" cellspacing="0" width="100%">
   <thead>
     <tr>
       <th class="th-sm">Name
@@ -36,5 +36,6 @@
       <td>$170,750</td>
     </tr>
 </tbody>
-</table>
+</table> -->
+
 @endsection
