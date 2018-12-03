@@ -11,11 +11,12 @@ class CreateArticlesTagsTable extends Migration {
    * @return void
    */
   public function up() {
-    Schema::create('articles_tags', function (Blueprint $table) {
+    Schema::create('tags', function (Blueprint $table) {
+      $table->increments('id');
       $table->unsignedInteger('article_id');
       $table->foreign('article_id')->references('id')->on('articles');
-      $table->unsignedInteger('tag_id');
-      $table->foreign('tag_id')->references('id')->on('tags');
+      $table->string('content');
+      $table->timestamps();
     });
   }
 

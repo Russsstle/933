@@ -23,13 +23,13 @@ class Article extends Model {
    * @return mixed
    */
   public function authors() {
-    return $this->belongsToMany('App\Author', 'articles_authors');
+    return $this->belongsTo('App\Author', 'author_id');
   }
 
   /**
    * @return mixed
    */
   public function tags() {
-    return $this->belongsToMany('App\Tag', 'articles_tags');
+    return $this->hasMany('App\Tag');
   }
 }

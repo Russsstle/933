@@ -13,7 +13,10 @@ class CreateAuthorsTable extends Migration {
   public function up() {
     Schema::create('authors', function (Blueprint $table) {
       $table->increments('id');
-      $table->string('name');
+      $table->unsignedInteger('user_id');
+      $table->foreign('user_id')->references('id')->on('users');
+      $table->string('first_name');
+      $table->string('last_name');
       $table->string('position');
       $table->timestamps();
       $table->softDeletes();

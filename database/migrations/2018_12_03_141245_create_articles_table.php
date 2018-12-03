@@ -13,6 +13,8 @@ class CreateArticlesTable extends Migration {
   public function up() {
     Schema::create('articles', function (Blueprint $table) {
       $table->increments('id');
+      $table->unsignedInteger('author_id');
+      $table->foreign('author_id')->references('id')->on('authors');
       $table->string('title');
       $table->date('date');
       $table->text('content');

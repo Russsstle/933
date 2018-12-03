@@ -16,13 +16,13 @@ class Tag extends Model {
    * @var array
    */
   protected $fillable = [
-    'name'
+    'content'
   ];
 
   /**
    * @return mixed
    */
   public function articles() {
-    return $this->belongsToMany('App\Article');
+    return $this->belongsTo('App\Article');
   }
 }

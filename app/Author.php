@@ -16,13 +16,20 @@ class Author extends Model {
    * @var array
    */
   protected $fillable = [
-    'name', 'position'
+    'first_name', 'last_name', 'position'
   ];
 
   /**
    * @return mixed
    */
   public function articles() {
-    return $this->belongsToMany('App\Article');
+    return $this->belongsTo('App\Article');
+  }
+
+  /**
+   * @return mixed
+   */
+  public function users() {
+    return $this->belongsTo('App\User');
   }
 }

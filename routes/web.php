@@ -1,5 +1,9 @@
 <?php
 
+use App\Article;
+use App\Author;
+use App\Tag;
+use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
