@@ -24,13 +24,20 @@ class Author extends Model {
    * @return mixed
    */
   public function articles() {
-    return $this->belongsTo('App\Article');
+    return $this->belongsTo('App\Article', 'article_id');
   }
 
   /**
    * @return mixed
    */
   public function users() {
-    return $this->belongsTo('App\User');
+    return $this->belongsTo('App\User', 'user_id');
+  }
+
+  /**
+   * @return mixed
+   */
+  public function getNameAttribute() {
+    return $this->first_name . ' ' . $this->last_name;
   }
 }

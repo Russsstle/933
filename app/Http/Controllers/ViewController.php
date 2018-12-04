@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Author;
+use App\User;
 
 class ViewController extends Controller {
   protected function home() {
@@ -60,17 +61,17 @@ class ViewController extends Controller {
     return view('cpanel.author.index', ['data' => Author::all()]);
   }
   protected function authorAdd() {
-    return view('cpanel.author.add');
+    return view('cpanel.author.add', ['users' => User::all()]);
   }
 
   /**
    * @param $id
    */
   protected function authorEdit($id) {
-    return view('cpanel . author . edit', ['row' => Author::find($id)]);
+    return view('cpanel.author.edit', ['row' => Author::find($id), 'users' => User::all()]);
   }
   protected function update() {
-    putenv('PATH =  / usr / bin');
-    return ' < pre > ' . shell_exec('cd / var  / www / html / 933 && gitpulloriginmaster2 >  & 1') . ' <  / pre > ';
+    putenv('PATH=/usr/bin');
+    return '<pre>' . shell_exec('cd/var/www/html/933 && git pull origin master 2>&1') . '</pre>';
   }
 }

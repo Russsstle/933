@@ -6,3 +6,7 @@
   background-color: $btn-primary-bg-color;
   color: $btn-primary-color;
 }
+
+.form-control:focus {
+  box-shadow: none;
+}

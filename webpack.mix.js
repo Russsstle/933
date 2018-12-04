@@ -26,7 +26,8 @@ mix.combine(
   [
     'resources/css/packages/bootstrap.min.css',
     'resources/css/packages/font-awesome.min.css',
-    'resources/css/packages/dataTables.bootstrap4.min.css'
+    'resources/css/packages/dataTables.bootstrap4.min.css',
+    'resources/css/packages/sweetalert2.min.css'
   ],
   'public/css/cpanel/packages.css'
 )
@@ -39,7 +40,9 @@ mix.combine(
     'resources/js/packages/jquery.min.js',
     'resources/js/packages/bootstrap.min.js',
     'resources/js/packages/jquery.dataTables.min.js',
-    'resources/js/packages/dataTables.bootstrap4.min.js'
+    'resources/js/packages/dataTables.bootstrap4.min.js',
+    'resources/js/packages/sweetalert2.all.min.js',
+    'resources/js/packages/loadingoverlay.min.js'
   ],
   'public/js/cpanel/packages.js'
 )

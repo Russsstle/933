@@ -9,24 +9,24 @@
     <table class="datatable table table-striped table-bordered">
       <thead>
         <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th width="5%">ID</th>
+          <th>Name</th>
           <th>Position</th>
           <th width="5%">Action</th>
         </tr>
       </thead>
       <tbody>
-        @foreach(\App\Author::all() as $row)
+        @foreach(\App\Author::all() as $id => $row)
           <tr>
-            <td>{{ $row->first_name }}</td>
-            <td>{{ $row->last_name }}</td>
+            <td>{{ $id + 1 }}</td>
+            <td>{{ $row->name }}</td>
             <td>{{ $row->position }}</td>
             <td>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/edit/' . $row->id) }}">
-                <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/' . $row->id . "/edit") }}">
+                <i class="fa fa-pencil-square-o"></i>&nbsp;Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/delete/' . $row->id) }}">
-                <i class="fa fa-trash"></i>&nbsp; Delete
+              <a class="btn btn-primary btn-sm btn-block btnDeleteAuthor" href="javascript:void(0)" data-id="{{ $row->id }}">
+                <i class="fa fa-trash"></i>&nbsp;Delete
               </a>
             </td>
           </tr>
