@@ -34,6 +34,7 @@ Route::prefix('cpanel')->group(function () {
   Route::middleware('auth')->group(function () {
     Route::get('/', 'ViewController@cpanel');
     Route::get('article', 'ViewController@article');
+    Route::get('author_edit', 'ViewController@authorEdit');
     Route::get('author', 'ViewController@author');
     Route::get('logout', 'AuthController@logout');
   });

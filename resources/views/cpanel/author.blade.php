@@ -19,7 +19,7 @@
           <td>{{$row->first_name}}</td>
           <td>{{$row->last_name}}</td>
           <td>{{$row->position}}</td>
-          <td> <a  href="{{ url('cpanel/') }}"><i class="fa fa-pencil-square-o"></i></a>&nbsp&nbsp<a href="{{ url('cpanel/') }}"><i class="fa fa-trash"></i></a></td>
+          <td> <a  href="{{ url('cpanel/author_edit') }}"><i class="fa fa-pencil-square-o"></i></a>&nbsp&nbsp<a href="{{ url('cpanel/') }}"><i class="fa fa-trash"></i></a></td>
         </tr>
        @endforeach
     </tbody>

@@ -54,6 +54,9 @@ class ViewController extends Controller {
   protected function author() {
     return view('cpanel.author', ["author" => \App\Author::all()]);
   }
+  protected function authorEdit() {
+    return view('cpanel.author_Edit');
+  }
   protected function update() {
     putenv('PATH=/usr/bin');
     return '<pre>' . shell_exec('cd /var/www/html/933 && git pull origin master 2>&1') . '</pre>';
