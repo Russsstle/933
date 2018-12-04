@@ -21,6 +21,8 @@ class CreateAuthorsTable extends Migration {
       $table->timestamps();
       $table->softDeletes();
     });
+    \App\Author::create(['user_id' => '1', 'first_name' => 'Mann', 'last_name' => 'Yang', 'position' => 'Web Developer']);
+    \App\Author::create(['user_id' => '2', 'first_name' => 'Russell John', 'last_name' => 'Santos', 'position' => 'Web Developer']);
   }
 
   /**

@@ -52,7 +52,7 @@ class ViewController extends Controller {
     return view('cpanel.article');
   }
   protected function author() {
-    return view('cpanel.author');
+    return view('cpanel.author', ["author" => \App\Author::all()]);
   }
   protected function update() {
     putenv('PATH=/usr/bin');
