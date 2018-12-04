@@ -1,9 +1,5 @@
 <?php
 
-use App\Article;
-use App\Author;
-use App\Tag;
-use App\User;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -37,6 +33,8 @@ Route::prefix('cpanel')->group(function () {
   Route::post('login', 'AuthController@login');
   Route::middleware('auth')->group(function () {
     Route::get('/', 'ViewController@cpanel');
+    Route::get('article', 'ViewController@article');
+    Route::get('author', 'ViewController@author');
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');
