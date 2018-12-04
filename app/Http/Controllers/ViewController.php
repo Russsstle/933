@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Author;
+
 class ViewController extends Controller {
   protected function home() {
     return view('website.home');
@@ -52,7 +54,16 @@ class ViewController extends Controller {
     return view('cpanel.article');
   }
   protected function author() {
-    return view('cpanel.author', ["author" => \App\Author::all()]);
+    return view('cpanel.author.index', ['data' => Author::all()]);
+  }
+  protected function authorAdd() {
+    return view('cpanel.author.add');
+  }
+  /**
+   * @param $id
+   */
+  protected function authorEdit($id) {
+    return view('cpanel.author.edit', ['row' => Author::find($id)]);
   }
   protected function update() {
     putenv('PATH=/usr/bin');

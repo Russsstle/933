@@ -26,18 +26,18 @@
     <nav class="side-navbar">
       <ul class="list-unstyled">
         <li class="{{ active('cpanel') }}">
-          <a href="{{ url('cpanel/') }}">
+          <a href="{{ url('cpanel') }}">
             <i class="fa fa-home"></i>
             Home
           </a>
         </li>
-        <li class="{{ active('cpanel/article') }}">
-          <a href="{{ url('article') }}">
+        <li class="{{ active('cpanel/article*') }}">
+          <a href="{{ url('cpanel/article') }}">
             <i class="fa fa-newspaper-o"></i>
             Article
           </a>
         </li>
-        <li class="{{ active('cpanel/author') }}">
+        <li class="{{ active('cpanel/author*') }}">
           <a href="{{ url('cpanel/author') }}">
             <i class="fa fa-user"></i>
             Author
@@ -57,18 +57,12 @@
       </ul>
     </nav>
     <div class="content-inner">
-      <section class="dashboard-counts no-padding-bottom">
-        <div class="container-fluid">
-          @yield("body")
-        </div>
+      <section class="no-padding-bottom">
+        @yield("body")
       </section>
       <footer class="main-footer">
         <div class="container-fluid">
-          <div class="row">
-            <div class="col-sm-6">
-              <p>&copy; 2018 933 Co-Working Mnl. All Rights Reserved</p>
-            </div>
-          </div>
+          <p>&copy; 2018 933 Co-Working Mnl. All Rights Reserved</p>
         </div>
       </footer>
     </div>

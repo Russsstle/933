@@ -1,8 +1,9 @@
 @import 'variables';
 @import '../fonts';
 @import '../margin_padding_helper_mixin';
-@import 'template/fontastic.css';
-@import 'template/style.sea.css';
+@import 'template/fontastic';
+@import 'template/style.sea';
+@import 'bootstrap-custom';
 
 nav.navbar,
 nav.side-navbar ul li.active > a,
@@ -14,8 +15,10 @@ nav.side-navbar ul li a:hover {
   background: $nav-color;
 }
 
-.right{
+.content-inner section {
+  padding: 15px;
+}
 
-  margin-top:100px;
-  float:right;
+.form-group {
+  position: relative;
 }
