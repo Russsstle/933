@@ -22,10 +22,10 @@
             <td>{{ $row->last_name }}</td>
             <td>{{ $row->position }}</td>
             <td>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/edit/' . $row->id) }}">
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/edit/' . $row->id) }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/delete/' . $row->id) }}">
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/delete/' . $row->id) }}">
                 <i class="fa fa-trash"></i>&nbsp; Delete
               </a>
             </td>
