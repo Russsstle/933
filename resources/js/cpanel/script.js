@@ -6,6 +6,5 @@ $(document).ready(function() {
       'X-CSRF-TOKEN': $('meta[name="token"]').attr('content')
     }
   })
-  $('#dtBasicExample').DataTable();
-  $('.dataTables_length').addClass('bs-select');
+  $('#author').DataTable();
 });

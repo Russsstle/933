@@ -25,10 +25,22 @@
   <div class="page-content d-flex align-items-stretch">
     <nav class="side-navbar">
       <ul class="list-unstyled">
-        <li class="active">
-          <a href="index.html">
+        <li class="{{ active('cpanel') }}">
+          <a href="{{ url('cpanel/') }}">
             <i class="fa fa-home"></i>
             Home
+          </a>
+        </li>
+        <li class="{{ active('cpanel/article') }}">
+          <a href="{{ url('article') }}">
+            <i class="fa fa-newspaper-o"></i>
+            Article
+          </a>
+        </li>
+        <li class="{{ active('cpanel/author') }}">
+          <a href="{{ url('cpanel/author') }}">
+            <i class="fa fa-user"></i>
+            Author
           </a>
         </li>
         <li>
