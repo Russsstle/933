@@ -31,14 +31,6 @@
           <i class="fa fa-save"></i>&nbsp;Save
         </button>
       </div>
-      <div class="form-group">
-        <input id="email" type="email" name="email" required data-msg="Please enter your email" class="input-material">
-        <label for="email" class="label-material">Email Address</label>
-      </div>
-      <div class="form-group">
-        <input id="password" type="password" name="password" required data-msg="Please enter your password" class="input-material">
-        <label for="password" class="label-material">Password</label>
-      </div>
     </form>
   </div>
 </div>

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Author;
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller {
@@ -12,7 +14,6 @@ class AuthorController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function index() {
-
     return Author::all();
   }
 
@@ -22,37 +23,64 @@ class AuthorController extends Controller {
    * @param  \Illuminate\Http\Request  $request
    * @return \Illuminate\Http\Response
    */
+  public function store(Request $request) {
+    $author = new Author;
+
+    $author->users()->associate(User::find($request->user_id));
+
+    $author->fill($request->only(['first_name', 'last_name', 'position']));
+
+    if ($author->save()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
+    }
+  }
 
   /**
    * Display the specified resource.
    *
-   * @param  \App\User  $user
+   * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function show(Author $author) {
-    return Author::findOrFail($author)->first();
+  public function show($id) {
+    return Author::firstOrFail($id);
   }
 
   /**
    * Update the specified resource in storage.
    *
    * @param  \Illuminate\Http\Request  $request
-   * @param  \App\User  $user
+   * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function update(Request $request, Author $author) {
+  public function update(Request $request, $id) {
+    $author = Author::find($id);
 
+    $author->users()->associate(User::find($request->user_id));
+
+    $author->fill($request->only(['first_name', 'last_name', 'position']));
+
+    if ($author->save()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error updating the record.']);
+    }
   }
 
   /**
    * Remove the specified resource from storage.
    *
-   * @param  \App\User  $user
+   * @param  int  $id
    * @return \Illuminate\Http\Response
    */
-  public function destroy(Author $author) {
-    $author->delete();
+  public function destroy($id) {
+    $author = Author::find($id);
 
-    return response()->json(['success' => true]);
+    if ($author->delete()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error deleting the record.']);
+    }
   }
 }
