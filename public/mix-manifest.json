@@ -1,12 +1,12 @@
 {
-    "/css/website/app.css": "/css/website/app.css",
-    "/css/website/app-responsive.css": "/css/website/app-responsive.css",
-    "/css/cpanel/app.css": "/css/cpanel/app.css",
-    "/css/cpanel/app-responsive.css": "/css/cpanel/app-responsive.css",
-    "/css/website/packages.css": "/css/website/packages.css",
-    "/js/website/packages.js": "/js/website/packages.js",
-    "/js/website/app.js": "/js/website/app.js",
-    "/css/cpanel/packages.css": "/css/cpanel/packages.css",
-    "/js/cpanel/packages.js": "/js/cpanel/packages.js",
-    "/js/cpanel/app.js": "/js/cpanel/app.js"
+    "/css/website/app.css": "/css/website/app.css?id=c361fae14745014d4e7e",
+    "/css/website/app-responsive.css": "/css/website/app-responsive.css?id=0e5aa8e41dd3c1461fe6",
+    "/css/cpanel/app.css": "/css/cpanel/app.css?id=b68f3da96029d6a429a2",
+    "/css/cpanel/app-responsive.css": "/css/cpanel/app-responsive.css?id=d41d8cd98f00b204e980",
+    "/css/website/packages.css": "/css/website/packages.css?id=ec1df3ba49973dcb9ff2",
+    "/js/website/packages.js": "/js/website/packages.js?id=e2a7c0718d8fae34e237",
+    "/js/website/app.js": "/js/website/app.js?id=b121b7497cd4aa431bcf",
+    "/css/cpanel/packages.css": "/css/cpanel/packages.css?id=d87a3780272e1bd83e37",
+    "/js/cpanel/packages.js": "/js/cpanel/packages.js?id=c7d2adfc89c40aad646b",
+    "/js/cpanel/app.js": "/js/cpanel/app.js?id=752ccd7b770d21c0b538"
 }
