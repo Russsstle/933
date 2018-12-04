@@ -43,7 +43,7 @@
             Author
           </a>
         </li>
-        <li>
+        <!-- <li>
           <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-file"></i>
             Example dropdown
@@ -53,7 +53,7 @@
             <li><a href="#">Page</a></li>
             <li><a href="#">Page</a></li>
           </ul>
-        </li>
+        </li> -->
       </ul>
     </nav>
     <div class="content-inner">

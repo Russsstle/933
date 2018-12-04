@@ -39,6 +39,10 @@ Route::prefix('cpanel')->group(function () {
       Route::get('add', 'ViewController@authorAdd');
       Route::get('edit/{id}', 'ViewController@authorEdit');
     });
+    Route::prefix('article')->group(function () {
+      Route::get('/', 'ViewController@article');
+      Route::get('add', 'ViewController@articleAdd');
+    });
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');
