@@ -21,7 +21,7 @@ class CreateArticlesTable extends Migration {
       $table->timestamps();
       $table->softDeletes();
     });
-    // \App\Author::create(['user_id' => '1', 'title' => 'Laravel Is Life', 'date' => '12-19-2018', 'content' => 'Sad']);
+    \App\Article::create(['author_id' => '1', 'title' => 'Laravel Is Life', 'date' => '2018-12-01', 'content' => 'Sad']);
   }
 
   /**

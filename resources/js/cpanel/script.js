@@ -1,6 +1,5 @@
 const main_url = $('base').attr('href') + 'cpanel/'
 const api_url = $('base').attr('href') + 'api/'
-
 $(document).ready(function() {
   $.ajaxSetup({
     headers: {
@@ -19,10 +18,25 @@ $(document).ready(function() {
   })
   $('.datatable').DataTable()
 })
-
+$('form[name=frmAddArticle]').submit(function(e) {
+  e.preventDefault()
+  $.ajax({
+    context: this,
+    url: api_url + 'articles',
+    type: 'POST',
+    data: $(this).serialize()
+  }).done(function(response) {
+    if (response.success) {
+      swal('Added Successfully!', null, 'success').then(function() {
+        location.href = main_url + 'article'
+      })
+    } else {
+      swal('Error!', response.error, 'warning')
+    }
+  })
+})
 $('form[name=frmAddAuthor]').submit(function(e) {
   e.preventDefault()
-
   $.ajax({
     context: this,
     url: api_url + 'authors',
@@ -38,12 +52,9 @@ $('form[name=frmAddAuthor]').submit(function(e) {
     }
   })
 })
-
 $('form[name=frmEditAuthor]').submit(function(e) {
   e.preventDefault()
-
   let id = $(this).data('id')
-
   $.ajax({
     context: this,
     url: api_url + 'authors/' + id,
@@ -59,12 +70,9 @@ $('form[name=frmEditAuthor]').submit(function(e) {
     }
   })
 })
-
 $('.btnDeleteAuthor').click(function(e) {
   e.preventDefault()
-
   let id = $(this).data('id')
-
   swal({
     title: 'Are you sure\nyou want to delete this data?',
     type: 'warning',

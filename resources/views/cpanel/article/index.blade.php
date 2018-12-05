@@ -9,6 +9,7 @@
     <table class="datatable table table-striped table-bordered">
       <thead>
         <tr>
+          <th width="5%">ID</th>
           <th>Title</th>
           <th>Author</th>
           <th>Date</th>
@@ -17,8 +18,9 @@
         </tr>
       </thead>
       <tbody>
-        @foreach(\App\Article::join('authors', 'authors.id', '=', 'articles.author_id')->get() as $row)
+        @foreach(\App\Article::join('authors', 'authors.id', '=', 'articles.author_id')->get() as $id => $row )
           <tr>
+            <td>{{  $id + 1  }}</td>
             <td>{{ $row->title }}</td>
             <td>{!! $row->first_name.' '. $row->last_name!!}</td>
             <td>{{ $row->date }}</td>
@@ -27,7 +29,7 @@
               <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/edit/' . $row->id) }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/delete/' . $row->id) }}">
+              <a class="btn btn-primary btn-sm btn-block" href="javascript:void(0)" data-id>
                 <i class="fa fa-trash"></i>&nbsp; Delete
               </a>
             </td>

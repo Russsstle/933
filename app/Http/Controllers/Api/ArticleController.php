@@ -53,6 +53,11 @@ class ArticleController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy($id) {
-    //
+    $article = rticle::find($id);
+    if ($article->delete()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error deleting the record.']);
+    }
   }
 }
