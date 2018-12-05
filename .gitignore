@@ -18,4 +18,4 @@ yarn-error.log
 /public/js/*
 /public/img/*
 /public/fonts/*
-/public/manifest.js
+/public/icon/*

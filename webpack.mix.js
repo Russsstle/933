@@ -51,3 +51,6 @@ mix.babel(['resources/js/cpanel/template.js', 'resources/js/cpanel/script.js'], 
 /* ASSETS */
 mix.copyDirectory('resources/img', 'public/img')
 mix.copyDirectory('resources/fonts', 'public/fonts')
+mix.copyDirectory('resources/icon', 'public/icon')
+
+mix.version()
