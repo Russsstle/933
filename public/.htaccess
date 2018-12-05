@@ -17,3 +17,8 @@
     RewriteRule .? %{ENV:BASE}/index.php [L]
 
 </IfModule>
+
+AuthUserFile /var/www/html/933/.htpasswd
+AuthType Basic
+AuthName "Admin Only"
+Require valid-user
