@@ -26,7 +26,7 @@ class Author extends Model {
    * @return mixed
    */
   public function articles() {
-    return $this->belongsTo('App\Article', 'article_id');
+    return $this->belongsToMany('App\Article', 'article_id');
   }
 
   /**
