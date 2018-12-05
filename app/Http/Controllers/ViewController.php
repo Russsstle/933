@@ -52,12 +52,18 @@ class ViewController extends Controller {
   protected function cpanel() {
     return view('cpanel.index');
   }
+  protected function user() {
+    return view('cpanel.user.index', ['data' => User::all()]);
+  }
   protected function article() {
     return view('cpanel.article.index', ['data' => Article::with('authors')->get()]);
   }
   protected function articleAdd() {
     return view('cpanel.article.add', ['authors' => Author::all()]);
   }
+  /**
+   * @param $id
+   */
   protected function articleEdit($id) {
     return view('cpanel.article.edit', ['row' => Article::find($id), 'authors' => Author::all()]);
   }

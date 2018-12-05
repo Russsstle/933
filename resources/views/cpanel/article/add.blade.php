@@ -23,6 +23,10 @@
         <textarea id="content" name="content" class="form-control" required></textarea>
       </div>
       <div class="form-group">
+        <label for="tags" class="form-control-label">tags</label>
+        <input id="tags" name="tags" data-role="tagsinput" class="form-control" required>
+      </div>
+      <div class="form-group">
         <label for="date" class="form-control-label">Date</label>
         <input id="date" type="date" name="date" class="form-control" required>
       </div>

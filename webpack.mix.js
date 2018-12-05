@@ -27,7 +27,7 @@ mix.combine(
     'resources/css/packages/bootstrap.min.css',
     'resources/css/packages/font-awesome.min.css',
     'resources/css/packages/dataTables.bootstrap4.min.css',
-    'resources/css/packages/bootstrap-tagsinput.css',
+    'resources/css/packages/tagsinput.css',
     'resources/css/packages/sweetalert2.min.css'
   ],
   'public/css/cpanel/packages.css'
@@ -43,7 +43,7 @@ mix.combine(
     'resources/js/packages/jquery.dataTables.min.js',
     'resources/js/packages/jquery.serializejson.min.js',
     'resources/js/packages/dataTables.bootstrap4.min.js',
-    'resources/js/packages/bootstrap-tagsinput.min.js',
+    'resources/js/packages/tagsinput.js',
     'resources/js/packages/sweetalert2.all.min.js',
     'resources/js/packages/loadingoverlay.min.js'
   ],
