@@ -23,9 +23,9 @@
   <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icon/favicon-96x96.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icon/favicon-16x16.png') }}">
   <link rel="manifest" href="{{ asset('icon/manifest.json') }}">
-  <link rel="stylesheet" href="{{ mix('css/cpanel/packages.css') }}">
-  <link rel="stylesheet" href="{{ mix('css/cpanel/app.css') }}">
-  <link rel="stylesheet" href="{{ mix('css/cpanel/app-responsive.css') }}" media="screen and (max-width:767px)">
+  <link rel="stylesheet" href="{{ url('/') . mix('css/cpanel/packages.css') }}">
+  <link rel="stylesheet" href="{{ url('/') . mix('css/cpanel/app.css') }}">
+  <link rel="stylesheet" href="{{ url('/') . mix('css/cpanel/app-responsive.css') }}" media="screen and (max-width:767px)">
   <title>933 Co-working Manila</title>
 </head>
 <body>
@@ -46,7 +46,7 @@
     @yield("body")
   @overwrite
   @include("cpanel.layouts.sidebar")
-  <script src="{{ mix('js/cpanel/packages.js') }}"></script>
-  <script src="{{ mix('js/cpanel/app.js') }}"></script>
+  <script src="{{ url('/') . mix('js/cpanel/packages.js') }}"></script>
+  <script src="{{ url('/') . mix('js/cpanel/app.js') }}"></script>
 </body>
 </html>
