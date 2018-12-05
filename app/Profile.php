@@ -5,33 +5,34 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Article extends Model {
+class Profile extends Model {
   use SoftDeletes;
   /**
    * @var array
    */
-  protected $dates = ['deleted_at', 'date'];
+  protected $dates = ['deleted_at'];
 
   /**
    * The attributes that are mass assignable.
    *
    * @var array
    */
+
   protected $fillable = [
-    'author_id', 'title', 'date', 'content'
+    'user_id', 'first_name', 'last_name', 'position'
   ];
 
   /**
    * @return mixed
    */
-  public function authors() {
-    return $this->belongsTo('App\Author', 'author_id');
+  public function users() {
+    return $this->belongsTo('App\User', 'user_id');
   }
 
   /**
    * @return mixed
    */
-  public function tags() {
-    return $this->hasMany('App\Tag');
+  public function getNameAttribute() {
+    return $this->first_name . ' ' . $this->last_name;
   }
 }

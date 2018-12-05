@@ -138,10 +138,8 @@ nav ul li.active {
 }
 
 .content,
-.home-content,
 .blog-content {
   padding: 40px 288px;
-  z-index: -1;
 }
 
 .dropdown-content li {
@@ -180,12 +178,29 @@ nav ul li.active {
 }
 
 .home-content {
+  padding: 128px 288px;
+
   &:nth-child(even) {
     background-color: $home-content-alternative-color;
   }
-
   &:first-child {
     margin-top: -65px;
+  }
+  .title {
+    font-size: 34px;
+  }
+  p {
+    font-size: 16px;
+  }
+  .card-price {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  .card-title {
+    font-size: 24pt;
+  }
+  .home-price-time {
+    padding: 35px;
   }
 }
 
@@ -316,32 +331,4 @@ svg.waves {
 
 .bubble {
   border-radius: 50% 50% 0% 0% / 36% 26% 0% 0%;
-}
-
-.title-size{
-  font-size:34pt
-}
-.content-size{
-  font-size:16pt
-}
-.home-padding{
-  padding-top:120px;
-  paddint-bottom:120px
-}
-.home-price-time{
-  padding:35px
-}
-.home-price-time >.col {
-  span{
-    font-size:24pt
-  } 
-  p{
-    font-size:16pt
-  }
-}
-.margin-top{
-  margin-top:35px
-}
-.link-font-size{
-  font-size:16pt
 }

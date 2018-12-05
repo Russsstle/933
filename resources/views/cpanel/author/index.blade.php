@@ -16,7 +16,7 @@
         </tr>
       </thead>
       <tbody>
-        @foreach(\App\Author::all() as $id => $row)
+        @foreach($data as $id => $row)
           <tr>
             <td>{{ $id + 1 }}</td>
             <td>{{ $row->name }}</td>
@@ -25,7 +25,7 @@
               <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/' . $row->id . "/edit") }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp;Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block btnDeleteAuthor" href="javascript:void(0)" data-id="{{ $row->id }}">
+              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="authors/{{ $row->id }}" data-redirect="author">
                 <i class="fa fa-trash"></i>&nbsp;Delete
               </a>
             </td>

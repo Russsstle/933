@@ -1,4 +1,5 @@
 @extends("website.layouts.app")
+
 @section("body")
 <div class="slider">
   <ul class="slides">
@@ -69,33 +70,33 @@
     </div>
   </div>
 </div>
-<div class="home-content home-padding">
+<div class="home-content">
   <div class="row">
     <div class="col s12 m5 white-text">
-      <span class="text-bold title-size">
+      <div class="text-bold title">
         Budget-friendly<br>
         to students
-      </span>
-      <p class="content-size">
+      </div>
+      <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
       </p>
     </div>
     <div class="col s12 m6 offset-m1">
       <div class="row white center-align home-price-time">
-        <div class="col s12 m4 ">
-          <span>1 hour</span>
+        <div class="col s12 m4">
+          <div class="card-title">1 hour</div>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
-          <span>₱ 50</span>
+          <div class="card-title">₱ 50</div>
         </div>
         <div class="col s12 m4">
-          <span>4 hours</span>
+          <div class="card-title">4 hours</div>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
-          <span>₱ 100</span>
+          <div class="card-title">₱ 100</div>
         </div>
         <div class="col s12 m4">
-          <span>Day Pass</span>
+          <div class="card-title">Day Pass</div>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
-          <span>₱ 250</span>
+          <div class="card-title">₱ 250</div>
         </div>
       </div>
       <a class="waves-effect btn-flat white-text margin-top link-font-size" href="{{ url('services/main') }}">

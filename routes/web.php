@@ -33,7 +33,6 @@ Route::prefix('cpanel')->group(function () {
   Route::post('login', 'AuthController@login');
   Route::middleware('auth')->group(function () {
     Route::get('/', 'ViewController@cpanel');
-    Route::get('article', 'ViewController@article');
     Route::prefix('author')->group(function () {
       Route::get('/', 'ViewController@author');
       Route::get('add', 'ViewController@authorAdd');
@@ -42,8 +41,13 @@ Route::prefix('cpanel')->group(function () {
     Route::prefix('article')->group(function () {
       Route::get('/', 'ViewController@article');
       Route::get('add', 'ViewController@articleAdd');
+      Route::get('{id}/edit', 'ViewController@articleEdit');
     });
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');
+});
+
+Route::get('test', function () {
+  return \App\Article::with('authors')->get();
 });

@@ -18,18 +18,18 @@
         </tr>
       </thead>
       <tbody>
-        @foreach(\App\Article::join('authors', 'authors.id', '=', 'articles.author_id')->get() as $id => $row )
+        @foreach($data as $id => $row)
           <tr>
             <td>{{  $id + 1  }}</td>
             <td>{{ $row->title }}</td>
-            <td>{!! $row->first_name.' '. $row->last_name!!}</td>
-            <td>{{ $row->date }}</td>
+            <td>{{ $row->authors->users->profiles->name }}</td>
+            <td>{{ $row->date->format('F d, Y') }}</td>
             <td>{{ $row->content }}</td>
             <td>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/edit/' . $row->id) }}">
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/article/' . $row->id.'/edit') }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block" href="javascript:void(0)" data-id>
+              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="articles/{{ $row->id }}" data-redirect="article">
                 <i class="fa fa-trash"></i>&nbsp; Delete
               </a>
             </td>

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\Article;
+use App\Author;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -22,7 +24,17 @@ class ArticleController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request) {
-    //
+    $article = new Article;
+
+    $article->authors()->associate(Author::find($request->author_id));
+
+    $article->fill($request->only(['title', 'content', 'date']));
+
+    if ($article->save()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
+    }
   }
 
   /**
@@ -43,7 +55,17 @@ class ArticleController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function update(Request $request, $id) {
-    //
+    $article = Article::find($id);
+
+    $article->authors()->associate(Author::find($request->author_id));
+
+    $article->fill($request->only(['title', 'content', 'date']));
+
+    if ($article->save()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error updating the record.']);
+    }
   }
 
   /**
@@ -53,7 +75,8 @@ class ArticleController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy($id) {
-    $article = rticle::find($id);
+    $article = Article::find($id);
+
     if ($article->delete()) {
       return response()->json(['success' => true]);
     } else {

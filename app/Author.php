@@ -1,6 +1,7 @@
 <?php
 
 namespace App;
+
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -18,7 +19,7 @@ class Author extends Model {
    */
 
   protected $fillable = [
-    'user_id', 'first_name', 'last_name', 'position'
+    'user_id', 'display_name'
   ];
 
   /**
@@ -33,12 +34,5 @@ class Author extends Model {
    */
   public function users() {
     return $this->belongsTo('App\User', 'user_id');
-  }
-
-  /**
-   * @return mixed
-   */
-  public function getNameAttribute() {
-    return $this->first_name . ' ' . $this->last_name;
   }
 }

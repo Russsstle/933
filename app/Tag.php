@@ -6,11 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tag extends Model {
   /**
-   * @var array
-   */
-  protected $dates = ['deleted_at'];
-
-  /**
    * The attributes that are mass assignable.
    *
    * @var array

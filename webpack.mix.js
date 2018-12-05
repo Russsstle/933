@@ -40,6 +40,7 @@ mix.combine(
     'resources/js/packages/jquery.min.js',
     'resources/js/packages/bootstrap.min.js',
     'resources/js/packages/jquery.dataTables.min.js',
+    'resources/js/packages/jquery.serializejson.min.js',
     'resources/js/packages/dataTables.bootstrap4.min.js',
     'resources/js/packages/sweetalert2.all.min.js',
     'resources/js/packages/loadingoverlay.min.js'

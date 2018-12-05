@@ -41,6 +41,13 @@ class User extends Authenticatable {
   }
 
   /**
+   * @return mixed
+   */
+  public function profiles() {
+    return $this->hasOne("App\Profile");
+  }
+
+  /**
    * @param $password
    */
   protected function setPasswordAttribute($password) {

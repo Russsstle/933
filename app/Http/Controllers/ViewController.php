@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Article;
 use App\Author;
 use App\User;
 
@@ -52,10 +53,13 @@ class ViewController extends Controller {
     return view('cpanel.index');
   }
   protected function article() {
-    return view('cpanel.article.index');
+    return view('cpanel.article.index', ['data' => Article::with('authors')->get()]);
   }
   protected function articleAdd() {
-    return view('cpanel.article.add');
+    return view('cpanel.article.add', ['authors' => Author::all()]);
+  }
+  protected function articleEdit($id) {
+    return view('cpanel.article.edit', ['row' => Article::find($id), 'authors' => Author::all()]);
   }
   protected function author() {
     return view('cpanel.author.index', ['data' => Author::all()]);
