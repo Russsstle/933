@@ -31,6 +31,12 @@
             Home
           </a>
         </li>
+        <li class="{{ active('cpanel/user*') }}">
+          <a href="{{ url('cpanel/user') }}">
+            <i class="fa fa-user-circle"></i>
+            User
+          </a>
+        </li>
         <li class="{{ active('cpanel/article*') }}">
           <a href="{{ url('cpanel/article') }}">
             <i class="fa fa-newspaper-o"></i>
@@ -39,10 +45,11 @@
         </li>
         <li class="{{ active('cpanel/author*') }}">
           <a href="{{ url('cpanel/author') }}">
-            <i class="fa fa-user"></i>
+            <i class="fa fa-address-book"></i>
             Author
           </a>
         </li>
+
         <!-- <li>
           <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-file"></i>

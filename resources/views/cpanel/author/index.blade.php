@@ -19,8 +19,8 @@
         @foreach($data as $id => $row)
           <tr>
             <td>{{ $id + 1 }}</td>
-            <td>{{ $row->name }}</td>
-            <td>{{ $row->position }}</td>
+            <td>{{ $row->users->profiles->name }}</td>
+            <td>{{ $row->users->profiles->position }}</td>
             <td>
               <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/' . $row->id . "/edit") }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp;Edit

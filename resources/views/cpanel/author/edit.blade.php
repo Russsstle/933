@@ -15,15 +15,15 @@
       </div>
       <div class="form-group">
         <label for="first_name" class="form-control-label">First Name</label>
-        <input id="first_name" type="text" name="first_name" class="form-control" value="{{ $row->first_name }}" required>
+        <input id="first_name" type="text" name="first_name" class="form-control" value="{{ $row->users->profiles->first_name }}" required>
       </div>
       <div class="form-group">
         <label for="last_name" class="form-control-label">Last Name</label>
-        <input id="last_name" type="text" name="last_name" class="form-control" value="{{ $row->last_name }}" required>
+        <input id="last_name" type="text" name="last_name" class="form-control" value="{{ $row->users->profiles->last_name }}" required>
       </div>
       <div class="form-group">
         <label for="position" class="form-control-label">Position</label>
-        <input id="position" type="text" name="position" class="form-control" value="{{ $row->position }}" required>
+        <input id="position" type="text" name="position" class="form-control" value="{{ $row->users->profiles->position }}" required>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">
