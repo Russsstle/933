@@ -25,7 +25,7 @@ class UserController extends Controller {
   public function store(Request $request) {
     $user = new User;
 
-    $user->fill($request->only(['email_address', 'password']));
+    $user->fill($request->only(['username', 'email_address', 'password']));
 
     if ($user->save()) {
       return response()->json(['success' => true]);
@@ -54,7 +54,7 @@ class UserController extends Controller {
   public function update(Request $request, $id) {
     $user = User::find($id);
 
-    $user->fill($request->only(['email_address', 'password']));
+    $user->fill($request->only(['username', 'email_address', 'password']));
 
     if ($user->save()) {
       return response()->json(['success' => true]);

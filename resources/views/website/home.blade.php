@@ -172,7 +172,7 @@
   </div>
 </div>
 <div class="home-content">
-  <div class="row flex-s">
+  <div class="row flex-s marg">
     <div class="col s12 m7 box-a">
       <div class="row" style="margin-top:50px">
         <div class="col s12 m4">

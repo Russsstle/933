@@ -3,10 +3,10 @@
 @section("body")
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title">Edit Author</h4>
+    <h4 class="card-title">Edit Article</h4>
      <form name="frmEditData" data-url="articles/{{ $row->id }}" data-redirect="article">
       <div class="form-group">
-        <label for="author" class="form-control-label">Author</label>
+        <label for="author" class="form-control-label">Article</label>
         <select id="author" class="form-control" name="author_id" required>
           @foreach($authors as $author)
             <option value="{{ $author->id }}" {{ $author->id == $row->id ? "selected" : "" }}>{{ $author->users->profiles->name }}</option>

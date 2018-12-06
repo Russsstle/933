@@ -33,6 +33,11 @@ Route::prefix('cpanel')->group(function () {
   Route::post('login', 'AuthController@login');
   Route::middleware('auth')->group(function () {
     Route::get('/', 'ViewController@cpanel');
+    Route::prefix('user')->group(function () {
+      Route::get('/', 'ViewController@user');
+      Route::get('add', 'ViewController@userAdd');
+      Route::get('{id}/edit', 'ViewController@userEdit');
+    });
     Route::prefix('author')->group(function () {
       Route::get('/', 'ViewController@author');
       Route::get('add', 'ViewController@authorAdd');
