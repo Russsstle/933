@@ -56,7 +56,7 @@ class ViewController extends Controller {
     return view('cpanel.user.index', ['data' => User::all()]);
   }
   protected function userAdd() {
-    return view('cpanel.user.add', ['data' => User::all()]);
+    return view('cpanel.user.add');
   }
   protected function userEdit($id) {
     return view('cpanel.user.edit', ['row' => User::find($id), 'users' => User::all()]);
