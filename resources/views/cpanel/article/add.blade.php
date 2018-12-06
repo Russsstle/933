@@ -24,7 +24,7 @@
       </div>
       <div class="form-group">
         <label for="tags" class="form-control-label">tags</label>
-        <input id="tags" name="tags" data-role="tagsinput" class="form-control" required>
+        <input id="tags" name="tags"  class="form-control" required>
       </div>
       <div class="form-group">
         <label for="date" class="form-control-label">Date</label>
