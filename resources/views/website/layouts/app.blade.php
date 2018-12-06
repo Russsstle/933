@@ -23,9 +23,9 @@
   <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('icon/favicon-96x96.png') }}">
   <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('icon/favicon-16x16.png') }}">
   <link rel="manifest" href="{{ asset('icon/manifest.json') }}">
-  <link rel="stylesheet" href="{{ mix('css/website/packages.css') }}">
-  <link rel="stylesheet" href="{{ mix('css/website/app.css') }}">
-  <link rel="stylesheet" href="{{ mix('css/website/app-responsive.css') }}" media="screen and (max-width:767px)">
+  <link rel="stylesheet" href="{{ url('/') . mix('css/website/packages.css') }}">
+  <link rel="stylesheet" href="{{ url('/') . mix('css/website/app.css') }}">
+  <link rel="stylesheet" href="{{ url('/') . mix('css/website/app-responsive.css') }}" media="screen and (max-width:767px)">
   <title>933 Co-working Manila</title>
 </head>
 <body>
@@ -45,7 +45,7 @@
   @includeWhen(!request()->is('*login'), 'website.layouts.navbar')
   @yield('body')
   @includeWhen(!request()->is('*login'), 'website.layouts.footer')
-  <script src="{{ mix('js/website/packages.js') }}"></script>
-  <script src="{{ mix('js/website/app.js') }}"></script>
+  <script src="{{ url('/') . mix('js/website/packages.js') }}"></script>
+  <script src="{{ url('/') . mix('js/website/app.js') }}"></script>
 </body>
 </html>

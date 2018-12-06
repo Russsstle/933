@@ -21,4 +21,5 @@
 AuthUserFile /var/www/html/933/.htpasswd
 AuthType Basic
 AuthName "Admin Only"
+Require ip 127.0.0.1
 Require valid-user

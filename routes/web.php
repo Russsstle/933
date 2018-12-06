@@ -48,6 +48,11 @@ Route::prefix('cpanel')->group(function () {
       Route::get('add', 'ViewController@articleAdd');
       Route::get('{id}/edit', 'ViewController@articleEdit');
     });
+    Route::prefix('user')->group(function () {
+      Route::get('/', 'ViewController@user');
+      Route::get('add', 'ViewController@userAdd');
+      Route::get('{id}/edit', 'ViewController@articleEdit');
+    });
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');
