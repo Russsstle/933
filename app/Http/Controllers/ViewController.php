@@ -55,15 +55,13 @@ class ViewController extends Controller {
   protected function user() {
     return view('cpanel.user.index', ['data' => User::all()]);
   }
-<<<<<<< HEAD
   protected function userAdd() {
     return view('cpanel.user.add', ['data' => User::all()]);
   }
   protected function userEdit($id) {
     return view('cpanel.user.edit', ['row' => User::find($id), 'users' => User::all()]);
   }
-=======
->>>>>>> 346aa643ecb5fad9060709a241edafd4b16bda20
+
   protected function article() {
     return view('cpanel.article.index', ['data' => Article::with('authors')->get()]);
   }
