@@ -2,7 +2,7 @@
 
 @section("body")
 <div class="header">
-  About 933 Co-working Manila
+  About
 </div>
 <div class="content">
   <div class="row">
@@ -43,7 +43,7 @@
       </ul>
     </div>
   </div>
-  <h4 class="center-align text-bold">Gallery</h4>
+  <h4 class="center-align text-bold top-title">Gallery</h4>
   <div class="carousel carousel-about">
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
@@ -51,7 +51,7 @@
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
   </div>
-  <h4 class="center-align text-bold">Meet the Team</h4>
+  <h4 class="center-align text-bold top-title">Meet the Team</h4>
   <br><br>
   <div class="row" style="width:80%">
     <div class="col m4 s12 center-align mb-30">
@@ -97,7 +97,7 @@
       </div>
     </div>
   </div>
-  <h4 class="center-align text-bold">Our Amazing Partners</h4>
+  <h4 class="center-align text-bold top-title">Our Amazing Partners</h4>
   <br><br>
   <div class="row">
     <img class="col m5ths s12" src="{{ asset('img/sample.png') }}" height="70px" width="140px">

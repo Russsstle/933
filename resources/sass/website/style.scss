@@ -107,7 +107,8 @@ nav ul li.active {
 
 .header {
   background-color: $nav-color;
-  padding: 10px 288px 3%;
+  //padding: 15px 288px  3% ;
+  padding: 20px 3%  10px  288px;
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -135,6 +136,9 @@ nav ul li.active {
     color: $nav-color;
     user-select: none;
   }
+}
+.footer>.box-a{
+  margin-left:-10px
 }
 
 .content,
@@ -178,7 +182,7 @@ nav ul li.active {
 }
 
 .home-content {
-  padding: 80px 188px;
+  padding: 110px 288px 60px;
 
   &:nth-child(even) {
     background-color: $home-content-alternative-color;
@@ -197,10 +201,10 @@ nav ul li.active {
     padding-bottom: 120px;
   }
   .card-title {
-    font-size: 24pt;
+    font-size: 18pt;
   }
   .home-price-time {
-    padding: 35px;
+    padding: 25px;
   }
   .col {
     padding: 0 0.75rem 0.75rem;
@@ -250,6 +254,7 @@ a.dark-underline {
 
 .blog-tabs {
   padding-left: 288px !important;
+   margin-top:30px
 }
 
 .sidebar-header {
@@ -337,4 +342,16 @@ svg.waves {
 }
 .home-content > .marg{
   margin-bottom:0px !important; 
+}
+.title-home{
+  margin-top: 43px;
+}
+.top-title{
+  margin-top:80px
+}
+.contact-info{
+   padding-left:90px !important
+}
+.service-content{
+  padding-left:0px !important;
 }

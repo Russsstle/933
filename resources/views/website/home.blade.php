@@ -171,7 +171,7 @@
     </div>
   </div>
 </div>
-<div class="home-content">
+<div class="home-content" style="padding-top:80px !important">
   <div class="row flex-s marg">
     <div class="col s12 m7 box-a">
       <div class="row" style="margin-top:50px">
@@ -196,7 +196,7 @@
       </div>
     </div>
     <div class="col s12 m5 right-align white-text box-b">
-      <h4 class="text-bold">
+      <h4 class="text-bold title-home">
         Our Partners in<br>
         Business
       </h4>
@@ -207,7 +207,7 @@
   </div>
 </div>
 <div class="home-content">
-  <h4 class="text-bold center-align">
+  <h4 class="text-bold center-align ">
     What our happy clients<br>
     say about us
   </h4>
@@ -274,7 +274,7 @@
       </div>
     </a>
   </div>
-  <h4 class="text-bold center-align">
+  <h4 class="text-bold center-align top-title" >
     Latest Updates
   </h4>
   <div class="row">

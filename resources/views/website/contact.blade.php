@@ -28,7 +28,7 @@
         <button class="waves-effect waves-light btn right" type="submit">Send</button>
       </form>
     </div>
-    <div class="col m6">
+    <div class="col m6 contact-info">
       <h5><b> Address</b></h5>
       <p style="font-size: 20px">
         933 Main branch<br>

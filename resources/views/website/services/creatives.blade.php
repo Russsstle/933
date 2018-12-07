@@ -7,7 +7,7 @@
 </div>
 <div class="content">
   <div class="row">
-    <div class="col m7 rates-card">
+    <div class="col m7 rates-card service-content">
       <img src="{{ asset('img/sample.png') }}" width="100%" height="100%">
     </div>
     <div class="col m5 rates-card rates-text">
@@ -43,18 +43,18 @@
     </div>
   </div>
   <div class="row flex-s">
-    <div class="col m5 rates-card rates-text box-a">
+    <div class="col m5 rates-card rates-text box-a service-content">
       <div class="title">Prepaid Rates</div>
       <div class="subtitle">whole day pass = 18 hours</div>
       <br><br>
-      <div class="col m8">
+      <div class="col m8 service-content">
         Whole Day Pass
       </div>
       <div class="col m4 right-align">
         ₱ 300
       </div>
       <br><br>
-      <div class="col m8">
+      <div class="col m8 service-content">
         Whole Day Pass<br>
         (Dedicated Desk)
       </div>
@@ -62,7 +62,7 @@
         ₱ 350
       </div>
       <br><br>
-      <div class="col m8">
+      <div class="col m8 service-content">
         7 Days<br>
         <i>Valid within one month</i>
       </div>
@@ -70,7 +70,7 @@
         ₱ 1,499
       </div>
       <br><br>
-      <div class="col m8">
+      <div class="col m8 service-content">
         30 Days<br>
         <i>Valid within 3 months</i>
       </div>
@@ -78,7 +78,7 @@
         ₱ 3,999
       </div>
       <br><br>
-      <div class="col m8">
+      <div class="col m8 service-content">
         Monthly Rate for<br>
         Dedicated Desk
       </div>
@@ -92,10 +92,10 @@
   </div>
   <div class="rates-title">Private Room Rates</div>
   <div class="row">
-    <div class="col m7 rates-card">
+    <div class="col m7 rates-card service-content">
       <img src="{{ asset('img/sample.png') }}" width="100%" height="100%">
     </div>
-    <div class="col m5 rates-card rates-text">
+    <div class="col m5 rates-card rates-text ">
       <div class="title">Film Room</div>
       <div class="subtitle">Good for 20 pax</div>
       <br><br>
@@ -129,32 +129,32 @@
     </div>
   </div>
   <div class="row flex-s">
-    <div class="col m5 rates-card rates-text box-a">
+    <div class="col m5 rates-card rates-text box-a service-content">
       <div class="title">Seminar Room</div>
       <div class="subtitle">Good for 24 pax</div>
       <br><br>
-      <div class="col s8 m8 left-align">
+      <div class="col s8 m8 left-align service-content">
         1 hour (₱ 60/pax)
       </div>
-      <div class="col s4 m4 right-align">
+      <div class="col s4 m4 right-align ">
         ₱ 1,440
       </div>
       <br><br>
-      <div class="col s8 m8 left-align">
+      <div class="col s8 m8 left-align service-content ">
         3 hours (₱ 144/pax)
       </div>
       <div class="col s4 m4 right-align">
         ₱ 3,456
       </div>
       <br><br>
-      <div class="col s8 m8 left-align">
+      <div class="col s8 m8 left-align service-content">
         6 hours (₱ 252/pax)
       </div>
       <div class="col s4 m4 right-align">
         ₱ 6,048
       </div>
       <br><br>
-      <div class="col s8 m8 left-align">
+      <div class="col s8 m8 left-align service-content">
         8 hours (₱ 288/pax)
       </div>
       <div class="col s4 m4 right-align">
