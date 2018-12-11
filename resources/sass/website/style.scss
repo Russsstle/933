@@ -3,6 +3,38 @@
 @import '../fonts';
 @import '../margin_padding_helper_mixin';
 @import 'materialize-custom';
+@media (max-width: 1150px) {
+  
+  .content,
+  .blog-content {
+    padding: 40px 100px !important;
+  }
+  .home-content {
+    padding: 110px 100px 60px !important;
+  }
+  .nav-wrapper {
+    padding: 0 100px;
+  }
+  .nav-wrapper {
+    padding: 0 100px !important;
+  }
+  .header {
+    padding: 20px 3%  10px  100px !important;
+  }
+  .footer {
+    padding: 20px 100px !important;
+  }
+}
+// @media (max-width: 760px) and (min-width:605px) {
+//  .flex-s{
+//     flex-direction: column !important;
+//  }
+//   .brand-logo{
+//     visibility: hidden !important;
+//   }
+  
+// }
+
 
 html,
 body {
@@ -107,7 +139,6 @@ nav ul li.active {
 
 .header {
   background-color: $nav-color;
-  //padding: 15px 288px  3% ;
   padding: 20px 3%  10px  288px;
   font-size: 30px;
   font-weight: bold;
@@ -127,6 +158,9 @@ nav ul li.active {
   }
   a {
     color: white;
+  }
+  .box-a{
+    padding-left:0px
   }
   .box-a,
   .box-b {
@@ -357,4 +391,7 @@ svg.waves {
 }
 .carousel .carousel-item>img {
     width:auto !important;
+}
+p {
+  text-align: justify;
 }
