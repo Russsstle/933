@@ -58,10 +58,12 @@ class ViewController extends Controller {
   protected function userAdd() {
     return view('cpanel.user.add');
   }
+  /**
+   * @param $id
+   */
   protected function userEdit($id) {
     return view('cpanel.user.edit', ['row' => User::find($id), 'users' => User::all()]);
   }
-
   protected function article() {
     return view('cpanel.article.index', ['data' => Article::with('authors')->get()]);
   }
@@ -80,15 +82,14 @@ class ViewController extends Controller {
   protected function authorAdd() {
     return view('cpanel.author.add', ['users' => User::all()]);
   }
-
-/**
- * @param $id
- */
+  /**
+   * @param $id
+   */
   protected function authorEdit($id) {
     return view('cpanel.author.edit', ['row' => Author::find($id), 'users' => User::all()]);
   }
   protected function update() {
     putenv('PATH=/usr/bin');
-    return '<pre>' . shell_exec('cd/var/www/html/933 && git pull origin master 2>&1') . '</pre>';
+    return '<pre>' . shell_exec('cd/var/www/html/933 && git pull origin master && npm run production 2>&1') . '</pre>';
   }
 }
