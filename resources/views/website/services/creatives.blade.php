@@ -167,7 +167,7 @@
   </div>
   <div class="rates-title">All our clients can enjoy the following</div>
   <div class="row">
-    <div class="col s12 m2 m5ths l5ths center-align">
+    <div class="col s12 m2 m5ths  l5ths center-align">
       <img class="circle" src="{{ asset('img/icons/nap area.png') }}" height="70px" width="70px">
       <div>
         Unlimited Coffee<br>&amp; Juice
