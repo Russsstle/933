@@ -33,20 +33,30 @@ Route::prefix('cpanel')->group(function () {
   Route::post('login', 'AuthController@login');
   Route::middleware('auth')->group(function () {
     Route::get('/', 'ViewController@cpanel');
-    Route::prefix('user')->group(function () {
+    Route::prefix('users')->group(function () {
       Route::get('/', 'ViewController@user');
       Route::get('add', 'ViewController@userAdd');
       Route::get('{id}/edit', 'ViewController@userEdit');
     });
-    Route::prefix('author')->group(function () {
+    Route::prefix('authors')->group(function () {
       Route::get('/', 'ViewController@author');
       Route::get('add', 'ViewController@authorAdd');
       Route::get('{id}/edit', 'ViewController@authorEdit');
     });
-    Route::prefix('article')->group(function () {
+    Route::prefix('articles')->group(function () {
       Route::get('/', 'ViewController@article');
       Route::get('add', 'ViewController@articleAdd');
       Route::get('{id}/edit', 'ViewController@articleEdit');
+    });
+    Route::prefix('services')->group(function () {
+      Route::get('/', 'ViewController@service');
+      Route::get('add', 'ViewController@serviceAdd');
+      Route::get('{id}/edit', 'ViewController@serviceEdit');
+    });
+    Route::prefix('branches')->group(function () {
+      Route::get('/', 'ViewController@branch');
+      Route::get('add', 'ViewController@branchAdd');
+      Route::get('{id}/edit', 'ViewController@branchEdit');
     });
     Route::get('logout', 'AuthController@logout');
   });

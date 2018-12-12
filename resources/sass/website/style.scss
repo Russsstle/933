@@ -13,10 +13,7 @@
     padding: 110px 100px 60px !important;
   }
   .nav-wrapper {
-    padding: 0 100px;
-  }
-  .nav-wrapper {
-    padding: 0 100px !important;
+    padding: 0 !important;
   }
   .header {
     padding: 20px 3%  10px  100px !important;
@@ -24,16 +21,11 @@
   .footer {
     padding: 20px 100px !important;
   }
+  // .sidenav-trigger{
+  //   margin-right
+  // }
 }
-// @media (max-width: 760px) and (min-width:605px) {
-//  .flex-s{
-//     flex-direction: column !important;
-//  }
-//   .brand-logo{
-//     visibility: hidden !important;
-//   }
-  
-// }
+
 
 
 html,

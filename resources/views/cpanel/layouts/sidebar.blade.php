@@ -34,19 +34,31 @@
         <li class="{{ active('cpanel/user*') }}">
           <a href="{{ url('cpanel/user') }}">
             <i class="fa fa-user-circle"></i>
-            User
+            Users
           </a>
         </li>
         <li class="{{ active('cpanel/article*') }}">
           <a href="{{ url('cpanel/article') }}">
             <i class="fa fa-newspaper-o"></i>
-            Article
+            Articles
           </a>
         </li>
         <li class="{{ active('cpanel/author*') }}">
           <a href="{{ url('cpanel/author') }}">
             <i class="fa fa-address-book"></i>
-            Author
+            Authors
+          </a>
+        </li>
+        <li class="{{ active('cpanel/service*') }}">
+          <a href="{{ url('cpanel/service') }}">
+            <i class="fa fa-money"></i>
+            Rates
+          </a>
+        </li>
+        <li class="{{ active('cpanel/branch*') }}">
+          <a href="{{ url('cpanel/branch') }}">
+            <i class="fa fa-home"></i>
+            Branches
           </a>
         </li>
 
