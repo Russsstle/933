@@ -88,8 +88,20 @@ class ViewController extends Controller {
   protected function authorEdit($id) {
     return view('cpanel.author.edit', ['row' => Author::find($id), 'users' => User::all()]);
   }
+  protected function service() {
+    return view('cpanel.service.index', ['data' => Rate::all()]);
+  }
+  protected function serviceAdd() {
+    return view('cpanel.service.add', ['users' => User::all()]);
+  }
+  /**
+   * @param $id
+   */
+  protected function serviceEdit($id) {
+    return view('cpanel.service.edit', ['row' => Author::find($id), 'users' => User::all()]);
+  }
   protected function update() {
     putenv('PATH=/usr/bin');
-    return '<pre>' . shell_exec('cd/var/www/html/933 && git pull origin master && npm run production 2>&1') . '</pre>';
+    return '<pre>' . shell_exec('cd /var/www/html/933 && git pull origin master 2>&1 && npm run production 2>&1') . '</pre>';
   }
 }
