@@ -4,7 +4,7 @@
 <div class="slider">
   <ul class="slides">
     <li>
-         <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
+      <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
       <div class="caption center-align">
         <h3>This is our big Tagline!</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
@@ -35,7 +35,7 @@
   </p>
   <br>
   <div class="row">
-    <div class="col s12 m4">
+    <div class="col m12 l4">
       <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
@@ -46,7 +46,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
       </p>
     </div>
-    <div class="col s12 m4">
+    <div class="col m12 l4">
       <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
@@ -57,7 +57,7 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
       </p>
     </div>
-    <div class="col s12 m4">
+    <div class="col m12 l4">
       <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
@@ -72,7 +72,7 @@
 </div>
 <div class="home-content">
   <div class="row">
-    <div class="col s12 m5 white-text">
+    <div class="col s12 m12 l5 white-text">
       <div class="text-bold title">
         Budget-friendly<br>
         to students
@@ -81,8 +81,8 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
       </p>
     </div>
-    <div class="col s12 m6 offset-m1">
-      <div class="row white center-align home-price-time">
+    <div class="col s12 m12 l6 offset-l1">
+      <div class="row white center-align home-price-card">
         <div class="col s12 m4">
           <div class="card-title">1 hour</div>
           <p>Lorem ipsum dolor sit amet, consectetur</p>
@@ -172,8 +172,8 @@
   </div>
 </div>
 <div class="home-content" style="padding-top:80px !important">
-  <div class="row flex-s marg">
-    <div class="col s12 m7 box-a">
+  <div class="row flex-s" style="margin-bottom:0">
+    <div class="col s12 m12 l7 box-a">
       <div class="row" style="margin-top:50px">
         <div class="col s12 m4">
           <img src="{{ asset('img/sample.png') }}" width="100%">
@@ -195,7 +195,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m5 right-align white-text box-b">
+    <div class="col s12 m12 l5 right-align white-text box-b">
       <h4 class="text-bold title-home">
         Our Partners in<br>
         Business
@@ -278,7 +278,7 @@
     Latest Updates
   </h4>
   <div class="row">
-    <div class="col s12 m4">
+    <div class="col s12 m12 l4">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
           <img class='activator'src="{{ asset('img/sample.png') }}">
@@ -295,7 +295,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12 m12 l4">
       <div class="card">
         <div class="card-image">
           <img src="{{ asset('img/sample.png') }}">
@@ -307,7 +307,7 @@
         </div>
       </div>
     </div>
-    <div class="col s12 m4">
+    <div class="col s12 m12 l4">
       <div class="card">
         <div class="card-image">
           <img src="{{ asset('img/sample.png') }}">

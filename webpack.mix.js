@@ -14,7 +14,6 @@ mix.combine(['resources/css/packages/materialize.min.css'], 'public/css/website/
 mix.sass('resources/sass/website/style.scss', 'public/css/website/app.css').options({
   processCssUrls: false
 })
-mix.sass('resources/sass/website/style-responsive.scss', 'public/css/website/app-responsive.css')
 mix.combine(
   ['resources/js/packages/jquery.min.js', 'resources/js/packages/materialize.min.js'],
   'public/js/website/packages.js'
@@ -34,7 +33,6 @@ mix.combine(
 mix.sass('resources/sass/cpanel/style.scss', 'public/css/cpanel/app.css').options({
   processCssUrls: false
 })
-mix.sass('resources/sass/cpanel/style-responsive.scss', 'public/css/cpanel/app-responsive.css')
 mix.combine(
   [
     'resources/js/packages/jquery.min.js',

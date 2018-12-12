@@ -3,30 +3,6 @@
 @import '../fonts';
 @import '../margin_padding_helper_mixin';
 @import 'materialize-custom';
-@media (max-width: 1150px) {
-  
-  .content,
-  .blog-content {
-    padding: 40px 100px !important;
-  }
-  .home-content {
-    padding: 110px 100px 60px !important;
-  }
-  .nav-wrapper {
-    padding: 0 !important;
-  }
-  .header {
-    padding: 20px 3%  10px  100px !important;
-  }
-  .footer {
-    padding: 20px 100px !important;
-  }
-  // .sidenav-trigger{
-  //   margin-right
-  // }
-}
-
-
 
 html,
 body {
@@ -131,7 +107,7 @@ nav ul li.active {
 
 .header {
   background-color: $nav-color;
-  padding: 20px 3%  10px  288px;
+  padding: 20px 3% 10px 288px;
   font-size: 30px;
   font-weight: bold;
   color: white;
@@ -151,8 +127,8 @@ nav ul li.active {
   a {
     color: white;
   }
-  .box-a{
-    padding-left:0px
+  .box-a {
+    padding-left: 0px;
   }
   .box-a,
   .box-b {
@@ -163,8 +139,8 @@ nav ul li.active {
     user-select: none;
   }
 }
-.footer>.box-a{
-  margin-left:-10px
+.footer > .box-a {
+  margin-left: -10px;
 }
 
 .content,
@@ -229,8 +205,8 @@ nav ul li.active {
   .card-title {
     font-size: 18pt;
   }
-  .home-price-time {
-    padding: 25px;
+  .home-price-card {
+    padding: 5%;
   }
   .col {
     padding: 0 0.75rem 0.75rem;
@@ -280,7 +256,7 @@ a.dark-underline {
 
 .blog-tabs {
   padding-left: 288px !important;
-   margin-top:30px
+  margin-top: 30px;
 }
 
 .sidebar-header {
@@ -366,24 +342,32 @@ svg.waves {
 .bubble {
   border-radius: 50% 50% 0% 0% / 36% 26% 0% 0%;
 }
-.home-content > .marg{
-  margin-bottom:0px !important; 
-}
-.title-home{
+.title-home {
   margin-top: 43px;
 }
-.top-title{
-  margin-top:80px
+.top-title {
+  margin-top: 80px;
 }
-.contact-info{
-   padding-left:90px !important
+.contact-info {
+  padding-left: 90px !important;
 }
-.service-content{
-  padding-left:0px !important;
+
+.carousel .carousel-item > img {
+  width: auto !important;
 }
-.carousel .carousel-item>img {
-    width:auto !important;
-}
+
 p {
   text-align: justify;
+}
+
+@media (min-width: 1281px) {
+  @import 'style-desktop';
+}
+
+@media (max-width: 1150px) {
+  @import 'style-tablet';
+}
+
+@media (max-width: 767px) {
+  @import 'style-mobile';
 }

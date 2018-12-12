@@ -64,5 +64,5 @@ Route::prefix('cpanel')->group(function () {
 });
 
 Route::get('test', function () {
-  return \App\Article::with('authors')->get();
+  \App\Branch::create(['name' => 'main']);
 });

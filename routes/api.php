@@ -14,5 +14,7 @@
 Route::apiResources([
   'users'    => 'UserController',
   'authors'  => 'AuthorController',
-  'articles' => "ArticleController"
+  'articles' => 'ArticleController',
+  'services' => 'ServiceController',
+  'branches' => 'BranchController'
 ]);

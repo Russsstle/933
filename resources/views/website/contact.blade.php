@@ -6,29 +6,29 @@
 </div>
 <div class="content">
   <div class="row">
-    <div class="col m6">
+    <div class="col l6">
       <form method="POST">
         @csrf
-        <div class="input-field col s12 m6">
+        <div class="input-field col m12 l6">
           <input id="name" type="text" class="validate">
           <label for="name">Name</label>
         </div>
-        <div class="input-field col s12 m6">
+        <div class="input-field col m12 l6">
           <input id="email" type="email" class="validate">
           <label for="email">Email</label>
         </div>
-        <div class="input-field col s12 m12">
+        <div class="input-field col m12 l12">
           <input id="subject" type="text" class="validate">
           <label for="subject">Subject</label>
         </div>
-        <div class="input-field col s12 m12">
+        <div class="input-field col m12 l12">
           <textarea id="message" class="materialize-textarea"></textarea>
           <label for="message">Message</label>
         </div>
         <button class="waves-effect waves-light btn right" type="submit">Send</button>
       </form>
     </div>
-    <div class="col m6 contact-info">
+    <div class="col l6 contact-info">
       <h5><b> Address</b></h5>
       <p style="font-size: 20px">
         933 Main branch<br>

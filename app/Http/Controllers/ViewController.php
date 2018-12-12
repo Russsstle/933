@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Article;
 use App\Author;
+use App\Branch;
+use App\Service;
 use App\User;
 
 class ViewController extends Controller {
@@ -89,16 +91,28 @@ class ViewController extends Controller {
     return view('cpanel.author.edit', ['row' => Author::find($id), 'users' => User::all()]);
   }
   protected function service() {
-    return view('cpanel.service.index', ['data' => Rate::all()]);
+    return view('cpanel.service.index', ['data' => Service::with('rates')->get()]);
   }
   protected function serviceAdd() {
-    return view('cpanel.service.add', ['users' => User::all()]);
+    return view('cpanel.service.add', ['branches' => Branch::all()]);
   }
   /**
    * @param $id
    */
   protected function serviceEdit($id) {
-    return view('cpanel.service.edit', ['row' => Author::find($id), 'users' => User::all()]);
+    return view('cpanel.service.edit', ['row' => Service::find($id)->with('rates')->get(), 'branches' => Branch::all()]);
+  }
+  protected function branch() {
+    return view('cpanel.branch.index', ['data' => Branch::all()]);
+  }
+  protected function branchAdd() {
+    return view('cpanel.branch.add');
+  }
+  /**
+   * @param $id
+   */
+  protected function branchEdit($id) {
+    return view('cpanel.branch.edit', ['row' => Branch::find($id)]);
   }
   protected function update() {
     putenv('PATH=/usr/bin');

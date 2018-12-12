@@ -6,20 +6,20 @@
 </div>
 <div class="content">
   <div class="row">
-    <div class="col m4">
+    <div class="col l4 ">
       <h5 class="text-bold">COMMUNITY</h5>
     </div>
-    <div class="col m8">
+    <div class="col l8 ">
       <p>
         933 Co-working Mnl is one of Manila's newest community of entrepreneurs, creative, startups, and students.<br>
         We offer a high-end yet affordable coworking space, workshops, events and study labs.<br>
         Whether you are an entrepreneur, startups or corporate professional conducting day to day business, holding meetings or a student looking for a vibrant, secure and peaceful place to study 933 Co-working Mnl is designed to suit all your personal and business needs.
       </p>
     </div>
-    <div class="col m4">
+    <div class="col l4 ">
       <h5 class="text-bold">Space</h5>
     </div>
-    <div class="col m8">
+    <div class="col l8">
       <p>
         People who use co-working spaces see themselves as part of a community. Connecting with people and expanding your network are just two reasons why people pay to work in a shared communal working space as opposed to working in a traditional office setup.<br>
         Enjoy an exceptional co-working space experience with a variety of space designed to suit all requirements.<br>
@@ -27,10 +27,10 @@
         933 Co-working Mnl is a fully equipped office with fast fiber optics wifi, fully centralized air condition, toilet with amenities shower, and napping area.
       </p>
     </div>
-    <div class="col m4">
+    <div class="col l4 ">
       <h5 class="text-bold">Space</h5>
     </div>
-    <div class="col m8">
+    <div class="col l8 m4">
       <ul class="dashed">
         <li>Bookable meeting room and conference room.</li>
         <li>Comfortable & professional office furniture</li>

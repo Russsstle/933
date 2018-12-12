@@ -31,32 +31,32 @@
             Home
           </a>
         </li>
-        <li class="{{ active('cpanel/user*') }}">
-          <a href="{{ url('cpanel/user') }}">
+        <li class="{{ active('cpanel/users*') }}">
+          <a href="{{ url('cpanel/users') }}">
             <i class="fa fa-user-circle"></i>
             Users
           </a>
         </li>
-        <li class="{{ active('cpanel/article*') }}">
-          <a href="{{ url('cpanel/article') }}">
+        <li class="{{ active('cpanel/articles*') }}">
+          <a href="{{ url('cpanel/articles') }}">
             <i class="fa fa-newspaper-o"></i>
             Articles
           </a>
         </li>
-        <li class="{{ active('cpanel/author*') }}">
-          <a href="{{ url('cpanel/author') }}">
+        <li class="{{ active('cpanel/authors*') }}">
+          <a href="{{ url('cpanel/authors') }}">
             <i class="fa fa-address-book"></i>
             Authors
           </a>
         </li>
-        <li class="{{ active('cpanel/service*') }}">
-          <a href="{{ url('cpanel/service') }}">
+        <li class="{{ active('cpanel/services*') }}">
+          <a href="{{ url('cpanel/services') }}">
             <i class="fa fa-money"></i>
             Rates
           </a>
         </li>
-        <li class="{{ active('cpanel/branch*') }}">
-          <a href="{{ url('cpanel/branch') }}">
+        <li class="{{ active('cpanel/branches*') }}">
+          <a href="{{ url('cpanel/branches') }}">
             <i class="fa fa-home"></i>
             Branches
           </a>
