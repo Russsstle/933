@@ -5,6 +5,10 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 
 class Rate extends Model {
+  /**
+   * @var string
+   */
+  protected $table = 'services_rates';
 
   /**
    * The attributes that are mass assignable.

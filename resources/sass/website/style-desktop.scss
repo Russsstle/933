@@ -5,3 +5,16 @@
 .rates-text:nth-child(odd) {
   padding-left: 0% !important;
 }
+
+.footer {
+  .box-a {
+    text-align: left;
+  }
+  .box-c {
+    text-align: right;
+  }
+  .box-a,
+  .box-c {
+    padding: 0 0.75rem;
+  }
+}

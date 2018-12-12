@@ -22,10 +22,10 @@
             <td>{{ $row->username }}</td>
             <td>{{ $row->email_address }}</td>
             <td>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/user/' . $row->id . "/edit") }}">
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/users/' . $row->id . "/edit") }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp;Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="users/{{ $row->id }}" data-redirect="user">
+              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="users/{{ $row->id }}" data-redirect="users">
                 <i class="fa fa-trash"></i>&nbsp;Delete
               </a>
             </td>

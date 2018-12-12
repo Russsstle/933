@@ -26,7 +26,7 @@
     </li>
   </ul>
 </div>
-<div class="home-content center-align" style="padding-top:0">
+<div class="home-content center-align" style="padding-top:40px">
   <h4 class="text-bold ">Benefits of Studying in Co-working Spaces</h4>
   <br>
   <p>
@@ -171,8 +171,8 @@
     </div>
   </div>
 </div>
-<div class="home-content" style="padding-top:80px !important">
-  <div class="row flex-s" style="margin-bottom:0">
+<div class="home-content">
+  <div class="row flex-s">
     <div class="col s12 m12 l7 box-a">
       <div class="row" style="margin-top:50px">
         <div class="col s12 m4">

@@ -63,6 +63,8 @@ Route::prefix('cpanel')->group(function () {
   Route::get('update', 'ViewController@update');
 });
 
-Route::get('test', function () {
-  \App\Branch::create(['name' => 'main']);
-});
+// Route::get('test', function () {
+//   $service = new \App\Service;
+
+//   $service->branches->associate(\App\Branch::find(1))
+// });

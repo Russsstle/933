@@ -24,14 +24,24 @@ $(document).ready(function() {
 $('form[name=frmAddData]').submit(function(e) {
   e.preventDefault()
 
+  let hasFile = $(this).is('[hasFile]')
+
   let url = $(this).data('url')
   let redirect = $(this).data('redirect')
+
+  let form_data = $(this).serialize()
+
+  if (hasFile) {
+    form_data = new FormData($(this)[0])
+  }
 
   $.ajax({
     context: this,
     url: api_url + url,
     type: 'POST',
-    data: $(this).serialize()
+    data: form_data,
+    contentType: !hasFile,
+    processData: !hasFile
   }).done(function(response) {
     if (response.success) {
       swal('Added Successfully!', null, 'success').then(function() {
@@ -46,17 +56,28 @@ $('form[name=frmAddData]').submit(function(e) {
 $('form[name=frmEditData]').submit(function(e) {
   e.preventDefault()
 
+  let hasFile = $(this).is('[hasFile]')
+
   let url = $(this).data('url')
   let redirect = $(this).data('redirect')
+
+  let form_data = {
+    _method: 'PUT',
+    ...$(this).serializeJSON()
+  }
+
+  if (hasFile) {
+    form_data = new FormData($(this)[0])
+    form_data.append('_method', 'PUT')
+  }
 
   $.ajax({
     context: this,
     url: api_url + url,
     type: 'POST',
-    data: {
-      _method: 'PUT',
-      ...$(this).serializeJSON()
-    }
+    data: form_data,
+    contentType: !hasFile,
+    processData: !hasFile
   }).done(function(response) {
     if (response.success) {
       swal('Updated Successfully!', null, 'success').then(function() {

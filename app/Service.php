@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Service extends Model {
   use SoftDeletes;
+
   /**
    * @var array
    */
@@ -19,20 +20,20 @@ class Service extends Model {
    */
 
   protected $fillable = [
-    'description', 'filename'
+    'title', 'description', 'filename'
   ];
 
   /**
    * @return mixed
    */
   public function branches() {
-    return $this->belongsToMany('App\Branch', 'branch_id');
+    return $this->belongsTo('App\Branch', 'branch_id')->withTrashed();
   }
 
   /**
    * @return mixed
    */
-  public function rate() {
+  public function rates() {
     return $this->hasMany("App\Rate");
   }
 }

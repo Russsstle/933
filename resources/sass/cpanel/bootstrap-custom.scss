@@ -7,6 +7,11 @@
   color: $btn-primary-color;
 }
 
-.form-control:focus {
+.form-control:focus,
+.custom-file-input:focus {
   box-shadow: none;
+}
+
+.custom-file-input {
+  border-radius: 0;
 }

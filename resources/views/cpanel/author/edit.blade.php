@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Edit Author</h4>
-    <form name="frmEditData" data-url="authors/{{ $row->id }}" data-redirect="author">
+    <form name="frmEditData" data-url="authors/{{ $row->id }}" data-redirect="authors">
       <div class="form-group">
         <label for="username" class="form-control-label">Username</label>
         <select class="form-control" name="user_id" required>

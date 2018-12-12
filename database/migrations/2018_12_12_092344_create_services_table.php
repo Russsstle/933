@@ -15,6 +15,7 @@ class CreateServicesTable extends Migration {
       $table->increments('id');
       $table->unsignedInteger('branch_id');
       $table->foreign('branch_id')->references('id')->on('branches');
+      $table->string('title');
       $table->string('description');
       $table->string('filename');
       $table->timestamps();

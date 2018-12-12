@@ -25,7 +25,7 @@ class Branch extends Model {
   /**
    * @return mixed
    */
-  public function rates() {
-    return $this->hasMany("App\Rate");
+  public function services() {
+    return $this->hasMany('App\Service');
   }
 }

@@ -52,7 +52,7 @@
         <li class="{{ active('cpanel/services*') }}">
           <a href="{{ url('cpanel/services') }}">
             <i class="fa fa-money"></i>
-            Rates
+            Services
           </a>
         </li>
         <li class="{{ active('cpanel/branches*') }}">

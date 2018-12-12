@@ -22,10 +22,10 @@
             <td>{{ $row->users->profiles->name }}</td>
             <td>{{ $row->users->profiles->position }}</td>
             <td>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/author/' . $row->id . "/edit") }}">
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/authors/' . $row->id . "/edit") }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp;Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="authors/{{ $row->id }}" data-redirect="author">
+              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="authors/{{ $row->id }}" data-redirect="authors">
                 <i class="fa fa-trash"></i>&nbsp;Delete
               </a>
             </td>

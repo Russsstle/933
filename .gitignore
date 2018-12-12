@@ -20,3 +20,4 @@ yarn-error.log
 /public/fonts/*
 /public/icon/*
 /public/mix-manifest.json
+/public/uploads/*

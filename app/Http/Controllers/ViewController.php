@@ -100,7 +100,7 @@ class ViewController extends Controller {
    * @param $id
    */
   protected function serviceEdit($id) {
-    return view('cpanel.service.edit', ['row' => Service::find($id)->with('rates')->get(), 'branches' => Branch::all()]);
+    return view('cpanel.service.edit', ['row' => Service::with('rates')->where('id', $id)->first(), 'branches' => Branch::all()]);
   }
   protected function branch() {
     return view('cpanel.branch.index', ['data' => Branch::all()]);

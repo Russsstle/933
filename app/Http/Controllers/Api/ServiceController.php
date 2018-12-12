@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
 use App\Branch;
+use App\Http\Controllers\Controller;
 use App\Service;
 use Illuminate\Http\Request;
 use Validator;
@@ -39,8 +40,10 @@ class ServiceController extends Controller {
 
     $service->branches()->associate(Branch::find($request->branch_id));
 
-    $service->fill($request->only(['name', 'description']));
+    $service->fill($request->only(['title', 'description']));
     $service->filename = uniqid($filename . '-') . $extension;
+
+    $request->image->move(public_path('uploads'), $service->filename);
 
     if ($service->save()) {
       return response()->json(['success' => true]);
@@ -84,10 +87,11 @@ class ServiceController extends Controller {
 
     $service->branches()->associate(Branch::find($request->branch_id));
 
-    $service->fill($request->only(['name', 'description']));
+    $service->fill($request->only(['title', 'description']));
 
-    if ($filename) {
+    if (isset($filename)) {
       $service->filename = uniqid($filename . '-') . $extension;
+      $request->image->move(public_path('uploads'), $service->filename);
     }
 
     if ($service->save()) {
