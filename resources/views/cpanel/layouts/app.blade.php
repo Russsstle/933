@@ -25,7 +25,6 @@
   <link rel="manifest" href="{{ asset('icon/manifest.json') }}">
   <link rel="stylesheet" href="{{ url('/') . mix('css/cpanel/packages.css') }}">
   <link rel="stylesheet" href="{{ url('/') . mix('css/cpanel/app.css') }}">
-  <link rel="stylesheet" href="{{ url('/') . mix('css/cpanel/app-responsive.css') }}" media="screen and (max-width:767px)">
   <title>933 Co-working Manila</title>
 </head>
 <body>

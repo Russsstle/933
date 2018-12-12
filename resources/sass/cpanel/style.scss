@@ -26,3 +26,15 @@ nav.side-navbar ul li a:hover {
 nav.side-navbar ul > li i {
   width: 30px;
 }
+
+@media (min-width: 1281px) {
+  @import 'style-desktop';
+}
+
+@media (max-width: 1150px) {
+  @import 'style-tablet';
+}
+
+@media (max-width: 767px) {
+  @import 'style-mobile';
+}
