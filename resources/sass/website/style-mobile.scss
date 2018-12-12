@@ -96,13 +96,6 @@ svg.waves {
   &:first-child {
     margin-top: -65px;
   }
-  .home-price-card > .col:not(:first-child) {
-    border-top: 1px solid #ccc;
-    padding-top: 20px;
-  }
-  .home-price-card > .col:not(:last-child) {
-    padding-bottom: 20px;
-  }
 }
 .blog-tabs {
   padding-left: 0px !important;

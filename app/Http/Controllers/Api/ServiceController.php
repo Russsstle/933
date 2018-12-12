@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\Branch;
 use App\Http\Controllers\Controller;
+use App\Rate;
 use App\Service;
 use Illuminate\Http\Request;
 use Validator;
@@ -46,6 +47,16 @@ class ServiceController extends Controller {
     $request->image->move(public_path('uploads'), $service->filename);
 
     if ($service->save()) {
+      foreach (explode("\n", $request->rates) as $rate_str) {
+        $rate_str = explode('|', $rate_str);
+
+        $rate = new Rate;
+        $rate->services()->associate($service);
+        $rate->name  = $rate_str[0];
+        $rate->price = $rate_str[1];
+
+        $rate->save();
+      }
       return response()->json(['success' => true]);
     } else {
       return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);

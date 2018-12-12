@@ -26,6 +26,16 @@
         <input id="image" type="file" name="image" class="form-control" accept="image/*">
       </div>
       <div class="form-group">
+        <label for="rates" class="form-control-label">Rates</label>
+        @php
+          $rates = [];
+          foreach ($row->rates as $rate) {
+            $rates[] = htmlentities($rate->name . "|" . $rate->price);
+          }
+        @endphp
+        <textarea id="rates" name="rates" class="form-control" required>{{ join("\n", $rates) }}</textarea>
+      </div>
+      <div class="form-group">
         <button type="submit" class="btn btn-primary">
           <i class="fa fa-save"></i>&nbsp;Save
         </button>

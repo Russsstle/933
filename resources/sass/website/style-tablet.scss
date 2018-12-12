@@ -1,22 +1,9 @@
-.flex-s {
-  display: flex;
-  flex-direction: column;
-}
-.box-a {
-  order: 3;
-}
-.box-b {
-  order: 2;
-}
-.box-c {
-  order: 1;
-}
 .content,
 .blog-content {
   padding: 40px 100px !important;
 }
 .home-content {
-  padding: 110px 100px 60px !important;
+  padding: 110px 100px;
 }
 .nav-wrapper {
   padding: 0 !important;
@@ -35,9 +22,9 @@
 // .sidenav-trigger{
 //   margin-right
 // }
-.blog-tabs{
-  padding-left:0px !important;
+.blog-tabs {
+  padding-left: 0px !important;
 }
-.blog-card{
-  padding-top:0px !important;
+.blog-card {
+  padding-top: 0px !important;
 }

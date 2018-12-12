@@ -13,17 +13,25 @@
           <th>Branch</th>
           <th>Name</th>
           <th>Description</th>
+          <th>Rates</th>
           <th>Image</th>
           <th width="5%">Action</th>
         </tr>
       </thead>
       <tbody>
         @foreach($data as $id => $row)
+          @php
+            $rates = [];
+            foreach ($row->rates as $rate) {
+              $rates[] = htmlentities($rate->name . " | " . $rate->price);
+            }
+          @endphp
           <tr>
             <td>{{ $id + 1 }}</td>
             <td>{{ $row->branches->name }}</td>
             <td>{{ $row->title }}</td>
             <td>{{ $row->description }}</td>
+            <td>{!! join("<br>", $rates) !!}</td>
             <td>
               <a href="{{ asset("uploads/" . $row->filename) }}">
                 <img class="material-boxed" src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">

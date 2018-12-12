@@ -23,6 +23,6 @@ class Rate extends Model {
    * @return mixed
    */
   public function services() {
-    return $this->belongsToMany('App\Service', 'service_id');
+    return $this->belongsTo('App\Service', 'service_id');
   }
 }

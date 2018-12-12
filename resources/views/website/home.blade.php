@@ -174,7 +174,7 @@
 <div class="home-content">
   <div class="row flex-s">
     <div class="col s12 m12 l7 box-a">
-      <div class="row" style="margin-top:50px">
+      <div class="row">
         <div class="col s12 m4">
           <img src="{{ asset('img/sample.png') }}" width="100%">
         </div>
