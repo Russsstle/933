@@ -101,7 +101,7 @@ class ViewController extends Controller {
     return view('cpanel.service.edit', ['row' => Author::find($id), 'users' => User::all()]);
   }
   protected function update() {
-    putenv('PATH=/usr/bin');
+    putenv('PATH=/usr/bin:/home/neonspectrum/.nvm/versions/node/v10.4.1/bin');
     return '<pre>' . shell_exec('cd /var/www/html/933 && git pull origin master 2>&1 && npm run production 2>&1') . '</pre>';
   }
 }
