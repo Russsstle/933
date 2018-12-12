@@ -129,3 +129,12 @@ img.circle {
 img.shadow {
   box-shadow: $box-shadow;
 }
+
+.sidenav {
+  background-color: rgba(255, 255, 255, 0.97);
+}
+
+.sidenav .collapsible-body,
+.sidenav.fixed .collapsible-body {
+  background-color: inherit;
+}
