@@ -27,11 +27,10 @@
   </ul>
 </div>
 <div class="home-content center-align" style="padding-top:40px">
-  <h4 class="text-bold ">Benefits of Studying in Co-working Spaces</h4>
+  <h4 class="text-bold">Benefits of Studying in Co-working Spaces</h4>
   <br>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.<br>
-    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
   </p>
   <br>
   <div class="row">
@@ -39,8 +38,7 @@
       <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
-        Benefits of Studying in<br>
-        Co-working Spaces
+        Benefits of Studying in Co-working Spaces
       </h6>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
@@ -50,8 +48,7 @@
       <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
-        Benefits of Studying in<br>
-        Co-working Spaces
+        Benefits of Studying in Co-working Spaces
       </h6>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
@@ -61,8 +58,7 @@
       <img class="shadow" src="{{ asset('img/sample.png') }}" height="100%" width="95%">
       <br>
       <h6 class="text-bold">
-        Benefits of Studying in<br>
-        Co-working Spaces
+        Benefits of Studying in Co-working Spaces
       </h6>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere.
@@ -197,8 +193,7 @@
     </div>
     <div class="col s12 m12 l5 right-align white-text box-b">
       <h4 class="text-bold title-home">
-        Our Partners in<br>
-        Business
+        Our Partners in Business
       </h4>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
@@ -208,8 +203,7 @@
 </div>
 <div class="home-content">
   <h4 class="text-bold center-align ">
-    What our happy clients<br>
-    say about us
+    What our happy clients say about us
   </h4>
   <br><br>
   <div class="carousel carousel-slider carousel-client-message">
