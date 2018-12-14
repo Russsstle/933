@@ -385,3 +385,6 @@ p {
 @media (max-width: 992px) {
   @import 'style-mobile';
 }
+.client-message-left-card, .client-message-right-card{
+  height: none !important;
+}

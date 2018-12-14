@@ -46,8 +46,8 @@ a.brand-logo {
 
 .client-message-left-card,
 .client-message-right-card {
-  height: 100px;
-  margin-bottom: 15px;
+  // height: 100px;
+  margin-top: 15px;
 }
 
 .home-content,
@@ -109,10 +109,10 @@ svg.waves {
   padding: 40px 5% !important;
 }
 
-.client-message-left-card,
-.client-message-right-card {
-  height: unset;
-}
+// .client-message-left-card,
+// .client-message-right-card {
+//   height: unset;
+// }
 .contact-info {
   padding-left: 0px !important;
 }
