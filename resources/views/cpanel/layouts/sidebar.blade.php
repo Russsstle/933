@@ -61,6 +61,12 @@
             Branches
           </a>
         </li>
+        <li class="{{ active('cpanel/feedbacks*') }}">
+          <a href="{{ url('cpanel/feedbacks') }}">
+            <i class="fa fa-home"></i>
+            Feedbacks
+          </a>
+        </li>
 
         <!-- <li>
           <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">

@@ -58,6 +58,14 @@ Route::prefix('cpanel')->group(function () {
       Route::get('add', 'ViewController@branchAdd');
       Route::get('{id}/edit', 'ViewController@branchEdit');
     });
+    Route::prefix('branches')->group(function () {
+      Route::get('/', 'ViewController@branch');
+      Route::get('add', 'ViewController@branchAdd');
+      Route::get('{id}/edit', 'ViewController@branchEdit');
+    });
+    Route::prefix('feedbacks')->group(function () {
+      Route::get('/', 'ViewController@cpanelfeedback');
+    });
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');

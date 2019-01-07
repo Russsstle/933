@@ -3,7 +3,7 @@
 @section("body")
 <div class="card">
   <div class="card-body">
-    <a class="btn btn-primary btn-sm pull-right" href="{{ url('cpanel/article/add') }}" role="button">
+    <a class="btn btn-primary btn-sm pull-right" href="{{ url('cpanel/articles/add') }}" role="button">
       <i class="fa fa-plus"></i>&nbsp;Add
     </a>
     <table class="datatable table table-striped table-bordered">

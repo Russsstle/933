@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Author;
 use App\Branch;
+// use App\Feedback;
 use App\Service;
 use App\User;
 
@@ -113,6 +114,9 @@ class ViewController extends Controller {
    */
   protected function branchEdit($id) {
     return view('cpanel.branch.edit', ['row' => Branch::find($id)]);
+  }
+  protected function cpanelfeedback() {
+    return view('cpanel.feedback.index');
   }
   protected function update() {
     putenv('PATH=/usr/bin');

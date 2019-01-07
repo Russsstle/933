@@ -26,15 +26,15 @@ $(document).ready(function() {
     onCycleTo: function() {
       if (
         $('.carousel-client-message .carousel-item')
-          .first()
-          .is('.active')
+        .first()
+        .is('.active')
       ) {
         $('.left.middle-indicator-text').fadeOut()
         $('.right.middle-indicator-text').fadeIn()
       } else if (
         $('.carousel-client-message .carousel-item')
-          .last()
-          .is('.active')
+        .last()
+        .is('.active')
       ) {
         $('.left.middle-indicator-text').fadeIn()
         $('.right.middle-indicator-text').fadeOut()
@@ -70,11 +70,11 @@ $('form[name=frmLogin]').submit(function(e) {
     .prop('disabled', true)
 
   $.ajax({
-    context: this,
-    type: 'POST',
-    dataType: 'json',
-    data: $(this).serialize()
-  })
+      context: this,
+      type: 'POST',
+      dataType: 'json',
+      data: $(this).serialize()
+    })
     .done(function(response) {
       if (response.success) {
         location.href = main_url + 'cpanel'
@@ -91,6 +91,37 @@ $('form[name=frmLogin]').submit(function(e) {
         .prop('disabled', false)
     })
 })
+// $('form[name=frmAddData]').submit(function(e) {
+//   e.preventDefault()
+
+//   let hasFile = $(this).is('[hasFile]')
+
+//   let url = $(this).data('url')
+//   let redirect = $(this).data('redirect')
+
+//   let form_data = $(this).serialize()
+
+//   if (hasFile) {
+//     form_data = new FormData($(this)[0])
+//   }
+
+//   $.ajax({
+//     context: this,
+//     url: api_url + url,
+//     type: 'POST',
+//     data: form_data,
+//     contentType: !hasFile,
+//     processData: !hasFile
+//   }).done(function(response) {
+//     if (response.success) {
+//       swal('Added Successfully!', null, 'success').then(function() {
+//         location.href = main_url + redirect
+//       })
+//     } else {
+//       swal('Error!', response.error, 'warning')
+//     }
+//   })
+// })
 
 $(window).on('load', function() {
   $('.loader-wrapper').fadeOut()
