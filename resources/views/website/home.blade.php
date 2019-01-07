@@ -217,7 +217,7 @@
     </div>
     <a class="carousel-item" href="#one!">
       <div class="row">
-        <div class="col s12 m5">
+        <div class="col s12 m5 l5">
           <div class="client-message-left-card">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
             <br><br>
@@ -225,7 +225,7 @@
             University of Sto. Tomas
           </div>
         </div>
-        <div class="col s12 m7">
+        <div class="col s12 m7 l7">
           <div class="client-message-right-card">
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
             <br>
