@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Author;
 use App\Branch;
+use App\Carousel;
 use App\ContactUs;
 use App\Feedback;
 use App\Partnership;
@@ -125,6 +126,15 @@ class ViewController extends Controller {
   }
   protected function cpanelpartnership() {
     return view('cpanel.partnership.index', ['data' => Partnership::all()]);
+  }
+  protected function cpanelwebsite() {
+    return view('cpanel.website.index', ['data' => Carousel::all()]);
+  }
+  protected function cpanelwebsiteAdd() {
+    return view('cpanel.website.add');
+  }
+  protected function cpanelwebsiteEdit($id) {
+    return view('cpanel.website.edit', ['row' => Carousel::find($id)]);
   }
 
   protected function update() {

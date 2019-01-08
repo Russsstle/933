@@ -72,6 +72,11 @@ Route::prefix('cpanel')->group(function () {
     Route::prefix('partnerships')->group(function () {
       Route::get('/', 'ViewController@cpanelpartnership');
     });
+    Route::prefix('website')->group(function () {
+      Route::get('/', 'ViewController@cpanelwebsite');
+      Route::get('add', 'ViewController@cpanelwebsiteAdd');
+      Route::get('{id}/edit', 'ViewController@cpanelwebsiteEdit');
+    });
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');

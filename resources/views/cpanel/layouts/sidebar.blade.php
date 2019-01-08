@@ -31,6 +31,12 @@
             Home
           </a>
         </li>
+        <li class="{{ active('cpanel/website*') }}">
+          <a href="{{ url('cpanel/website') }}">
+            <i class="fa fa-window-maximize"></i>
+            Website
+          </a>
+        </li>
         <li class="{{ active('cpanel/users*') }}">
           <a href="{{ url('cpanel/users') }}">
             <i class="fa fa-user-circle"></i>
