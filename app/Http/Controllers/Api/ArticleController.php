@@ -6,6 +6,7 @@ use App\Article;
 use App\Author;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Validator;
 
 class ArticleController extends Controller {
   /**
@@ -24,11 +25,31 @@ class ArticleController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request) {
-    $article = new Article;
 
+    // $article->fill($request->only(['title', 'content', 'date']));
+
+    // if ($article->save()) {
+    //   return response()->json(['success' => true]);
+    // } else {
+    //   return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
+    // }
+
+    $validator = Validator::make($request->all(), [
+      'image' => 'image'
+    ]);
+
+    if ($validator->fails()) {
+      return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
+    }
+
+    $filename  = pathinfo($request->image, PATHINFO_FILENAME);
+    $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+    $article   = new Article;
     $article->authors()->associate(Author::find($request->author_id));
+    $article->fill($request->only(['title', 'date', 'content']));
 
-    $article->fill($request->only(['title', 'content', 'date']));
+    $article->filename = uniqid($filename . '-') . $extension;
+    $request->image->move(public_path('uploads'), $article->filename);
 
     if ($article->save()) {
       return response()->json(['success' => true]);
@@ -37,29 +58,45 @@ class ArticleController extends Controller {
     }
   }
 
-  /**
-   * Display the specified resource.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
+/**
+ * Display the specified resource.
+ *
+ * @param  int  $id
+ * @return \Illuminate\Http\Response
+ */
   public function show($id) {
     //
   }
 
-  /**
-   * Update the specified resource in storage.
-   *
-   * @param  \Illuminate\Http\Request  $request
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
+/**
+ * Update the specified resource in storage.
+ *
+ * @param  \Illuminate\Http\Request  $request
+ * @param  int  $id
+ * @return \Illuminate\Http\Response
+ */
   public function update(Request $request, $id) {
+    if ($request->image) {
+      $validator = Validator::make($request->all(), [
+        'image' => 'image'
+      ]);
+
+      if ($validator->fails()) {
+        return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
+      }
+
+      $filename  = pathinfo($request->image, PATHINFO_FILENAME);
+      $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+    }
     $article = Article::find($id);
 
     $article->authors()->associate(Author::find($request->author_id));
 
     $article->fill($request->only(['title', 'content', 'date']));
+    if (isset($filename)) {
+      $article->filename = uniqid($filename . '-') . $extension;
+      $request->image->move(public_path('uploads'), $article->filename);
+    }
 
     if ($article->save()) {
       return response()->json(['success' => true]);
@@ -68,12 +105,12 @@ class ArticleController extends Controller {
     }
   }
 
-  /**
-   * Remove the specified resource from storage.
-   *
-   * @param  int  $id
-   * @return \Illuminate\Http\Response
-   */
+/**
+ * Remove the specified resource from storage.
+ *
+ * @param  int  $id
+ * @return \Illuminate\Http\Response
+ */
   public function destroy($id) {
     $article = Article::find($id);
 
@@ -83,4 +120,4 @@ class ArticleController extends Controller {
       return response()->json(['success' => false, 'error' => 'There was an error deleting the record.']);
     }
   }
-}
+};

@@ -14,6 +14,7 @@
           <th>Author</th>
           <th>Date</th>
           <th>Content</th>
+          <th>Image</th>
           <th width="5%">Action</th>
         </tr>
       </thead>
@@ -26,10 +27,15 @@
             <td>{{ $row->date->format('F d, Y') }}</td>
             <td>{{ $row->content }}</td>
             <td>
+              <a href="{{ asset("uploads/" . $row->filename) }}">
+                <img class="material-boxed" src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">
+              </a>
+            </td>
+            <td>
               <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/articles/' . $row->id.'/edit') }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
               </a>
-              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="articles/{{ $row->id }}" data-redirect="article">
+              <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="articles/{{ $row->id }}" data-redirect="articles">
                 <i class="fa fa-trash"></i>&nbsp; Delete
               </a>
             </td>

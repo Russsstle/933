@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Edit Article</h4>
-     <form name="frmEditData" data-url="articles/{{ $row->id }}" data-redirect="articles">
+     <form name="frmEditData" data-url="articles/{{ $row->id }}" data-redirect="articles" hasFile>
       <div class="form-group">
         <label for="author" class="form-control-label">Article</label>
         <select id="author" class="form-control" name="author_id" required>
@@ -20,6 +20,10 @@
       <div class="form-group">
         <label for="content" class="form-control-label">Content</label>
         <textarea id="content" name="content" class="form-control" required> {{ $row->content }}</textarea>
+      </div>
+      <div class="form-group">
+        <label for="image" class="form-control-label">Upload Image</label>
+        <input id="image" type="file" name="image" class="form-control" accept="image/*">
       </div>
       <div class="form-group">
         <label for="date" class="form-control-label">Date</label>

@@ -18,11 +18,12 @@ class CreateArticlesTable extends Migration {
       $table->string('title');
       $table->date('date');
       $table->text('content');
+      $table->string('filename');
       $table->timestamps();
       $table->softDeletes();
     });
 
-    \App\Article::create(['author_id' => '1', 'title' => 'Laravel Is Life', 'date' => '2018-12-01', 'content' => 'Sad']);
+    // \App\Article::create(['author_id' => '1', 'title' => 'Laravel Is Life', 'date' => '2018-12-01', 'content' => 'Sad']);
   }
 
   /**
