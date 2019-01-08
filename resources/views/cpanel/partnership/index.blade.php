@@ -9,7 +9,10 @@
           <th width="5%">ID</th>
           <th>Name</th>
           <th>Email Address</th>
-          <th>Message</th>
+          <th>Position</th>
+          <th>School</th>
+          <th>Organization</th>
+          <th>Type of Organization</th>
           <th>Timestamp</th>
         </tr>
       </thead>
@@ -19,7 +22,10 @@
             <td>{{ $id + 1 }}</td>
             <td>{{ $row->name }}</td>
             <td>{{ $row->email }}</td>
-            <td>{{ $row->message }}</td>
+            <td>{{ $row->position }}</td>
+            <td>{{ $row->school }}</td>
+            <td>{{ $row->organization }}</td>
+            <td>{{ $row->organizationtype }}</td>
             <td>{{ date("F j, Y, g:i a", strtotime($row->created_at) )}}</td>
           </tr>
          @endforeach

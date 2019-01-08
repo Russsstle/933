@@ -40,8 +40,8 @@ class PartnershipController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show($id) {
-    return Partnership::firstOrFail($id);}
-}
+    // return Partnership::firstOrFail($id);}
+  }
 
 /**
  * Update the specified resource in storage.
@@ -50,9 +50,9 @@ class PartnershipController extends Controller {
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-function update(Request $request, $id) {
-  //
-}
+  public function update(Request $request, $id) {
+    //
+  }
 
 /**
  * Remove the specified resource from storage.
@@ -60,7 +60,7 @@ function update(Request $request, $id) {
  * @param  int  $id
  * @return \Illuminate\Http\Response
  */
-function destroy($id) {
-  //
-}
+  public function destroy($id) {
+    //
+  }
 };
