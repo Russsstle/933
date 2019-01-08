@@ -40,7 +40,7 @@ $('form[name=frmAddData]').submit(function(e) {
     url: api_url + url,
     type: 'POST',
     data: form_data,
-    contentType: !hasFile,
+    contentType: !hasFile && undefined,
     processData: !hasFile
   }).done(function(response) {
     if (response.success) {
@@ -76,7 +76,7 @@ $('form[name=frmEditData]').submit(function(e) {
     url: api_url + url,
     type: 'POST',
     data: form_data,
-    contentType: !hasFile,
+    contentType: !hasFile && undefined,
     processData: !hasFile
   }).done(function(response) {
     if (response.success) {

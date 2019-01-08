@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Add Article</h4>
-    <form name="frmAddData" data-url="articles" data-redirect="article">
+    <form name="frmAddData" data-url="articles" data-redirect="articles">
       <div class="form-group">
         <label for="author" class="form-control-label">Author</label>
         <select id="author" class="form-control" name="author_id" required>

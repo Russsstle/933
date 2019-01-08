@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Article;
 use App\Author;
 use App\Branch;
-// use App\Feedback;
+use App\ContactUs;
+use App\Feedback;
+use App\Partnership;
 use App\Service;
 use App\User;
 
@@ -116,10 +118,17 @@ class ViewController extends Controller {
     return view('cpanel.branch.edit', ['row' => Branch::find($id)]);
   }
   protected function cpanelfeedback() {
-    return view('cpanel.feedback.index');
+    return view('cpanel.feedback.index', ['data' => Feedback::all()]);
   }
+  protected function cpanelcontactus() {
+    return view('cpanel.contact.index', ['data' => ContactUs::all()]);
+  }
+  protected function cpanelpartnership() {
+    return view('cpanel.partnership.index', ['data' => Partnership::all()]);
+  }
+
   protected function update() {
-    putenv('PATH=/usr/bin');
-    return '<pre>' . shell_exec('cd /var/www/html/933 && git pull origin master 2>&1') . '</pre>';
+    putenv('PATH =  / usr / bin');
+    return ' < pre > ' . shell_exec('cd / var  / www / html / 933 && gitpulloriginmaster2 >  & 1') . ' <  / pre > ';
   }
 }

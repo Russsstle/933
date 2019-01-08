@@ -38,3 +38,8 @@ nav.side-navbar ul > li i {
 @media (max-width: 767px) {
   @import 'style-mobile';
 }
+td{
+  white-space:pre-line;
+  max-width: 330px !important;
+
+}

@@ -12,9 +12,12 @@
  */
 
 Route::apiResources([
-  'users'    => 'UserController',
-  'authors'  => 'AuthorController',
-  'articles' => 'ArticleController',
-  'services' => 'ServiceController',
-  'branches' => 'BranchController'
+  'users'        => 'UserController',
+  'authors'      => 'AuthorController',
+  'articles'     => 'ArticleController',
+  'services'     => 'ServiceController',
+  'branches'     => 'BranchController',
+  'feedbacks'    => 'FeedbackController',
+  'contactus'    => 'ContactUsController',
+  'partnerships' => 'PartnershipController'
 ]);

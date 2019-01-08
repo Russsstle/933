@@ -66,6 +66,12 @@ Route::prefix('cpanel')->group(function () {
     Route::prefix('feedbacks')->group(function () {
       Route::get('/', 'ViewController@cpanelfeedback');
     });
+    Route::prefix('contactus')->group(function () {
+      Route::get('/', 'ViewController@cpanelcontactus');
+    });
+    Route::prefix('partnerships')->group(function () {
+      Route::get('/', 'ViewController@cpanelpartnership');
+    });
     Route::get('logout', 'AuthController@logout');
   });
   Route::get('update', 'ViewController@update');

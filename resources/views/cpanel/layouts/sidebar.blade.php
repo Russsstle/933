@@ -63,8 +63,20 @@
         </li>
         <li class="{{ active('cpanel/feedbacks*') }}">
           <a href="{{ url('cpanel/feedbacks') }}">
-            <i class="fa fa-home"></i>
-            Feedbacks
+            <i class="fa fa-comments-o"></i>
+            Feedback
+          </a>
+        </li>
+        <li class="{{ active('cpanel/contact*') }}">
+          <a href="{{ url('cpanel/contactus') }}">
+            <i class="fa fa-phone"></i>
+            Contact
+          </a>
+        </li>
+        <li class="{{ active('cpanel/partnerships*') }}">
+          <a href="{{ url('cpanel/partnerships') }}">
+            <i class="fa fa-handshake-o"></i>
+            Partnerships
           </a>
         </li>
 

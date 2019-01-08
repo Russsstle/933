@@ -7,22 +7,22 @@
 <div class="content">
   <div class="row">
     <div class="col l6">
-      <form method="POST">
+      <form name="frmAddData" data-url="contactus" data-redirect="contact">
         @csrf
         <div class="input-field col m12 l6">
-          <input id="name" type="text" class="validate">
+          <input id="name" name="name" type="text" class="validate">
           <label for="name">Name</label>
         </div>
         <div class="input-field col m12 l6">
-          <input id="email" type="email" class="validate">
+          <input id="email" type="email" name="email" class="validate">
           <label for="email">Email</label>
         </div>
         <div class="input-field col m12 l12">
-          <input id="subject" type="text" class="validate">
+          <input id="subject" name="subject" type="text" class="validate">
           <label for="subject">Subject</label>
         </div>
         <div class="input-field col m12 l12">
-          <textarea id="message" class="materialize-textarea"></textarea>
+          <textarea id="message" name="message" class="materialize-textarea"></textarea>
           <label for="message">Message</label>
         </div>
         <button class="waves-effect waves-light btn right" type="submit">Send</button>

@@ -26,7 +26,7 @@
             <td>{{ $row->date->format('F d, Y') }}</td>
             <td>{{ $row->content }}</td>
             <td>
-              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/article/' . $row->id.'/edit') }}">
+              <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/articles/' . $row->id.'/edit') }}">
                 <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
               </a>
               <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="articles/{{ $row->id }}" data-redirect="article">

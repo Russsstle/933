@@ -10,12 +10,20 @@ const mix = require('laravel-mix')
  |
  */
 /* WEBSITE */
-mix.combine(['resources/css/packages/materialize.min.css'], 'public/css/website/packages.css')
+mix.combine([
+  'resources/css/packages/materialize.min.css',
+  'resources/css/packages/sweetalert2.min.css'
+], 'public/css/website/packages.css')
 mix.sass('resources/sass/website/style.scss', 'public/css/website/app.css').options({
   processCssUrls: false
 })
 mix.combine(
-  ['resources/js/packages/jquery.min.js', 'resources/js/packages/materialize.min.js'],
+  [
+    'resources/js/packages/jquery.min.js',
+    'resources/js/packages/materialize.min.js',
+    'resources/js/packages/jquery.serializejson.min.js',
+    'resources/js/packages/sweetalert2.all.min.js',
+  ],
   'public/js/website/packages.js'
 )
 mix.babel(['resources/js/website/script.js'], 'public/js/website/app.js')
