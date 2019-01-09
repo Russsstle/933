@@ -10,7 +10,7 @@
             <a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
           </div>
           <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
-            <li class="nav-item">Hello, {{ Auth::user()->username }}</li>
+            <li class="nav-item" style="line-height: 34px">Hello, {{ Auth::user()->username }}</li>
             <li class="nav-item">
               <a href="{{ url('cpanel/logout') }}" onclick="return confirm('Are you sure do you want to logout?')" class="nav-link logout">
                 <span class="d-none d-sm-inline">Logout</span>
