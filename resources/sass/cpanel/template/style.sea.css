@@ -337,7 +337,7 @@ nav.side-navbar a {
   font-size: 0.9em;
 }
 nav.side-navbar a[data-toggle='collapse']::before {
-  content: '\f104';
+  content: '\f105';
   display: inline-block;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);

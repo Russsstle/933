@@ -25,7 +25,7 @@
             <td>{{ $row->branch->name }}</td>
             <td>{{ $row->title }}</td>
             <td>{{ $row->description }}</td>
-            <td>{{ join("\n", array_map(function($x){ return $x["name"] . " | " . $x["price"]; }, $row->rates->toArray())) }}</td>
+            <td class="preline">{{ join("\n", array_map(function($x){ return $x["name"] . " | " . $x["price"]; }, $row->rates->toArray())) }}</td>
             <td class="baguetteBox">
               <a href="{{ asset("uploads/" . $row->filename) }}">
                 <img class="material-boxed" src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">

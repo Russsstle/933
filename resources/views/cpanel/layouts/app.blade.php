@@ -28,19 +28,6 @@
   <title>933 Co-working Manila</title>
 </head>
 <body>
-  <div class="loader-wrapper">
-    <div class="preloader-wrapper big active loader">
-      <div class="spinner-layer spinner-blue-only">
-        <div class="circle-clipper left">
-          <div class="circle"></div>
-        </div><div class="gap-patch">
-          <div class="circle"></div>
-        </div><div class="circle-clipper right">
-          <div class="circle"></div>
-        </div>
-      </div>
-    </div>
-  </div>
   @section("content")
     @yield("body")
   @overwrite

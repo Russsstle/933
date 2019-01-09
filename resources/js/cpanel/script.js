@@ -20,6 +20,7 @@ $(document).ready(function() {
   })
   $('.datatable').DataTable()
   baguetteBox.run('.baguetteBox')
+  $('.content-loader').fadeOut()
 })
 
 $('form[name=frmAddData]').submit(function(e) {

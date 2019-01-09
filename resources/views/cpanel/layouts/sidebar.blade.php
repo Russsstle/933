@@ -92,6 +92,7 @@
       </ul>
     </nav>
     <div class="content-inner">
+        <div class="content-loader"></div>
       <section class="no-padding-bottom">
         @yield("body")
       </section>
