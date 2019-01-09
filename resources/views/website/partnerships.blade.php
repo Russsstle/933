@@ -31,7 +31,7 @@
       <label for="organization">Organization</label>
     </div>
     <div class="input-field">
-      <input id="type_of_organization" name='organizationtype' type="text" class="validate">
+      <input id="type_of_organization" name='organization_type' type="text" class="validate">
       <label for="type_of_organization">Type of Organization</label>
     </div>
      <button class="waves-effect waves-light btn right" type="submit">Send</button>

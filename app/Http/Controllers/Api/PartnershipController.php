@@ -31,7 +31,7 @@ class PartnershipController extends Controller {
   public function store(Request $request) {
     $partnership = new Partnership;
 
-    $partnership->fill($request->only(['name', 'email', 'position', 'school', 'organization', 'organizationtype']));
+    $partnership->fill($request->only(['name', 'email', 'position', 'school', 'organization', 'organization_type']));
 
     if ($partnership->save()) {
       return response()->json(['success' => true]);
