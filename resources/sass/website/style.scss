@@ -271,10 +271,6 @@ a.dark-underline {
   margin: 0;
 }
 
-.slider {
-  z-index: -1;
-}
-
 .slider .indicators .indicator-item.active {
   background-color: #696969;
 }
@@ -385,6 +381,7 @@ p {
 @media (max-width: 992px) {
   @import 'style-mobile';
 }
-.client-message-left-card, .client-message-right-card{
+.client-message-left-card,
+.client-message-right-card {
   height: none !important;
 }

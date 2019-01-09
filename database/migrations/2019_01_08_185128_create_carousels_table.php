@@ -15,8 +15,8 @@ class CreateCarouselsTable extends Migration {
       $table->increments('id');
       $table->string('title');
       $table->string('description');
-      $table->string('filename');
       $table->enum('label_align', ['left', 'center', 'right']);
+      $table->string('filename');
       $table->timestamps();
     });
   }

@@ -80,11 +80,11 @@
           </a>
         </li>
         <li class="{{ active('cpanel/website*') }}">
-          <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
+          <a href="#website" aria-expanded="false" data-toggle="collapse">
             <i class="fa fa-cogs"></i>
             Website Management
           </a>
-          <ul id="exampledropdownDropdown" class="collapse list-unstyled">
+          <ul id="website" class="collapse list-unstyled">
             <li><a href="{{ url('cpanel/website/carousel') }}">Carousel (Home)</a></li>
             <li><a href="{{ url('cpanel/website/gallery') }}">Gallery</a></li>
           </ul>

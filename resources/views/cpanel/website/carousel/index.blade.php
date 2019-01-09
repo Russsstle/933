@@ -12,6 +12,7 @@
           <th width="5%">ID</th>
           <th>Title</th>
           <th>Description</th>
+          <th>Label Align</th>
           <th>Image</th>
           <th width="5%">Action</th>
         </tr>
@@ -22,6 +23,7 @@
             <td>{{ $id + 1 }}</td>
             <td>{{ $row->title }}</td>
             <td>{{ $row->description }}</td>
+            <td>{{ ucfirst($row->label_align) }}</td>
             <td class="baguetteBox">
               <a href="{{ asset("img/carousel/" . $row->filename) }}">
                 <img src="{{ asset("img/carousel/" . $row->filename) }}" alt="" height="80px">
