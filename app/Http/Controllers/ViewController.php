@@ -76,7 +76,7 @@ class ViewController extends Controller {
     return view('cpanel.user.edit', ['row' => User::find($id), 'users' => User::all()]);
   }
   protected function article() {
-    return view('cpanel.article.index', ['data' => Article::with('authors')->get()]);
+    return view('cpanel.article.index', ['data' => Article::with('author')->get()]);
   }
   protected function articleAdd() {
     return view('cpanel.article.add', ['authors' => Author::all()]);
@@ -85,7 +85,7 @@ class ViewController extends Controller {
    * @param $id
    */
   protected function articleEdit($id) {
-    return view('cpanel.article.edit', ['row' => Article::find($id), 'authors' => Author::all()]);
+    return view('cpanel.article.edit', ['row' => Article::find($id), 'author' => Author::all()]);
   }
   protected function author() {
     return view('cpanel.author.index', ['data' => Author::all()]);
@@ -97,7 +97,7 @@ class ViewController extends Controller {
    * @param $id
    */
   protected function authorEdit($id) {
-    return view('cpanel.author.edit', ['row' => Author::find($id), 'users' => User::all()]);
+    return view('cpanel.author.edit', ['row' => Author::find($id), 'user' => User::all()]);
   }
   protected function service() {
     return view('cpanel.service.index', ['data' => Service::with('rates')->get()]);

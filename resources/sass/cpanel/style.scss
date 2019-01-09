@@ -36,6 +36,10 @@ nav.side-navbar ul > li i {
   width: 30px;
 }
 
+nav.side-navbar.shrinked ul li a i {
+  margin-left: 28px;
+}
+
 .content-inner {
   min-height: calc(100vh - 56px);
 }
