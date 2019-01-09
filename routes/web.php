@@ -71,6 +71,8 @@ Route::prefix('cpanel')->group(function () {
     });
     Route::prefix('partnerships')->group(function () {
       Route::get('/', 'ViewController@cpanelPartnership');
+      Route::get('add', 'ViewController@cpanelPartnershipAdd');
+      Route::get('{id}/edit', 'ViewController@cpanelPartnershipEdit');
     });
     Route::prefix('website')->group(function () {
       Route::prefix('carousel')->group(function () {

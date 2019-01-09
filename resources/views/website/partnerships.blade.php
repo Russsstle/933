@@ -7,7 +7,7 @@
   Partnerships
 </div>
 <div class="content" style="overflow:hidden">
-  <h5>Interested in partnering with us?<br/>Fill up the form/ note and we'll get back to you soon!</h5>
+  <h5>Interested in partnering with us?<br/>Fill up the form / note and we'll get back to you soon!</h5>
   <form name="frmAddData" data-url="partnerships" data-redirect="partnerships">
      @csrf
     <div class="input-field">

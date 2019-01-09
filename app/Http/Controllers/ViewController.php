@@ -132,6 +132,12 @@ class ViewController extends Controller {
   protected function cpanelPartnership() {
     return view('cpanel.partnership.index', ['data' => Partnership::all()]);
   }
+  protected function cpanelPartnershipAdd() {
+    return view('cpanel.partnership.add');
+  }
+  protected function cpanelPartnershipEdit($id) {
+    return view('cpanel.partnership.edit', ['row' => Partnership::find($id)]);
+  }
   protected function cpanelCarousel() {
     return view('cpanel.website.carousel.index', ['data' => Carousel::all()]);
   }

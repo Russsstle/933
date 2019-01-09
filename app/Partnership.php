@@ -8,6 +8,6 @@ class Partnership extends Model {
   //protected $table = "partnerships";
 
   protected $fillable = [
-    'name', 'email', 'position', 'school', 'organization', 'organization_type'
+    'name', 'email', 'position', 'school', 'organization', 'organization_type', 'logo'
   ];
 }

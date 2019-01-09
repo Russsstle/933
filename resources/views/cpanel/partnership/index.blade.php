@@ -1,8 +1,11 @@
 @extends("cpanel.layouts.app")
 
 @section("body")
-  <div class="card">
+<div class="card">
   <div class="card-body">
+    <a class="btn btn-primary btn-sm pull-right" href="{{ url('cpanel/partnerships/add') }}" role="button">
+      <i class="fa fa-plus"></i>&nbsp;Add
+    </a>
     <div class="table-responsive">
       <table class="datatable table table-striped table-bordered">
         <thead>
@@ -14,7 +17,8 @@
             <th>School</th>
             <th>Organization</th>
             <th>Type of Organization</th>
-            <th>Timestamp</th>
+            <th>Logo</th>
+            <th>Action</th>
           </tr>
         </thead>
         <tbody>
@@ -27,7 +31,20 @@
               <td>{{ $row->school }}</td>
               <td>{{ $row->organization }}</td>
               <td>{{ $row->organization_type }}</td>
-              <td>{{ date("F j, Y, g:i a", strtotime($row->created_at) )}}</td>
+              <td class="baguetteBox"><center>
+                <a href="{{ asset("uploads/" . $row->filename) }}">
+                  <img src="{{ asset("uploads/" . $row->filename) }}" alt="" height="100px">
+                </a>
+              </center>
+              </td>
+              <td>
+                <a class="btn btn-primary btn-sm btn-block" href="{{ url('cpanel/partnerships/' . $row->id.'/edit') }}">
+                  <i class="fa fa-pencil-square-o"></i>&nbsp; Edit
+                </a>
+                <a class="btn btn-primary btn-sm btn-block btnDeleteData" href="javascript:void(0)" data-url="partnerships/{{ $row->id }}" data-redirect="partnerships">
+                  <i class="fa fa-trash"></i>&nbsp; Delete
+                </a>
+              </td>
             </tr>
            @endforeach
         </tbody>
