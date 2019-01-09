@@ -14,6 +14,14 @@
         <textarea id="description" name="description" class="form-control" required> {{ $row->description }}</textarea>
       </div>
       <div class="form-group">
+        <label for="label_align" class="form-control-label">Label Align</label>
+        <select name="label_align" id="label_align" class="form-control">
+          <option value="left" {{ $row->label_align == "left" ? "selected" : "" }}>Left</option>
+          <option value="center" {{ $row->label_align == "center" ? "selected" : "" }}>Center</option>
+          <option value="right" {{ $row->label_align == "right" ? "selected" : "" }}>Right</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="image" class="form-control-label">Upload Image</label>
         <input id="image" type="file" name="image" class="form-control" accept="image/*">
       </div>

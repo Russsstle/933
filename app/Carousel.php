@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Carousel extends Model {
 
+  /**
+   * @var array
+   */
   protected $fillable = [
-    'title', 'description', 'filename'
+    'title', 'description', 'filename', 'label_align'
   ];
 }

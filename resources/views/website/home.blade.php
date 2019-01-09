@@ -29,7 +29,7 @@
     @foreach($data as $row)
     <li>
         <img src="{{ asset("img/carousel/" . $row->filename) }}">
-        <div class="caption center-align">
+        <div class="caption {{ $row->label_align }}-align">
           <h3>{{ $row->title}}</h3>
           <h5 class="light grey-text text-lighten-3">{{ $row->description}}</h5>
         </div>

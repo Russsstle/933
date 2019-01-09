@@ -14,6 +14,14 @@
         <input id="description" type="text" name="description" class="form-control" required>
       </div>
       <div class="form-group">
+        <label for="label_align" class="form-control-label">Label Align</label>
+        <select name="label_align" id="label_align" class="form-control">
+          <option value="left">Left</option>
+          <option value="center">Center</option>
+          <option value="right">Right</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="image" class="form-control-label">Upload Image</label>
         <input id="image" type="file" name="image" class="form-control" accept="image/*" required>
       </div>

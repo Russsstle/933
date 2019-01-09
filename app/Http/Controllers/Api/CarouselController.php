@@ -41,7 +41,7 @@ class CarouselController extends Controller {
     $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
     $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     $carousel  = new Carousel;
-    $carousel->fill($request->only(['title', 'description']));
+    $carousel->fill($request->only(['title', 'description', 'label_align']));
 
     $carousel->filename = uniqid($filename . '-') . '.' . $extension;
     $request->image->move(public_path('img\carousel'), $carousel->filename);
@@ -85,7 +85,7 @@ class CarouselController extends Controller {
     }
     $carousel = Carousel::find($id);
 
-    $carousel->fill($request->only(['title', 'description']));
+    $carousel->fill($request->only(['title', 'description', 'label_align']));
     if (isset($filename)) {
       $carousel->filename = uniqid($filename . '-') . '.' . $extension;
       $request->image->move(public_path('img\carousel'), $carousel->filename);
