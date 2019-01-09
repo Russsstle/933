@@ -23,12 +23,12 @@
         <textarea id="content" name="content" class="form-control" required></textarea>
       </div>
       <div class="form-group">
-        <label for="image" class="form-control-label">Upload Image</label>
-        <input id="image" type="file" name="image" class="form-control" accept="image/*" required>
+        <label for="tags" class="form-control-label">Tags</label>
+        <textarea id="tags" name="tags" class="form-control" required></textarea>
       </div>
       <div class="form-group">
-        <label for="tags" class="form-control-label">tags</label>
-        <textarea id="tags" name="tags"  class="form-control" required></textarea>
+        <label for="image" class="form-control-label">Upload Image</label>
+        <input id="image" type="file" name="image" class="form-control" accept="image/*" required>
       </div>
       <div class="form-group">
         <label for="date" class="form-control-label">Date</label>

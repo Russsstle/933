@@ -22,7 +22,7 @@ class Rate extends Model {
   /**
    * @return mixed
    */
-  public function services() {
+  public function service() {
     return $this->belongsTo('App\Service', 'service_id');
   }
 }

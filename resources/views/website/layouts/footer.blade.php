@@ -20,9 +20,9 @@
       </div>
     </div>
     <div class="col s12 m12 l12 xl2 box-c">
-      <a href="#"><img src="{{ asset('img/buttons/facebook.png') }}"></a>
-      <a href="#"><img src="{{ asset('img/buttons/twitter.png') }}"></a>
-      <a href="#"><img src="{{ asset('img/buttons/instagram.png') }}"></a>
+      <a href="https://www.facebook.com/933CoworkingMnl/"><img src="{{ asset('img/buttons/facebook.png') }}"></a>
+      <a href="https://twitter.com/933CoworkingMnl"><img src="{{ asset('img/buttons/twitter.png') }}"></a>
+      <a href="https://www.instagram.com/933_coworkingmnl/"><img src="{{ asset('img/buttons/instagram.png') }}"></a>
     </div>
   </div>
 </div>

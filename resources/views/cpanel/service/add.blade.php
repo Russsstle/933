@@ -28,7 +28,7 @@
       </div>
       <div class="form-group">
         <label for="rates" class="form-control-label">Rates</label>
-        <textarea id="rates" name="rates" placeholder="Rate Name| Price"class="form-control" required></textarea>
+        <textarea id="rates" name="rates" placeholder="Rate Name|Price"class="form-control" required></textarea>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">

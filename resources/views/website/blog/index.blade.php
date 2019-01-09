@@ -1,3 +1,5 @@
+@php($title = "Blog")
+
 @extends("website.layouts.app")
 
 @section("body")

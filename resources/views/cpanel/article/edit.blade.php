@@ -9,7 +9,7 @@
         <label for="author" class="form-control-label">Article</label>
         <select id="author" class="form-control" name="author_id" required>
           @foreach($authors as $author)
-            <option value="{{ $author->id }}" {{ $author->id == $row->id ? "selected" : "" }}>{{ $author->users->profiles->name }}</option>
+            <option value="{{ $author->id }}" {{ $author->id == $row->id ? "selected" : "" }}>{{ $author->user->profile->name }}</option>
           @endforeach
         </select>
       </div>

@@ -20,19 +20,13 @@
       </thead>
       <tbody>
         @foreach($data as $id => $row)
-          @php
-            $rates = [];
-            foreach ($row->rates as $rate) {
-              $rates[] = htmlentities($rate->name . " | " . $rate->price);
-            }
-          @endphp
           <tr>
             <td>{{ $id + 1 }}</td>
-            <td>{{ $row->branches->name }}</td>
+            <td>{{ $row->branch->name }}</td>
             <td>{{ $row->title }}</td>
             <td>{{ $row->description }}</td>
-            <td>{!! join("<br>", $rates) !!}</td>
-            <td>
+            <td>{{ join("\n", array_map(function($x){ return $x["name"] . " | " . $x["price"]; }, $row->rates->toArray())) }}</td>
+            <td class="baguetteBox">
               <a href="{{ asset("uploads/" . $row->filename) }}">
                 <img class="material-boxed" src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">
               </a>

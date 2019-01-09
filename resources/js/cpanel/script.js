@@ -19,6 +19,7 @@ $(document).ready(function() {
     }
   })
   $('.datatable').DataTable()
+  baguetteBox.run('.baguetteBox')
 })
 
 $('form[name=frmAddData]').submit(function(e) {

@@ -20,5 +20,6 @@ Route::apiResources([
   'feedbacks'    => 'FeedbackController',
   'contactus'    => 'ContactUsController',
   'partnerships' => 'PartnershipController',
-  'carousel'     => 'CarouselController'
+  'carousel'     => 'CarouselController',
+  'galleries'    => 'GalleryController'
 ]);

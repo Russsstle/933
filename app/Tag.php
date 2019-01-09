@@ -17,7 +17,7 @@ class Tag extends Model {
   /**
    * @return mixed
    */
-  public function articles() {
-    return $this->belongsTo('App\Article');
+  public function article() {
+    return $this->belongsTo('App\Article', 'article_id');
   }
 }

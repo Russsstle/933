@@ -15,3 +15,8 @@
 .custom-file-input {
   border-radius: 0;
 }
+
+.page-item.active .page-link {
+  background-color: $btn-primary-bg-color;
+  border-color: $btn-primary-bg-color;
+}

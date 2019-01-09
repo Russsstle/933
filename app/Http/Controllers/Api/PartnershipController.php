@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class PartnershipController extends Controller {
   /**
+   * @return mixed
+   */
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
+  /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response

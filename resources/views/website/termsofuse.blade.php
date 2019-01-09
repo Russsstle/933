@@ -1,3 +1,5 @@
+@php($title = "Terms of Use")
+
 @extends("website.layouts.app")
 
 @section("body")

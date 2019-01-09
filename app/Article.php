@@ -24,7 +24,7 @@ class Article extends Model {
   /**
    * @return mixed
    */
-  public function authors() {
+  public function author() {
     return $this->belongsTo('App\Author', 'author_id');
   }
 

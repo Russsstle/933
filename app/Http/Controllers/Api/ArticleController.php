@@ -5,10 +5,18 @@ namespace App\Http\Controllers\Api;
 use App\Article;
 use App\Author;
 use App\Http\Controllers\Controller;
+use App\Tag;
 use Illuminate\Http\Request;
 use Validator;
 
 class ArticleController extends Controller {
+  /**
+   * @return mixed
+   */
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
   /**
    * Display a listing of the resource.
    *
@@ -25,15 +33,6 @@ class ArticleController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request) {
-
-    // $article->fill($request->only(['title', 'content', 'date']));
-
-    // if ($article->save()) {
-    //   return response()->json(['success' => true]);
-    // } else {
-    //   return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
-    // }
-
     $validator = Validator::make($request->all(), [
       'image' => 'image'
     ]);
@@ -48,33 +47,40 @@ class ArticleController extends Controller {
     $article->authors()->associate(Author::find($request->author_id));
     $article->fill($request->only(['title', 'date', 'content']));
 
-    $article->filename = uniqid($filename . '-') . "." . $extension;
+    $article->filename = uniqid($filename . '-') . '.' . $extension;
     $request->image->move(public_path('uploads'), $article->filename);
 
     if ($article->save()) {
+      $tags = explode('\n', $request->tags);
+      foreach ($tags as $value) {
+        $tag = new Tag;
+        $tag->articles()->associate($article);
+        $tag->content = $value;
+        $tag->save();
+      }
       return response()->json(['success' => true]);
-    } else {
-      return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
     }
+
+    return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
   }
 
-/**
- * Display the specified resource.
- *
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
+  /**
+   * Display the specified resource.
+   *
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
   public function show($id) {
-    //
+    return Article::firstOrFail($id);
   }
 
-/**
- * Update the specified resource in storage.
- *
- * @param  \Illuminate\Http\Request  $request
- * @param  int  $id
- * @return \Illuminate\Http\Response
- */
+  /**
+   * Update the specified resource in storage.
+   *
+   * @param  \Illuminate\Http\Request  $request
+   * @param  int  $id
+   * @return \Illuminate\Http\Response
+   */
   public function update(Request $request, $id) {
     if ($request->image) {
       $validator = Validator::make($request->all(), [
@@ -94,7 +100,7 @@ class ArticleController extends Controller {
 
     $article->fill($request->only(['title', 'content', 'date']));
     if (isset($filename)) {
-      $article->filename = uniqid($filename . '-') . "." . $extension;
+      $article->filename = uniqid($filename . '-') . '.' . $extension;
       $request->image->move(public_path('uploads'), $article->filename);
     }
 

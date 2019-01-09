@@ -31,12 +31,6 @@
             Home
           </a>
         </li>
-        <li class="{{ active('cpanel/website*') }}">
-          <a href="{{ url('cpanel/website') }}">
-            <i class="fa fa-window-maximize"></i>
-            Website
-          </a>
-        </li>
         <li class="{{ active('cpanel/users*') }}">
           <a href="{{ url('cpanel/users') }}">
             <i class="fa fa-user-circle"></i>
@@ -85,18 +79,16 @@
             Partnerships
           </a>
         </li>
-
-        <!-- <li>
+        <li class="{{ active('cpanel/website*') }}">
           <a href="#exampledropdownDropdown" aria-expanded="false" data-toggle="collapse">
-            <i class="fa fa-file"></i>
-            Example dropdown
+            <i class="fa fa-cogs"></i>
+            Website Management
           </a>
           <ul id="exampledropdownDropdown" class="collapse list-unstyled">
-            <li><a href="#">Page</a></li>
-            <li><a href="#">Page</a></li>
-            <li><a href="#">Page</a></li>
+            <li><a href="{{ url('cpanel/website/carousel') }}">Carousel (Home)</a></li>
+            <li><a href="{{ url('cpanel/website/gallery') }}">Gallery</a></li>
           </ul>
-        </li> -->
+        </li>
       </ul>
     </nav>
     <div class="content-inner">

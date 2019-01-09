@@ -1,3 +1,5 @@
+@php($title = "Feedback")
+
 @extends("website.layouts.app")
 
 @section("body")

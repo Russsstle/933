@@ -1,3 +1,5 @@
+@php($title = "About")
+
 @extends("website.layouts.app")
 
 @section("body")
@@ -45,11 +47,16 @@
   </div>
   <h4 class="center-align text-bold top-title">Gallery</h4>
   <div class="carousel carousel-about">
+    @foreach($data as $row)
+    <a class="carousel-item" href="javascript:void(0)">
+      <img src="{{ asset("img/gallery/" . $row->filename) }}" height="250px" >
+    </a>
+    @endforeach
+    {{-- <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
     <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
-    <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
-    <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a>
+    <a class="carousel-item" href="javascript:void(0)"><img src="{{ asset('img/sample.png') }}"></a> --}}
   </div>
   <h4 class="center-align text-bold top-title">Meet the Team</h4>
   <br><br>

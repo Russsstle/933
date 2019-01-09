@@ -15,7 +15,7 @@
       </div>
       <div class="form-group">
         <label for="password" class="form-control-label">Password</label>
-        <input id="password" type="password" name="password" class="form-control"  value="{{ $row->password }}" required>
+        <input id="password" type="password" name="password" class="form-control" required>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">

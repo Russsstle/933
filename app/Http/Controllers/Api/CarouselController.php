@@ -8,6 +8,13 @@ use Validator;
 
 class CarouselController extends Controller {
   /**
+   * @return mixed
+   */
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
+  /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response
@@ -36,7 +43,7 @@ class CarouselController extends Controller {
     $carousel  = new Carousel;
     $carousel->fill($request->only(['title', 'description']));
 
-    $carousel->filename = uniqid($filename . '-') . "." . $extension;
+    $carousel->filename = uniqid($filename . '-') . '.' . $extension;
     $request->image->move(public_path('img\carousel'), $carousel->filename);
 
     if ($carousel->save()) {
@@ -80,7 +87,7 @@ class CarouselController extends Controller {
 
     $carousel->fill($request->only(['title', 'description']));
     if (isset($filename)) {
-      $carousel->filename = uniqid($filename . '-') . "." . $extension;
+      $carousel->filename = uniqid($filename . '-') . '.' . $extension;
       $request->image->move(public_path('img\carousel'), $carousel->filename);
     }
 

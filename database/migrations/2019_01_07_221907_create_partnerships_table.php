@@ -18,7 +18,7 @@ class CreatePartnershipsTable extends Migration {
       $table->string('position');
       $table->string('school');
       $table->string('organization');
-      $table->string('organizationtype');
+      $table->string('organization_type');
       $table->timestamps();
     });
   }

@@ -5,6 +5,9 @@ $(document).ready(function() {
   $.ajaxSetup({
     headers: {
       'X-CSRF-TOKEN': $('meta[name="token"]').attr('content')
+    },
+    error: function() {
+      swal('Error', 'We are sorry for the inconvenience.', 'error')
     }
   })
   $('ul.tabs').tabs()
@@ -26,15 +29,15 @@ $(document).ready(function() {
     onCycleTo: function() {
       if (
         $('.carousel-client-message .carousel-item')
-        .first()
-        .is('.active')
+          .first()
+          .is('.active')
       ) {
         $('.left.middle-indicator-text').fadeOut()
         $('.right.middle-indicator-text').fadeIn()
       } else if (
         $('.carousel-client-message .carousel-item')
-        .last()
-        .is('.active')
+          .last()
+          .is('.active')
       ) {
         $('.left.middle-indicator-text').fadeIn()
         $('.right.middle-indicator-text').fadeOut()
@@ -70,11 +73,11 @@ $('form[name=frmLogin]').submit(function(e) {
     .prop('disabled', true)
 
   $.ajax({
-      context: this,
-      type: 'POST',
-      dataType: 'json',
-      data: $(this).serialize()
-    })
+    context: this,
+    type: 'POST',
+    dataType: 'json',
+    data: $(this).serialize()
+  })
     .done(function(response) {
       if (response.success) {
         location.href = main_url + 'cpanel'

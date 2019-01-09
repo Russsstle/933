@@ -64,18 +64,25 @@ Route::prefix('cpanel')->group(function () {
       Route::get('{id}/edit', 'ViewController@branchEdit');
     });
     Route::prefix('feedbacks')->group(function () {
-      Route::get('/', 'ViewController@cpanelfeedback');
+      Route::get('/', 'ViewController@cpanelFeedback');
     });
     Route::prefix('contactus')->group(function () {
-      Route::get('/', 'ViewController@cpanelcontactus');
+      Route::get('/', 'ViewController@cpanelContactUs');
     });
     Route::prefix('partnerships')->group(function () {
-      Route::get('/', 'ViewController@cpanelpartnership');
+      Route::get('/', 'ViewController@cpanelPartnership');
     });
     Route::prefix('website')->group(function () {
-      Route::get('/', 'ViewController@cpanelwebsite');
-      Route::get('add', 'ViewController@cpanelwebsiteAdd');
-      Route::get('{id}/edit', 'ViewController@cpanelwebsiteEdit');
+      Route::prefix('carousel')->group(function () {
+        Route::get('/', 'ViewController@cpanelCarousel');
+        Route::get('add', 'ViewController@cpanelCarouselAdd');
+        Route::get('{id}/edit', 'ViewController@cpanelCarouselEdit');
+      });
+      Route::prefix('gallery')->group(function () {
+        Route::get('/', 'ViewController@cpanelGallery');
+        Route::get('add', 'ViewController@cpanelGalleryAdd');
+        Route::get('{id}/edit', 'ViewController@cpanelGalleryEdit');
+      });
     });
     Route::get('logout', 'AuthController@logout');
   });

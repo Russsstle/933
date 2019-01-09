@@ -8,6 +8,7 @@ use App\Branch;
 use App\Carousel;
 use App\ContactUs;
 use App\Feedback;
+use App\Gallery;
 use App\Partnership;
 use App\Service;
 use App\User;
@@ -23,10 +24,14 @@ class ViewController extends Controller {
     return redirect()->route('website.services.main');
   }
   protected function servicesMain() {
-    return view('website.services.main');
+    return view('website.services.main', ['data' => Service::with(['Rates', 'Branch' => function ($query) {
+      $query->where('name', 'Main');
+    }])->get()]);
   }
   protected function servicesCreatives() {
-    return view('website.services.creatives');
+    return view('website.services.creatives', ['data' => Service::with(['Rates', 'Branch' => function ($query) {
+      $query->where('name', 'Services');
+    }])->get()]);
   }
   protected function blog() {
     return view('website.blog.index');
@@ -38,7 +43,7 @@ class ViewController extends Controller {
     return view('website.feature');
   }
   protected function about() {
-    return view('website.about');
+    return view('website.about', ['data' => Gallery::all()]);
   }
   protected function contact() {
     return view('website.contact');
@@ -118,27 +123,42 @@ class ViewController extends Controller {
   protected function branchEdit($id) {
     return view('cpanel.branch.edit', ['row' => Branch::find($id)]);
   }
-  protected function cpanelfeedback() {
+  protected function cpanelFeedback() {
     return view('cpanel.feedback.index', ['data' => Feedback::all()]);
   }
-  protected function cpanelcontactus() {
+  protected function cpanelContactUs() {
     return view('cpanel.contact.index', ['data' => ContactUs::all()]);
   }
-  protected function cpanelpartnership() {
+  protected function cpanelPartnership() {
     return view('cpanel.partnership.index', ['data' => Partnership::all()]);
   }
-  protected function cpanelwebsite() {
-    return view('cpanel.website.index', ['data' => Carousel::all()]);
+  protected function cpanelCarousel() {
+    return view('cpanel.website.carousel.index', ['data' => Carousel::all()]);
   }
-  protected function cpanelwebsiteAdd() {
-    return view('cpanel.website.add');
+  protected function cpanelCarouselAdd() {
+    return view('cpanel.website.carousel.add');
   }
-  protected function cpanelwebsiteEdit($id) {
-    return view('cpanel.website.edit', ['row' => Carousel::find($id)]);
+  /**
+   * @param $id
+   */
+  protected function cpanelCarouselEdit($id) {
+    return view('cpanel.website.carousel.edit', ['row' => Carousel::find($id)]);
+  }
+  protected function cpanelGallery() {
+    return view('cpanel.website.gallery.index', ['data' => Gallery::all()]);
+  }
+  protected function cpanelGalleryAdd() {
+    return view('cpanel.website.gallery.add');
+  }
+  /**
+   * @param $id
+   */
+  protected function cpanelGalleryEdit($id) {
+    return view('cpanel.website.gallery.edit', ['row' => Gallery::find($id)]);
   }
 
   protected function update() {
-    putenv('PATH =  / usr / bin');
-    return ' < pre > ' . shell_exec('cd / var  / www / html / 933 && gitpulloriginmaster2 >  & 1') . ' <  / pre > ';
+    putenv('PATH=/usr/bin');
+    return '<pre>' . shell_exec('cd/var/www/html/933 && git pull origin master 2>&1') . ' </pre>';
   }
 }

@@ -1,3 +1,5 @@
+@php($title = "Partnerships")
+
 @extends("website.layouts.app")
 
 @section("body")

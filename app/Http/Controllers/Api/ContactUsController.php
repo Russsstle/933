@@ -40,7 +40,7 @@ class ContactUsController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show($id) {
-    //
+    return ContactUs::firstOrFail($id);
   }
 
   /**

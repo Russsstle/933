@@ -25,7 +25,7 @@
   <link rel="manifest" href="{{ asset('icon/manifest.json') }}">
   <link rel="stylesheet" href="{{ url('/') . mix('css/website/packages.css') }}">
   <link rel="stylesheet" href="{{ url('/') . mix('css/website/app.css') }}">
-  <title>933 Co-working Manila</title>
+  <title>{{ isset($title) ? "$title | " : '' }}933 Co-working Manila</title>
 </head>
 <body>
   <div class="loader-wrapper">

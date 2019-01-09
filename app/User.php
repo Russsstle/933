@@ -36,14 +36,14 @@ class User extends Authenticatable {
   /**
    * @return mixed
    */
-  public function authors() {
+  public function author() {
     return $this->hasOne("App\Author");
   }
 
   /**
    * @return mixed
    */
-  public function profiles() {
+  public function profile() {
     return $this->hasOne("App\Profile");
   }
 

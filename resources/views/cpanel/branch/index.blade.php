@@ -9,8 +9,8 @@
     <table class="datatable table table-striped table-bordered">
       <thead>
         <tr>
-          <th >ID</th>
-          <th >Name</th>
+          <th width="5%">ID</th>
+          <th>Name</th>
           <th width="5%">Action</th>
         </tr>
       </thead>

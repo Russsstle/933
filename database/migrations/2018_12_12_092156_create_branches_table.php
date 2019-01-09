@@ -1,5 +1,6 @@
 <?php
 
+use App\Branch;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -17,6 +18,9 @@ class CreateBranchesTable extends Migration {
       $table->timestamps();
       $table->softDeletes();
     });
+
+    Branch::create(['name' => 'Main']);
+    Branch::create(['name' => 'Creatives']);
   }
 
   /**

@@ -10,10 +10,10 @@ const mix = require('laravel-mix')
  |
  */
 /* WEBSITE */
-mix.combine([
-  'resources/css/packages/materialize.min.css',
-  'resources/css/packages/sweetalert2.min.css'
-], 'public/css/website/packages.css')
+mix.combine(
+  ['resources/css/packages/materialize.min.css', 'resources/css/packages/sweetalert2.min.css'],
+  'public/css/website/packages.css'
+)
 mix.sass('resources/sass/website/style.scss', 'public/css/website/app.css').options({
   processCssUrls: false
 })
@@ -22,7 +22,7 @@ mix.combine(
     'resources/js/packages/jquery.min.js',
     'resources/js/packages/materialize.min.js',
     'resources/js/packages/jquery.serializejson.min.js',
-    'resources/js/packages/sweetalert2.all.min.js',
+    'resources/js/packages/sweetalert2.all.min.js'
   ],
   'public/js/website/packages.js'
 )
@@ -34,7 +34,8 @@ mix.combine(
     'resources/css/packages/bootstrap.min.css',
     'resources/css/packages/font-awesome.min.css',
     'resources/css/packages/dataTables.bootstrap4.min.css',
-    'resources/css/packages/sweetalert2.min.css'
+    'resources/css/packages/sweetalert2.min.css',
+    'resources/css/packages/baguetteBox.min.css'
   ],
   'public/css/cpanel/packages.css'
 )
@@ -49,7 +50,8 @@ mix.combine(
     'resources/js/packages/jquery.serializejson.min.js',
     'resources/js/packages/dataTables.bootstrap4.min.js',
     'resources/js/packages/sweetalert2.all.min.js',
-    'resources/js/packages/loadingoverlay.min.js'
+    'resources/js/packages/loadingoverlay.min.js',
+    'resources/js/packages/baguetteBox.min.js'
   ],
   'public/js/cpanel/packages.js'
 )

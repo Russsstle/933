@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 
 class BranchController extends Controller {
   /**
+   * @return mixed
+   */
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
+  /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response

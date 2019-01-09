@@ -14,6 +14,7 @@
           <th>Author</th>
           <th>Date</th>
           <th>Content</th>
+          <th>Tags</th>
           <th>Image</th>
           <th width="5%">Action</th>
         </tr>
@@ -23,12 +24,13 @@
           <tr>
             <td>{{  $id + 1  }}</td>
             <td>{{ $row->title }}</td>
-            <td>{{ $row->authors->users->profiles->name }}</td>
+            <td>{{ $row->author->user->profile->name }}</td>
             <td>{{ $row->date->format('F d, Y') }}</td>
             <td>{{ $row->content }}</td>
-            <td>
+            <td>{{ join("\n", array_map(function($x){ return $x["content"]; }, $row->tags->toArray())) }}</td>
+            <td class="baguetteBox">
               <a href="{{ asset("uploads/" . $row->filename) }}">
-                <img class="material-boxed" src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">
+                <img src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">
               </a>
             </td>
             <td>

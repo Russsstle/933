@@ -4,10 +4,18 @@ namespace App\Http\Controllers\Api;
 
 use App\Author;
 use App\Http\Controllers\Controller;
+use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
 
 class AuthorController extends Controller {
+  /**
+   * @return mixed
+   */
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
   /**
    * Display a listing of the resource.
    *
@@ -24,13 +32,19 @@ class AuthorController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request) {
+    $profile = new Profile;
+
+    $profile->user()->associate(User::find($request->user_id));
+
+    $profile->fill($request->only(['first_name', 'last_name', 'position']));
+
     $author = new Author;
 
-    $author->users()->associate(User::find($request->user_id));
+    $author->user()->associate(User::find($request->user_id));
 
-    $author->fill($request->only(['first_name', 'last_name', 'position']));
+    $author->fill($request->only(['display_name']));
 
-    if ($author->save()) {
+    if ($profile->save() && $author->save()) {
       return response()->json(['success' => true]);
     } else {
       return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);
@@ -57,7 +71,7 @@ class AuthorController extends Controller {
   public function update(Request $request, $id) {
     $author = Author::find($id);
 
-    $author->users()->associate(User::find($request->user_id));
+    $author->user()->associate(User::find($request->user_id));
 
     $author->fill($request->only(['first_name', 'last_name', 'position']));
 

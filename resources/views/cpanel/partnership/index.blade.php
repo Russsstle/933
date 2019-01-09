@@ -25,7 +25,7 @@
             <td>{{ $row->position }}</td>
             <td>{{ $row->school }}</td>
             <td>{{ $row->organization }}</td>
-            <td>{{ $row->organizationtype }}</td>
+            <td>{{ $row->organization_type }}</td>
             <td>{{ date("F j, Y, g:i a", strtotime($row->created_at) )}}</td>
           </tr>
          @endforeach

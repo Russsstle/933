@@ -11,6 +11,13 @@ use Validator;
 
 class ServiceController extends Controller {
   /**
+   * @return mixed
+   */
+  public function __construct() {
+    return $this->middleware('auth');
+  }
+
+  /**
    * Display a listing of the resource.
    *
    * @return \Illuminate\Http\Response
@@ -39,10 +46,10 @@ class ServiceController extends Controller {
 
     $service = new Service;
 
-    $service->branches()->associate(Branch::find($request->branch_id));
+    $service->branch()->associate(Branch::find($request->branch_id));
 
     $service->fill($request->only(['title', 'description']));
-    $service->filename = uniqid($filename . '-') . "." . $extension;
+    $service->filename = uniqid($filename . '-') . '.' . $extension;
 
     $request->image->move(public_path('uploads'), $service->filename);
 
@@ -51,7 +58,7 @@ class ServiceController extends Controller {
         $rate_str = explode('|', $rate_str);
 
         $rate = new Rate;
-        $rate->services()->associate($service);
+        $rate->service()->associate($service);
         $rate->name  = $rate_str[0];
         $rate->price = $rate_str[1];
 
@@ -96,16 +103,27 @@ class ServiceController extends Controller {
 
     $service = Service::find($id);
 
-    $service->branches()->associate(Branch::find($request->branch_id));
+    $service->branch()->associate(Branch::find($request->branch_id));
 
     $service->fill($request->only(['title', 'description']));
 
     if (isset($filename)) {
-      $service->filename = uniqid($filename . '-') . "." . $extension;
+      $service->filename = uniqid($filename . '-') . '.' . $extension;
       $request->image->move(public_path('uploads'), $service->filename);
     }
 
     if ($service->save()) {
+      Rate::where('service_id', $service->id)->delete();
+      foreach (explode("\n", $request->rates) as $rate_str) {
+        $rate_str = explode('|', $rate_str);
+
+        $rate = new Rate;
+        $rate->service()->associate($service);
+        $rate->name  = $rate_str[0];
+        $rate->price = $rate_str[1];
+
+        $rate->save();
+      }
       return response()->json(['success' => true]);
     } else {
       return response()->json(['success' => false, 'error' => 'There was an error adding the record.']);

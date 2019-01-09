@@ -26,7 +26,7 @@ class Service extends Model {
   /**
    * @return mixed
    */
-  public function branches() {
+  public function branch() {
     return $this->belongsTo('App\Branch', 'branch_id')->withTrashed();
   }
 

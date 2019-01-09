@@ -4,7 +4,7 @@
 <div class="card">
   <div class="card-body">
     <h4 class="card-title">Add Author</h4>
-    <form name="frmAddData" data-url="authors" data-redirect="authors">
+    <form name="frmAddData" data-url="authors" data-redirect="authors" hasFile>
       <div class="form-group">
         <label for="username" class="form-control-label">Username</label>
         <select class="form-control" name="user_id" required>
@@ -25,6 +25,14 @@
       <div class="form-group">
         <label for="position" class="form-control-label">Position</label>
         <input id="position" type="text" name="position" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="display_name" class="form-control-label">Display Name</label>
+        <input id="display_name" type="text" name="display_name" class="form-control" required>
+      </div>
+      <div class="form-group">
+        <label for="image" class="form-control-label">Upload Image</label>
+        <input id="image" type="file" name="image" class="form-control" accept="image/*">
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">
