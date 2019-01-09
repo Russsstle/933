@@ -107,11 +107,19 @@
   <h4 class="center-align text-bold top-title">Our Amazing Partners</h4>
   <br><br>
   <div class="row">
-    <img class="col m5ths s12" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths s12" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths s12" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths s12" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
-    <img class="col m5ths s12" src="{{ asset('img/sample.png') }}" height="70px" width="140px">
+    @for($i = 0, $j = count($partners); $i < count($partners); $i++)
+      @if($j == 1)
+        @php($class = "m4 offset-m4")
+      @elseif($j == 2)
+        @php($class = "m4 offset-m1")
+      @elseif($j >= 3)
+        @php($class = "m4")
+      @endif
+      @if(($i + 1) % 3 == 0)
+        @php($j -= 3)
+      @endif
+      <img class="col {{ $class }} s12 mb-10" src="{{ asset('uploads/'.$partners[$i]->filename) }}" height="200px" width="140px" style="object-fit:cover">
+    @endfor
   </div>
   <br><br>
   <div class="center-align">

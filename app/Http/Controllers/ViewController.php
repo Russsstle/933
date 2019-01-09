@@ -43,7 +43,7 @@ class ViewController extends Controller {
     return view('website.feature');
   }
   protected function about() {
-    return view('website.about', ['data' => Gallery::all()]);
+    return view('website.about', ['data' => Gallery::all(), 'partners' => Partnership::all()]);
   }
   protected function contact() {
     return view('website.contact');

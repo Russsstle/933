@@ -3,7 +3,7 @@
 @section("body")
 <div class="card">
   <div class="card-body">
-    <h4 class="card-title">Add Logo</h4>
+    <h4 class="card-title">Add Partner</h4>
     <form name="frmAddData" data-url="partnerships" data-redirect="partnerships" hasFile>
       <div class="form-group">
         <label for="name" class="form-control-label">Name</label>
