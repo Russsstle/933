@@ -10,8 +10,8 @@
         <input id="title" type="text" name="title" class="form-control" value="{{ $row->title }}"required>
       </div>
       <div class="form-group">
-        <label for="subtitle" class="form-control-label">Subtitle</label>
-        <textarea id="subtitle" name="subtitle" class="form-control" required> {{ $row->subtitle }}</textarea>
+        <label for="description" class="form-control-label">Description</label>
+        <textarea id="description" name="description" class="form-control" required> {{ $row->description }}</textarea>
       </div>
       <div class="form-group">
         <label for="image" class="form-control-label">Upload Image</label>

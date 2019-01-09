@@ -10,7 +10,8 @@
       <thead>
         <tr>
           <th width="5%">ID</th>
-          <th>Label</th>
+          <th>Title</th>
+          <th>Description</th>
           <th>Image</th>
           <th width="5%">Action</th>
         </tr>
@@ -19,9 +20,10 @@
          @foreach($data as $id => $row)
           <tr>
             <td>{{ $id + 1 }}</td>
-            <td><h3>{{ $row->title }}</h3><br><h6><i>{{ $row->subtitle }}</i></h6></td>
+            <td>{{ $row->title }}</td>
+            <td>{{ $row->description }}</td>
             <td>
-              <a href="{{ asset("uploads/" . $row->filename) }}">
+              <a href="{{ asset("img/carousel/" . $row->filename) }}">
                 <img class="material-boxed" src="{{ asset("img/carousel/" . $row->filename) }}" alt="" height="80px">
               </a>
             </td>

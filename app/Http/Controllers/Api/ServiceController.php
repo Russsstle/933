@@ -34,15 +34,15 @@ class ServiceController extends Controller {
       return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
     }
 
-    $filename  = pathinfo($request->image, PATHINFO_FILENAME);
-    $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+    $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+    $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
 
     $service = new Service;
 
     $service->branches()->associate(Branch::find($request->branch_id));
 
     $service->fill($request->only(['title', 'description']));
-    $service->filename = uniqid($filename . '-') . $extension;
+    $service->filename = uniqid($filename . '-') . "." . $extension;
 
     $request->image->move(public_path('uploads'), $service->filename);
 
@@ -90,8 +90,8 @@ class ServiceController extends Controller {
         return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
       }
 
-      $filename  = pathinfo($request->image, PATHINFO_FILENAME);
-      $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+      $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+      $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     }
 
     $service = Service::find($id);
@@ -101,7 +101,7 @@ class ServiceController extends Controller {
     $service->fill($request->only(['title', 'description']));
 
     if (isset($filename)) {
-      $service->filename = uniqid($filename . '-') . $extension;
+      $service->filename = uniqid($filename . '-') . "." . $extension;
       $request->image->move(public_path('uploads'), $service->filename);
     }
 

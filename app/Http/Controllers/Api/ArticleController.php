@@ -42,13 +42,13 @@ class ArticleController extends Controller {
       return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
     }
 
-    $filename  = pathinfo($request->image, PATHINFO_FILENAME);
-    $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+    $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+    $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     $article   = new Article;
     $article->authors()->associate(Author::find($request->author_id));
     $article->fill($request->only(['title', 'date', 'content']));
 
-    $article->filename = uniqid($filename . '-') . $extension;
+    $article->filename = uniqid($filename . '-') . "." . $extension;
     $request->image->move(public_path('uploads'), $article->filename);
 
     if ($article->save()) {
@@ -85,8 +85,8 @@ class ArticleController extends Controller {
         return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
       }
 
-      $filename  = pathinfo($request->image, PATHINFO_FILENAME);
-      $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+      $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+      $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     }
     $article = Article::find($id);
 
@@ -94,7 +94,7 @@ class ArticleController extends Controller {
 
     $article->fill($request->only(['title', 'content', 'date']));
     if (isset($filename)) {
-      $article->filename = uniqid($filename . '-') . $extension;
+      $article->filename = uniqid($filename . '-') . "." . $extension;
       $request->image->move(public_path('uploads'), $article->filename);
     }
 

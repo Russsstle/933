@@ -31,12 +31,12 @@ class CarouselController extends Controller {
       return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
     }
 
-    $filename  = pathinfo($request->image, PATHINFO_FILENAME);
-    $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+    $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+    $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     $carousel  = new Carousel;
-    $carousel->fill($request->only(['title', 'subtitle']));
+    $carousel->fill($request->only(['title', 'description']));
 
-    $carousel->filename = uniqid($filename . '-') . $extension;
+    $carousel->filename = uniqid($filename . '-') . "." . $extension;
     $request->image->move(public_path('img\carousel'), $carousel->filename);
 
     if ($carousel->save()) {
@@ -73,14 +73,14 @@ class CarouselController extends Controller {
         return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
       }
 
-      $filename  = pathinfo($request->image, PATHINFO_FILENAME);
-      $extension = pathinfo($request->image, PATHINFO_EXTENSION);
+      $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+      $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     }
     $carousel = Carousel::find($id);
 
-    $carousel->fill($request->only(['title', 'subtitle']));
+    $carousel->fill($request->only(['title', 'description']));
     if (isset($filename)) {
-      $carousel->filename = uniqid($filename . '-') . $extension;
+      $carousel->filename = uniqid($filename . '-') . "." . $extension;
       $request->image->move(public_path('img\carousel'), $carousel->filename);
     }
 

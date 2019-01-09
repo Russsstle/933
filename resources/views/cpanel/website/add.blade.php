@@ -10,8 +10,8 @@
         <input id="title" type="text" name="title" class="form-control" required>
       </div>
       <div class="form-group">
-        <label for="subtitle" class="form-control-label">Subtitle</label>
-        <input id="subtitle" type="text" name="subtitle" class="form-control" required>
+        <label for="description" class="form-control-label">Description</label>
+        <input id="description" type="text" name="description" class="form-control" required>
       </div>
       <div class="form-group">
         <label for="image" class="form-control-label">Upload Image</label>

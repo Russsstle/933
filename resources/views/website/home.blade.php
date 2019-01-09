@@ -3,7 +3,7 @@
 @section("body")
 <div class="slider">
   <ul class="slides">
-    <li>
+    {{-- <li>
       <img src="https://images.unsplash.com/photo-1464817739973-0128fe77aaa1?dpr=1&auto=compress,format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop=">
       <div class="caption center-align">
         <h3>This is our big Tagline!</h3>
@@ -23,7 +23,16 @@
         <h3>Right Aligned Caption</h3>
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
       </div>
+    </li> --}}
+    @foreach($data as $row)
+    <li>
+        <img src="{{ asset("img/carousel/" . $row->filename) }}">
+        <div class="caption center-align">
+          <h3>{{ $row->title}}</h3>
+          <h5 class="light grey-text text-lighten-3">{{ $row->description}}</h5>
+        </div>
     </li>
+    @endforeach
   </ul>
 </div>
 <div class="home-content center-align" style="padding-top:40px">
