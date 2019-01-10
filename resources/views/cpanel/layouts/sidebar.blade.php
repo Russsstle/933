@@ -67,12 +67,12 @@
             Feedback
           </a>
         </li>
-        <li class="{{ active('cpanel/contact*') }}">
+        {{-- <li class="{{ active('cpanel/contact*') }}">
           <a href="{{ url('cpanel/contactus') }}">
             <i class="fa fa-phone"></i>
             Contact
           </a>
-        </li>
+        </li> --}}
         <li class="{{ active('cpanel/partnerships*') }}">
           <a href="{{ url('cpanel/partnerships') }}">
             <i class="fa fa-handshake-o"></i>

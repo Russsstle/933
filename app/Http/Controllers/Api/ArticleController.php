@@ -44,7 +44,7 @@ class ArticleController extends Controller {
     $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
     $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     $article   = new Article;
-    $article->authors()->associate(Author::find($request->author_id));
+    $article->author()->associate(Author::find($request->author_id));
     $article->fill($request->only(['title', 'date', 'content']));
 
     $article->filename = uniqid($filename . '-') . '.' . $extension;
@@ -54,7 +54,7 @@ class ArticleController extends Controller {
       $tags = explode('\n', $request->tags);
       foreach ($tags as $value) {
         $tag = new Tag;
-        $tag->articles()->associate($article);
+        $tag->article()->associate($article);
         $tag->content = $value;
         $tag->save();
       }
@@ -96,7 +96,7 @@ class ArticleController extends Controller {
     }
     $article = Article::find($id);
 
-    $article->authors()->associate(Author::find($request->author_id));
+    $article->author()->associate(Author::find($request->author_id));
 
     $article->fill($request->only(['title', 'content', 'date']));
     if (isset($filename)) {

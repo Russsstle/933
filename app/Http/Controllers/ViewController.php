@@ -85,7 +85,7 @@ class ViewController extends Controller {
    * @param $id
    */
   protected function articleEdit($id) {
-    return view('cpanel.article.edit', ['row' => Article::find($id), 'author' => Author::all()]);
+    return view('cpanel.article.edit', ['row' => Article::find($id), 'authors' => Author::all()]);
   }
   protected function author() {
     return view('cpanel.author.index', ['data' => Author::all()]);

@@ -10,7 +10,7 @@
         <select id="author" class="form-control" name="author_id" required>
           <option disabled selected></option>
           @foreach($authors as $author)
-            <option value="{{ $author->id }}">{{ $author->users->profiles->name }}</option>
+            <option value="{{ $author->id }}">{{ $author->display_name}}{{-- {{ $author->users->profiles->name }} --}}</option>
           @endforeach
         </select>
       </div>
