@@ -22,7 +22,17 @@ $(document).ready(function() {
   baguetteBox.run('.baguetteBox')
   $('.content-loader').fadeOut()
 })
+$('#user_id').change(function(e) {
+  let select_input_id = $(this).val()
+  // let select_input_id = $(this).closest('form').serialize()
+  alert(select_input_id)
+  // $.ajax({
+  //   url: api_url,
+  //   type: 'GET',
+  //   data: ID:select_input_id,
+  // })
 
+})
 $('form[name=frmAddData]').submit(function(e) {
   e.preventDefault()
 

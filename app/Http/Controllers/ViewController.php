@@ -97,7 +97,7 @@ class ViewController extends Controller {
    * @param $id
    */
   protected function authorEdit($id) {
-    return view('cpanel.author.edit', ['row' => Author::find($id), 'user' => User::all()]);
+    return view('cpanel.author.edit', ['row' => Author::find($id), 'users' => User::all()]);
   }
   protected function service() {
     return view('cpanel.service.index', ['data' => Service::with('rates')->get()]);

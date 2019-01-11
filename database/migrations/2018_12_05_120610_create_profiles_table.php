@@ -18,12 +18,13 @@ class CreateProfilesTable extends Migration {
       $table->string('first_name');
       $table->string('last_name');
       $table->string('position');
+      $table->string('filename');
       $table->timestamps();
       $table->softDeletes();
     });
 
-    \App\Profile::create(['user_id' => '1', 'first_name' => 'Mann', 'last_name' => 'Yang', 'position' => 'Web Developer']);
-    \App\Profile::create(['user_id' => '2', 'first_name' => 'Russell John', 'last_name' => 'Santos', 'position' => 'Web Developer']);
+    \App\Profile::create(['user_id' => '1', 'first_name' => 'Mann', 'last_name' => 'Yang', 'position' => 'Web Developer', 'filename' => 'sad']);
+    \App\Profile::create(['user_id' => '2', 'first_name' => 'Russell John', 'last_name' => 'Santos', 'position' => 'Web Developer', 'filename' => 'sad']);
   }
 
   /**

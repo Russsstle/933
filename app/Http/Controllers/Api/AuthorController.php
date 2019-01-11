@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Profile;
 use App\User;
 use Illuminate\Http\Request;
+use Validator;
 
 class AuthorController extends Controller {
   /**
@@ -32,7 +33,17 @@ class AuthorController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function store(Request $request) {
-    $profile = new Profile;
+    $validator = Validator::make($request->all(), [
+      'image' => 'image'
+    ]);
+
+    if ($validator->fails()) {
+      return response()->json(['success' => false, 'error' => 'Invalid Image Format.']);
+    }
+
+    $filename  = pathinfo($request->image->getClientOriginalName(), PATHINFO_FILENAME);
+    $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
+    $profile   = new Profile;
 
     $profile->user()->associate(User::find($request->user_id));
 
@@ -43,6 +54,8 @@ class AuthorController extends Controller {
     $author->user()->associate(User::find($request->user_id));
 
     $author->fill($request->only(['display_name']));
+    $profile->filename = uniqid($filename . '-') . '.' . $extension;
+    $request->image->move(public_path('img\profile'), $profile->filename);
 
     if ($profile->save() && $author->save()) {
       return response()->json(['success' => true]);
@@ -73,7 +86,7 @@ class AuthorController extends Controller {
 
     $author->user()->associate(User::find($request->user_id));
 
-    $author->fill($request->only(['first_name', 'last_name', 'position']));
+    $author->fill($request->only(['first_name', 'last_name', 'position', 'display_name']));
 
     if ($author->save()) {
       return response()->json(['success' => true]);
