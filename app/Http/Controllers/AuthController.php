@@ -3,25 +3,38 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Http\Request;
 
 class AuthController extends Controller {
-	/**
-	 * @param Request $request
-	 */
-	protected function login(Request $request) {
-		$credentials = ['username' => $request->username, 'password' => $request->password];
+  use ThrottlesLogins;
+  /**
+   * @param Request $request
+   */
+  protected function login(Request $request) {
+    if ($this->hasTooManyLoginAttempts($request)) {
+      $this->fireLockoutEvent($request);
+      return $this->sendLockoutResponse($request);
+    }
 
-		if (Auth::attempt($credentials, $request->remember_me)) {
-			return response()->json(['success' => true]);
-		} else {
-			return response()->json(['success' => false, 'error' => 'Invalid Username and/or Password.']);
-		}
-	}
+    $credentials = ['username' => $request->username, 'password' => $request->password];
 
-	protected function logout() {
-		Auth::logout();
+    if (Auth::attempt($credentials, $request->remember_me)) {
+      $this->clearLoginAttempts($request);
+      return response()->json(['success' => true]);
+    } else {
+      $this->incrementLoginAttempts($request);
+      return response()->json(['success' => false, 'error' => 'Invalid Username and/or Password.']);
+    }
+  }
 
-		return redirect()->route('login');
-	}
+  protected function logout() {
+    Auth::logout();
+
+    return redirect()->route('login');
+  }
+
+  public function username() {
+    return 'username';
+  }
 }

@@ -23,8 +23,10 @@ Route::prefix('blog')->group(function () {
 Route::get('feature', 'ViewController@feature')->name('feature');
 Route::get('about', 'ViewController@about')->name('about');
 Route::get('contact', 'ViewController@contact')->name('contact');
+Route::post('contact', 'MailController@sendContactUsMail');
 Route::get('termsofuse', 'ViewController@termsofuse')->name('termsofuse');
 Route::get('partnerships', 'ViewController@partnerships')->name('partnerships');
+Route::post('partnerships', 'MailController@sendPartnershipMail');
 Route::get('faqs', 'ViewController@faqs')->name('faqs');
 Route::get('feedback', 'ViewController@feedback')->name('feedback');
 

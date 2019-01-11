@@ -10,6 +10,9 @@ $(document).ready(function() {
       swal('Error', 'We are sorry for the inconvenience.', 'error')
     }
   })
+  swal.setDefaults({
+    heightAuto: false
+  })
   $('ul.tabs').tabs()
   $('.sidenav').sidenav({
     edge: 'right'
@@ -76,13 +79,20 @@ $('form[name=frmLogin]').submit(function(e) {
     context: this,
     type: 'POST',
     dataType: 'json',
-    data: $(this).serialize()
+    data: $(this).serialize(),
+    error: function({ responseJSON: response }) {
+      if (response.errors) {
+        swal('Error', response.errors.username[0], 'error')
+      } else {
+        swal('Error', 'We are sorry for the inconvenience.', 'error')
+      }
+    }
   })
     .done(function(response) {
       if (response.success) {
         location.href = main_url + 'cpanel'
       } else {
-        alert(response.error)
+        swal('Error', response.error, 'error')
       }
     })
     .always(function() {
@@ -94,31 +104,17 @@ $('form[name=frmLogin]').submit(function(e) {
         .prop('disabled', false)
     })
 })
-$('form[name=frmAddData]').submit(function(e) {
+
+$('form[name=frmSend]').submit(function(e) {
   e.preventDefault()
 
-  let hasFile = $(this).is('[hasFile]')
-
-  let url = $(this).data('url')
-  let redirect = $(this).data('redirect')
-
-  let form_data = $(this).serialize()
-
-  if (hasFile) {
-    form_data = new FormData($(this)[0])
-  }
-
   $.ajax({
-    context: this,
-    url: api_url + url,
     type: 'POST',
-    data: form_data,
-    contentType: !hasFile && undefined,
-    processData: !hasFile
+    data: $(this).serialize()
   }).done(function(response) {
     if (response.success) {
       swal('Sent Successfully!', null, 'success').then(function() {
-        location.href = main_url + redirect
+        location.reload()
       })
     } else {
       swal('Error!', response.error, 'warning')
