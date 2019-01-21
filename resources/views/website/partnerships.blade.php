@@ -7,8 +7,13 @@
   Partnerships
 </div>
 <div class="content" style="overflow:hidden">
+<<<<<<< Updated upstream
   <h5>Interested in partnering with us?<br/>Fill up the form / note and we'll get back to you soon!</h5>
   <form name="frmAddData" data-url="partnerships" data-redirect="partnerships">
+=======
+  <h5>Interested in partnering with us?<br/>Fill up the form/ note and we'll get back to you soon!</h5>
+  <form name="frmSend">
+>>>>>>> Stashed changes
      @csrf
     <div class="input-field">
       <input id="name" name='name' type="text" class="validate">
