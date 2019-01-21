@@ -44,7 +44,7 @@ class CarouselController extends Controller {
     $carousel->fill($request->only(['title', 'description', 'label_align']));
 
     $carousel->filename = uniqid($filename . '-') . '.' . $extension;
-    $request->image->move(public_path('img\carousel'), $carousel->filename);
+    $request->image->move(public_path('img/carousel'), $carousel->filename);
 
     if ($carousel->save()) {
       return response()->json(['success' => true]);
@@ -88,7 +88,7 @@ class CarouselController extends Controller {
     $carousel->fill($request->only(['title', 'description', 'label_align']));
     if (isset($filename)) {
       $carousel->filename = uniqid($filename . '-') . '.' . $extension;
-      $request->image->move(public_path('img\carousel'), $carousel->filename);
+      $request->image->move(public_path('img/carousel'), $carousel->filename);
     }
 
     if ($carousel->save()) {
