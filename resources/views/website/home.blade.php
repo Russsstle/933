@@ -223,10 +223,55 @@
         <a href="#" class="movePrevCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons left middle-indicator-text">chevron_left</i></a>
       </div>
       <div class="right">
-        <a href="#" class=" moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
+        <a href="#" class="moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
       </div>
     </div>
-    <a class="carousel-item" href="#one!">
+    
+       @foreach($comments as $row)
+       <a class="carousel-item">
+          <div class="row" style="height:100%;color:black">
+         {{-- div class="col s12 m12 l12">
+            <div class="client-message-left-card"> --}}
+        <blockquote style="height:100%">
+          <div style="font-size:25px;height:100%;position:relative;">
+            {{ $row->message }}
+            <div align="right" style="font-size:20px;position:absolute;right:5px;bottom:233px">
+              <b>{{ $row->name }}</b>
+            </div>
+          </div>
+          
+        </blockquote>
+        </div>
+      </a>     
+           {{--  </div>
+          </div> --}}
+       @endforeach
+        {{-- <div class="col s12 m5 l5">
+          <div class="client-message-left-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
+            <br><br>
+            <b>Juan Dela Cruz,</b><br>
+            University of Sto. Tomas
+          </div>
+        </div>
+        <div class="col s12 m7 l7">
+          <div class="client-message-right-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            <br>
+            <b>Juan Dela Cruz,</b>
+            University of Sto. Tomas
+          </div>
+          <div class="client-message-right-card">
+            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+            <br>
+            <b>Juan Dela Cruz,</b>
+            University of Sto. Tomas
+          </div>
+        </div> --}}
+    
+    
+  
+    {{-- <a class="carousel-item" href="#one!">
       <div class="row">
         <div class="col s12 m5 l5">
           <div class="client-message-left-card">
@@ -277,7 +322,7 @@
           </div>
         </div>
       </div>
-    </a>
+    </a> --}}
   </div>
   <h4 class="text-bold center-align top-title" >
     Latest Updates

@@ -15,7 +15,7 @@ use App\User;
 
 class ViewController extends Controller {
   protected function home() {
-    return view('website.home', ['data' => Carousel::all()]);
+    return view('website.home', ['data' => Carousel::all()], ['comments' => Feedback::all()]);
   }
   protected function login() {
     return view('cpanel.login');

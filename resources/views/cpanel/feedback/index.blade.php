@@ -20,7 +20,7 @@
               <td>{{ $id + 1 }}</td>
               <td>{{ $row->name }}</td>
               <td>{{ $row->email }}</td>
-              <td>{{ $row->message }}</td>
+              <td class="preline">{{ $row->message }}</td>
               <td>{{ date("F j, Y, g:i a", strtotime($row->created_at) )}}</td>
             </tr>
            @endforeach

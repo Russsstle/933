@@ -27,7 +27,7 @@
               <td>{{ $row->title }}</td>
               <td>{{ $row->author->user->profile->name }}</td>
               <td>{{ $row->date->format('F d, Y') }}</td>
-              <td>{{ $row->content }}</td>
+              <td class="preline">{{ $row->content }}</td>
               <td>{{ join("\n", array_map(function($x){ return $x["content"]; }, $row->tags->toArray())) }}</td>
               <td class="baguetteBox">
                 <a href="{{ asset("uploads/" . $row->filename) }}">
