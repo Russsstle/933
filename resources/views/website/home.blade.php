@@ -232,7 +232,7 @@
           <div class="row" style="height:100%;color:black">
          {{-- div class="col s12 m12 l12">
             <div class="client-message-left-card"> --}}
-        <blockquote style="height:100%">
+        <blockquote style="height:100%;">
           <div style="font-size:25px;height:100%;position:relative;">
             {{ $row->message }}
             <div align="right" style="font-size:20px;position:absolute;right:5px;bottom:233px">

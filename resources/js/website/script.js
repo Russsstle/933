@@ -105,6 +105,38 @@ $('form[name=frmLogin]').submit(function(e) {
     })
 })
 
+$('form[name=frmAddData]').submit(function(e) {
+  e.preventDefault()
+
+  let hasFile = $(this).is('[hasFile]')
+
+  let url = $(this).data('url')
+  let redirect = $(this).data('redirect')
+
+  let form_data = $(this).serialize()
+
+  if (hasFile) {
+    form_data = new FormData($(this)[0])
+  }
+
+  $.ajax({
+    context: this,
+    url: api_url + url,
+    type: 'POST',
+    data: form_data,
+    contentType: !hasFile && undefined,
+    processData: !hasFile
+  }).done(function(response) {
+    if (response.success) {
+      swal('Added Successfully!', null, 'success').then(function() {
+        location.href = main_url + redirect
+      })
+    } else {
+      swal('Error!', response.error, 'warning')
+    }
+  })
+})
+
 $('form[name=frmSend]').submit(function(e) {
   e.preventDefault()
 

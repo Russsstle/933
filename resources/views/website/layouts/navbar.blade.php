@@ -1,10 +1,10 @@
 <nav>
   <div class="nav-wrapper">
-    <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('img/logo-white.png') }}"></a>
+    <a href="{{ url('/') }}" class="brand-logo"><img src="{{ asset('img/logo-new.png') }}"></a>
     <a href="javascript:void(0)"  data-target="mobile-sidebar" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down">
       <li class="{{ active('/') }}"><a href="{{ url('/') }}">Home</a></li>
-      <li class="{{ active('services/*') }}"><a class="dropdown-trigger" href="javascript:void(0)"  data-target='dropdown2'>Services<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li class="{{ active('services/*') }}"><a class="dropdown-trigger" href="javascript:void(0)"  data-target='dropdown2'>Branches<i class="material-icons right">arrow_drop_down</i></a></li>
       <li class="{{ active('blog*') }}"><a  href="{{ url('blog') }}">Blog</a></li>
       <li class="{{ active('about') }}"><a  href="{{ url('about') }}">About</a></li>
       <li class="{{ active('contact') }}"><a  href="{{ url('contact') }}">Contact</a></li>

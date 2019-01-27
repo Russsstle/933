@@ -46,6 +46,6 @@
       <p style="font-size: 15px;text-align:left">+63 945 217 6021<br/>+63 995 338 3313</p>
     </div>
   </div>
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.30306054864585!2d120.98749521983216!3d14.607678115309355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca0025d116e7%3A0xfd3450a55859002c!2s1024+Tolentino+St%2C+Sampaloc%2C+Manila%2C+1008+Metro+Manila!5e0!3m2!1sen!2sph!4v1543001036495" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+  <iframe src="https://www.google.com/maps/d/embed?mid=1sQREQkc-arI0yRjUl8EaLf7ayfHozkte" width="640" height="480"></iframe>
 </div>
 @endsection
