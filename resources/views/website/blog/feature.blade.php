@@ -26,7 +26,7 @@
     <i class="material-icons bullet-color">brightness_1</i>
     <i class="material-icons bullet-color">brightness_1</i>
   </div>
-  <div class="divider"></div>
+  {{-- <div class="divider"></div>
   <div class="center-align title">Late Updates</div>
   <div class="row">
     <div class="col s12 m4">
@@ -81,5 +81,5 @@
       <i class=" material-icons right">chevron_right</i>
     </a>
   </div>
-</div>
+</div> --}}
 @endsection
