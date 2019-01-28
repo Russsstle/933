@@ -22,25 +22,28 @@ body {
 #body {
   padding-bottom: 71px; /* Height of the footer */
 }
-a:focus {
-  outline: 0;
-}
+
 #footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 71px; /* Height of the footer */
 }
-
+li:focus {
+  outline: 0;
+}
 nav {
   width: auto;
   background-color: $nav-color;
-  height: 90px;
-  line-height: 90px;
+  height: 80px;
+  line-height: 58px;
   .nav-wrapper i,
   a.sidenav-trigger,
   a.sidenav-trigger i {
-    line-height: 90px;
+    line-height: 60px;
+  }
+  ul {
+    padding-top: 17px;
   }
 }
 
@@ -345,7 +348,9 @@ a.dark-underline {
 .slides li img {
   background-attachment: fixed;
 }
-
+.slider .slides {
+  margin-bottom: -10px;
+}
 svg.waves {
   margin-top: -480px;
   z-index: -1;
