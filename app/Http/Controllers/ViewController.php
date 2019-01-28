@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Article;
 use App\Author;
 use App\Branch;
@@ -15,7 +14,7 @@ use App\User;
 
 class ViewController extends Controller {
   protected function home() {
-    return view('website.home', ['data' => Carousel::all()], ['comments' => Feedback::all()]);
+    return view('website.home', ['data' => Carousel::all(), 'comments' => Feedback::all(), 'updates' => Article::latest()->get()->slice(0, 3)]);
   }
   protected function login() {
     return view('cpanel.login');

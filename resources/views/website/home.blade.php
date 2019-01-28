@@ -255,50 +255,27 @@
     Latest Updates
   </h4>
   <div class="row">
-    <div class="col s12 m12 l4">
+    @foreach($updates as $article)
+     <div class="col s12 m12 l4">
       <div class="card">
         <div class="card-image waves-effect waves-block waves-light">
-          <img class='activator'src="{{ asset('img/sample.png') }}">
-          <span class="card-title">Card Title</span>
+          <img class='activator'src="{{ asset('uploads/'. $article->filename) }}" width="100%" height="250px">
+          <span class="card-title">{{ $article->title }}</span>
         </div>
         <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <p class="truncate">{{ $article->content }}</p>
         </div>
         <div class="card-reveal">
-          <span class="card-title grey-text text-darken-4">Card Title<i class="material-icons right">close</i></span>
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
+          <span class="card-title grey-text text-darken-4">{{$article->title}}<i class="material-icons right">close</i></span>
+          <p>{{ $article->content }}</p>
+          <a href="{{ url('blog/' . $article->type . "/" . $article->title) }}">See Full Story</a>
         </div>
       </div>
     </div>
-    <div class="col s12 m12 l4">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{ asset('img/sample.png') }}">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-      </div>
-    </div>
-    <div class="col s12 m12 l4">
-      <div class="card">
-        <div class="card-image">
-          <img src="{{ asset('img/sample.png') }}">
-          <span class="card-title">Card Title</span>
-        </div>
-        <div class="card-content">
-          <p>I am a very simple card. I am good at containing small bits of information.
-          I am convenient because I require little markup to use effectively.</p>
-        </div>
-      </div>
-    </div>
+    @endforeach
   </div>
   <div class="right-align">
-    <a class="waves-effect btn-flat" href="#">
+    <a class="waves-effect btn-flat" href="{{ url('blog') }}">
       <span class="icon-title">See All Posts</span>
       <i class=" material-icons right">chevron_right</i>
     </a>
