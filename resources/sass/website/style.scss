@@ -22,7 +22,9 @@ body {
 #body {
   padding-bottom: 71px; /* Height of the footer */
 }
-
+a:focus {
+  outline: 0;
+}
 #footer {
   position: absolute;
   bottom: 0;
