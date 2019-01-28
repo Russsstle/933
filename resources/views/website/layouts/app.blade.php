@@ -52,5 +52,6 @@
   </div>
   <script src="{{ url('/') . mix('js/website/packages.js') }}"></script>
   <script src="{{ url('/') . mix('js/website/app.js') }}"></script>
+  @yield('extra-scripts')
 </body>
 </html>

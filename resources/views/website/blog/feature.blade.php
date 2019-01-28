@@ -2,6 +2,17 @@
 
 @extends("website.layouts.app")
 
+@section('extra-scripts')
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2&appId=2073011192740467&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+@endsection
+
 @section("body")
 <div class="header">
   {{ $data->title }}
@@ -22,9 +33,10 @@
   </div>
   <div class="right-align icon-wrapper" style="margin:20px auto">
     <span class="icon-title">Share this</span>
-    <i class="material-icons bullet-color">brightness_1</i>
-    <i class="material-icons bullet-color">brightness_1</i>
-    <i class="material-icons bullet-color">brightness_1</i>
+    <div class="fb-share-button" data-href="{{ url()->current() }}" data-layout="button_count" data-size="small" data-mobile-iframe="true"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F933.test%2Fblog&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+    <div class="twitter-share-button-container">
+      <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button" data-show-count="false">Tweet</a>
+    </div>
   </div>
   {{-- <div class="divider"></div>
   <div class="center-align title">Late Updates</div>
