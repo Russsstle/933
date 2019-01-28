@@ -45,7 +45,7 @@ class ArticleController extends Controller {
     $extension = pathinfo($request->image->getClientOriginalName(), PATHINFO_EXTENSION);
     $article   = new Article;
     $article->author()->associate(Author::find($request->author_id));
-    $article->fill($request->only(['title', 'date', 'content']));
+    $article->fill($request->only(['title', 'type', 'date', 'content']));
 
     $article->filename = uniqid($filename . '-') . '.' . $extension;
     $request->image->move(public_path('uploads'), $article->filename);
@@ -98,7 +98,7 @@ class ArticleController extends Controller {
 
     $article->author()->associate(Author::find($request->author_id));
 
-    $article->fill($request->only(['title', 'content', 'date']));
+    $article->fill($request->only(['title', 'type', 'content', 'date']));
     if (isset($filename)) {
       $article->filename = uniqid($filename . '-') . '.' . $extension;
       $request->image->move(public_path('uploads'), $article->filename);

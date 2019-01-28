@@ -34,10 +34,13 @@ class ViewController extends Controller {
     }])->get()]);
   }
   protected function blog() {
-    return view('website.blog.index');
+    return view('website.blog.index', ['data' => new Article]);
   }
-  protected function blogFeature() {
-    return view('website.blog.feature');
+  /**
+   * @param $title
+   */
+  protected function blogFeature($type, $title) {
+    return view('website.blog.feature', ['data' => Article::with('author')->where(['type' => $type, 'title' => $title])->firstOrFail()]);
   }
   protected function feature() {
     return view('website.feature');
@@ -126,6 +129,9 @@ class ViewController extends Controller {
   protected function cpanelFeedback() {
     return view('cpanel.feedback.index', ['data' => Feedback::all()]);
   }
+  /**
+   * @param $id
+   */
   protected function cpanelFeedbackEdit($id) {
     return view('cpanel.feedback.edit', ['row' => Feedback::find($id)]);
   }
@@ -138,6 +144,9 @@ class ViewController extends Controller {
   protected function cpanelPartnershipAdd() {
     return view('cpanel.partnership.add');
   }
+  /**
+   * @param $id
+   */
   protected function cpanelPartnershipEdit($id) {
     return view('cpanel.partnership.edit', ['row' => Partnership::find($id)]);
   }

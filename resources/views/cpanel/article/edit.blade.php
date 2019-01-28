@@ -14,6 +14,15 @@
         </select>
       </div>
       <div class="form-group">
+        <label for="type" class="form-control-label">Type</label>
+        <select name="type" id="type" class="form-control">
+          <option value="news" {{ $author->type == "news" ? "selected" : "" }}>News</option>
+          <option value="features" {{ $author->type == "features" ? "selected" : "" }}>Features</option>
+          <option value="upcoming_events" {{ $author->type == "upcoming_events" ? "selected" : "" }}>Upcoming Events</option>
+          <option value="tips" {{ $author->type == "tips" ? "selected" : "" }}>Tips</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="title" class="form-control-label">Title</label>
         <input id="title" type="text" name="title" class="form-control" value="{{ $row->title }}"required>
       </div>
@@ -27,7 +36,7 @@
       </div>
       <div class="form-group">
         <label for="date" class="form-control-label">Date</label>
-        <input id="date" type="date" name="date" class="form-control" value="{{ $row->date }}" required>
+        <input id="date" type="date" name="date" class="form-control" value="{{ $row->date->format("Y-m-d") }}" required>
       </div>
       <div class="form-group">
         <button type="submit" class="btn btn-primary">

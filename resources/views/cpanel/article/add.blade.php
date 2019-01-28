@@ -15,6 +15,15 @@
         </select>
       </div>
       <div class="form-group">
+        <label for="type" class="form-control-label">Type</label>
+        <select name="type" id="type" class="form-control">
+          <option value="news">News</option>
+          <option value="features">Features</option>
+          <option value="upcoming_events">Upcoming Events</option>
+          <option value="tips">Tips</option>
+        </select>
+      </div>
+      <div class="form-group">
         <label for="title" class="form-control-label">Title</label>
         <input id="title" type="text" name="title" class="form-control" required>
       </div>

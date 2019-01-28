@@ -18,7 +18,7 @@ class Article extends Model {
    * @var array
    */
   protected $fillable = [
-    'author_id', 'title', 'date', 'content', 'filename'
+    'author_id', 'type', 'title', 'date', 'content', 'filename'
   ];
 
   /**
@@ -33,5 +33,9 @@ class Article extends Model {
    */
   public function tags() {
     return $this->hasMany('App\Tag');
+  }
+
+  public function getFormattedTypeAttribute() {
+    return ucwords(str_replace('_', ' ', $this->type));
   }
 }

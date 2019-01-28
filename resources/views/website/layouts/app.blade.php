@@ -41,9 +41,15 @@
       </div>
     </div>
   </div>
-  @includeWhen(!request()->is('*login'), 'website.layouts.navbar')
-  @yield('body')
-  @includeWhen(!request()->is('*login'), 'website.layouts.footer')
+  <div id="container">
+    @includeWhen(!request()->is('*login'), 'website.layouts.navbar')
+    <div id="body">
+      @yield('body')
+    </div>
+    <div id="footer">
+      @includeWhen(!request()->is('*login'), 'website.layouts.footer')
+    </div>
+  </div>
   <script src="{{ url('/') . mix('js/website/packages.js') }}"></script>
   <script src="{{ url('/') . mix('js/website/app.js') }}"></script>
 </body>

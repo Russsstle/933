@@ -15,6 +15,7 @@ class CreateArticlesTable extends Migration {
       $table->increments('id');
       $table->unsignedInteger('author_id');
       $table->foreign('author_id')->references('id')->on('authors');
+      $table->enum('type', ['news', 'features', 'upcoming_events', 'tips']);
       $table->string('title');
       $table->date('date');
       $table->text('content');

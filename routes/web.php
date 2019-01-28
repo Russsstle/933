@@ -18,7 +18,7 @@ Route::prefix('/services')->group(function () {
 });
 Route::prefix('blog')->group(function () {
   Route::get('/', 'ViewController@blog')->name('blog');
-  Route::get('feature', 'ViewController@blogFeature')->name('blog.feature');
+  Route::get('{type}/{title}', 'ViewController@blogFeature')->name('blog.feature');
 });
 Route::get('feature', 'ViewController@feature')->name('feature');
 Route::get('about', 'ViewController@about')->name('about');

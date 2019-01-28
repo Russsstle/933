@@ -11,6 +11,7 @@
         <thead>
           <tr>
             <th width="5%">ID</th>
+            <th>Type</th>
             <th>Title</th>
             <th>Author</th>
             <th>Date</th>
@@ -24,11 +25,12 @@
           @foreach($data as $id => $row)
             <tr>
               <td>{{  $id + 1  }}</td>
+              <td>{{ $row->formattedType }}</td>
               <td>{{ $row->title }}</td>
               <td>{{ $row->author->user->profile->name }}</td>
               <td>{{ $row->date->format('F d, Y') }}</td>
               <td class="preline">{{ $row->content }}</td>
-              <td>{{ join("\n", array_map(function($x){ return $x["content"]; }, $row->tags->toArray())) }}</td>
+              <td class="preline">{{ join("\n", array_map(function($x){ return $x["content"]; }, $row->tags->toArray())) }}</td>
               <td class="baguetteBox">
                 <a href="{{ asset("uploads/" . $row->filename) }}">
                   <img src="{{ asset("uploads/" . $row->filename) }}" alt="" height="80px">
