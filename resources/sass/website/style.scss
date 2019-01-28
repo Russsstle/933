@@ -203,7 +203,7 @@ nav ul li.active {
 .home-content {
   padding: 110px 288px 110px;
 
-  &:nth-child(even) {
+  &:nth-child(odd) {
     background-color: $home-content-alternative-color;
   }
   &:first-child {
