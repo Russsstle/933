@@ -37,7 +37,7 @@ class GalleryController extends Controller {
     // $gallery->fill($request->only(['title', 'description']));
 
     $gallery->filename = uniqid($filename . '-') . '.' . $extension;
-    $request->image->move(public_path('img\gallery'), $gallery->filename);
+    $request->image->move(public_path('img/gallery'), $gallery->filename);
 
     if ($gallery->save()) {
       return response()->json(['success' => true]);
@@ -79,7 +79,7 @@ class GalleryController extends Controller {
     $gallery = Gallery::find($id);
     if (isset($filename)) {
       $gallery->filename = uniqid($filename . '-') . '.' . $extension;
-      $request->image->move(public_path('img\gallery'), $gallery->filename);
+      $request->image->move(public_path('img/gallery'), $gallery->filename);
     }
 
     if ($gallery->save()) {

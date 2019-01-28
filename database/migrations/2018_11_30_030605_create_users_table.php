@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration {
     });
     \App\User::create(['username' => 'neonspectrum', 'email_address' => 'youngskymann@gmail.com', 'password' => '1234']);
     \App\User::create(['username' => 'rustle', 'email_address' => 'rjohnsantos19@gmail.com', 'password' => '123']);
-    \App\User::create(['username' => 'sample', 'email_address' => 'sample@gmail.com', 'password' => '1234']);
+    \App\User::create(['username' => 'admin', 'email_address' => 'sample@gmail.com', 'password' => '12345']);
   }
 
   /**
