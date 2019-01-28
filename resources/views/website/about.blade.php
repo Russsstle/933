@@ -30,7 +30,7 @@
       </p>
     </div>
     <div class="col l4 ">
-      <h5 class="text-bold">Space</h5>
+      <h5 class="text-bold">Features</h5>
     </div>
     <div class="col l8 m4">
       <ul class="dashed">
