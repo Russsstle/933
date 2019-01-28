@@ -19,8 +19,11 @@ $(document).ready(function() {
   })
   $('.collapsible').collapsible()
   $('.dropdown-trigger').dropdown({
+    alignment: 'right' ,
     coverTrigger: false,
-    hover: true
+    hover: true,
+    closeOnClick:true
+
   })
   $('.carousel-about').carousel({
     indicators: true

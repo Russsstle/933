@@ -9,7 +9,7 @@
 <div class="content">
   <div class="row">
     <div class="col l4 ">
-      <h5 class="text-bold">COMMUNITY</h5>
+      <h5 class="text-bold">Community</h5>
     </div>
     <div class="col l8 ">
       <p>

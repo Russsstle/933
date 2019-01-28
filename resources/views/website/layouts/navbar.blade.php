@@ -12,6 +12,7 @@
   </div>
 </nav>
 <ul id='dropdown2' class='dropdown-content'>
+   <li class="divider"></li>
   <li><a href="{{ url('services/main') }}">933 MAIN</a></li>
   <li class="divider"></li>
   <li><a href="{{ url('services/creatives') }}">933 CREATIVES</a></li>
