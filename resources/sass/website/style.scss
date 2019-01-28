@@ -47,7 +47,6 @@ a.brand-logo {
 
   img {
     height: 74px;
-    width: 130px;
   }
 }
 
@@ -378,6 +377,15 @@ p {
 .twitter-share-button-container {
   display: inline-block;
   vertical-align: text-top;
+}
+
+.dropdown-content li {
+  min-height: 35px;
+}
+
+.dropdown-content li > a,
+.dropdown-content li > span {
+  padding: 6px 16px;
 }
 
 @media (min-width: 1281px) {

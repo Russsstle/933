@@ -19,7 +19,7 @@
 @else
   <div class="content">
     <div class="center-align" style="font-size:22px;color:#bbb;font-style:italic;padding-top:10%">
-      NO DATA TO SHOW
+      NO ENTRIES FOUND
     </div>
   </div>
 @endif
