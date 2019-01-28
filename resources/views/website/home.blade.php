@@ -251,9 +251,9 @@
       <a class="carousel-item"></a>
     @endif
   </div>
-  <h4 class="text-bold center-align top-title" >
+  {{-- <h4 class="text-bold center-align top-title" >
     Latest Updates
-  </h4>
+  </h4> --}}
   <div class="row">
     @foreach($updates as $article)
      <div class="col s12 m12 l4">
