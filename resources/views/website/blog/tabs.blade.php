@@ -18,7 +18,7 @@
   </div>
 @else
   <div class="content">
-    <div class="row">
+    <div class="center-align" style="font-size:22px;color:#bbb;font-style:italic;padding-top:10%">
       NO DATA TO SHOW
     </div>
   </div>
