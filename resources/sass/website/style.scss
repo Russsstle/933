@@ -32,6 +32,7 @@ body {
 li:focus {
   outline: 0;
 }
+
 nav {
   width: auto;
   background-color: $nav-color;
@@ -42,7 +43,7 @@ nav {
   a.sidenav-trigger i {
     line-height: 60px;
   }
-  ul {
+  .ul-nav {
     padding-top: 17px;
   }
 }
