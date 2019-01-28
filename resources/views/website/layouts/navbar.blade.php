@@ -4,7 +4,9 @@
     <a href="javascript:void(0)"  data-target="mobile-sidebar" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
     <ul class="right hide-on-med-and-down ul-nav">
       <li class="{{ active('/') }}"><a href="{{ url('/') }}">Home</a></li>
-      <li class="{{ active('services/*') }}"><a class="dropdown-trigger" href="javascript:void(0)"  data-target='dropdown2'>Branches<i class="material-icons right">arrow_drop_down</i></a></li>
+      <li class="{{ active('services/*') }}">
+        <a class="dropdown-trigger" data-target='dropdown2'>Branches<i class="material-icons right">arrow_drop_down</i></a>
+      </li>
       <li class="{{ active('blog*') }}"><a  href="{{ url('blog') }}">Blog</a></li>
       <li class="{{ active('about') }}"><a  href="{{ url('about') }}">About</a></li>
       <li class="{{ active('contact') }}"><a  href="{{ url('contact') }}">Contact</a></li>
@@ -12,7 +14,6 @@
   </div>
 </nav>
 <ul id='dropdown2' class='dropdown-content'>
-   <li class="divider"></li>
   <li><a href="{{ url('services/main') }}">933 MAIN</a></li>
   <li class="divider"></li>
   <li><a href="{{ url('services/creatives') }}">933 CREATIVES</a></li>

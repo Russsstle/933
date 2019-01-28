@@ -34,14 +34,11 @@ nav {
   width: auto;
   background-color: $nav-color;
   height: 80px;
-  line-height: 58px;
+  line-height: 75px;
   .nav-wrapper i,
   a.sidenav-trigger,
   a.sidenav-trigger i {
-    line-height: 60px;
-  }
-  .ul-nav {
-    padding-top: 15px;
+    line-height: 75px;
   }
   a:focus {
     outline: none !important;
@@ -387,13 +384,15 @@ p {
   vertical-align: text-top;
 }
 
-.dropdown-content li {
-  min-height: 35px;
-}
+.dropdown-content {
+  li {
+    min-height: 35px;
+  }
 
-.dropdown-content li > a,
-.dropdown-content li > span {
-  padding: 6px 16px;
+  li > a,
+  li > span {
+    padding: 6px 16px;
+  }
 }
 
 @media (min-width: 1281px) {

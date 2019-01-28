@@ -19,11 +19,9 @@ $(document).ready(function() {
   })
   $('.collapsible').collapsible()
   $('.dropdown-trigger').dropdown({
-    alignment: 'right' ,
+    alignment: 'right',
     coverTrigger: false,
-    hover: true,
-    closeOnClick:true
-
+    hover: true
   })
   $('.carousel-about').carousel({
     indicators: true
@@ -54,7 +52,7 @@ $(document).ready(function() {
     }
   })
   $('.slider').slider({
-    height: $(window).height() - (isMobile() ? 56 : 90)
+    height: $(window).height() - (isMobile() ? 56 : 80)
   })
   $('.moveNextCarousel').click(function(e) {
     e.preventDefault()
