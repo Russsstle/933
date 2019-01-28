@@ -67,6 +67,7 @@ Route::prefix('cpanel')->group(function () {
     });
     Route::prefix('feedbacks')->group(function () {
       Route::get('/', 'ViewController@cpanelFeedback');
+      Route::get('{id}/edit', 'ViewController@cpanelFeedbackEdit');
     });
     Route::prefix('contactus')->group(function () {
       Route::get('/', 'ViewController@cpanelContactUs');

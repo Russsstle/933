@@ -40,7 +40,8 @@ class FeedbackController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show($id) {
-    return Feedback::firstOrFail($id);}
+    return Feedback::firstOrFail($id);
+  }
 
   /**
    * Update the specified resource in storage.
@@ -50,6 +51,15 @@ class FeedbackController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function update(Request $request, $id) {
+    $feedback = Feedback::find($id);
+
+    $feedback->fill($request->only(['name', 'email', 'message']));
+
+    if ($feedback->save()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error updating the record.']);
+    }
     //
   }
 
@@ -60,6 +70,13 @@ class FeedbackController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function destroy($id) {
+    $feedback = Feedback::find($id);
+
+    if ($feedback->delete()) {
+      return response()->json(['success' => true]);
+    } else {
+      return response()->json(['success' => false, 'error' => 'There was an error deleting the record.']);
+    }
     //
   }
 }

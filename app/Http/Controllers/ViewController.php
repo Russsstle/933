@@ -126,6 +126,9 @@ class ViewController extends Controller {
   protected function cpanelFeedback() {
     return view('cpanel.feedback.index', ['data' => Feedback::all()]);
   }
+  protected function cpanelFeedbackEdit($id) {
+    return view('cpanel.feedback.edit', ['row' => Feedback::find($id)]);
+  }
   protected function cpanelContactUs() {
     return view('cpanel.contact.index', ['data' => ContactUs::all()]);
   }
