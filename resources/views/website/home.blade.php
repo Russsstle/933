@@ -134,7 +134,7 @@
     </p>
   </div>
   <br>
-  <div class="row center-align amenities-card">
+  <div class="row center-align amenities-card" style="padding-top:40px">
     <div class="col s12 m3">
       <img class="circle" src="{{ asset('img/icons/meeting.png') }}" height="70px" width="70px">
       <div>
