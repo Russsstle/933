@@ -26,15 +26,21 @@
         <h5 class="light grey-text text-lighten-3">Here's our small slogan.</h5>
       </div>
     </li> --}}
-    @foreach($data as $row)
-    <li>
-        <img src="{{ asset("img/carousel/" . $row->filename) }}">
-        <div class="caption {{ $row->label_align }}-align">
-          <h3>{{ $row->title}}</h3>
-          <h5 class="light grey-text text-lighten-3">{{ $row->description}}</h5>
-        </div>
-    </li>
-    @endforeach
+    @if($data->count() > 0)
+      @foreach($data as $row)
+      <li>
+          <img src="{{ asset("img/carousel/" . $row->filename) }}">
+          <div class="caption {{ $row->label_align }}-align">
+            <h3>{{ $row->title}}</h3>
+            <h5 class="light grey-text text-lighten-3">{{ $row->description}}</h5>
+          </div>
+      </li>
+      @endforeach
+    @else
+      <li>
+        <img src="{{ asset("img/sample.png") }}">
+      </li>
+    @endif
   </ul>
 </div>
 <div class="home-content center-align" style="padding-top:40px">
@@ -226,103 +232,24 @@
         <a href="#" class="moveNextCarousel middle-indicator-text waves-effect waves-light content-indicator"><i class="material-icons right middle-indicator-text">chevron_right</i></a>
       </div>
     </div>
-    
-       @foreach($comments as $row)
-       <a class="carousel-item">
+    @if($comments->count() > 0)
+      @foreach($comments as $row)
+        <a class="carousel-item">
           <div class="row" style="height:100%;color:black">
-         {{-- div class="col s12 m12 l12">
-            <div class="client-message-left-card"> --}}
-        <blockquote style="height:100%;">
-          <div style="font-size:25px;height:100%;position:relative;">
-            {{ $row->message }}
-            <div align="right" style="font-size:20px;position:absolute;right:5px;bottom:233px">
-              <b>{{ $row->name }}</b>
-            </div>
+            <blockquote style="height:100%;">
+              <div style="font-size:25px;height:100%;position:relative;">
+                {{ $row->message }}
+                <div align="right" style="font-size:20px;position:absolute;right:5px;bottom:233px">
+                  <b>{{ $row->name }}</b>
+                </div>
+              </div>
+            </blockquote>
           </div>
-          
-        </blockquote>
-        </div>
-      </a>     
-           {{--  </div>
-          </div> --}}
-       @endforeach
-        {{-- <div class="col s12 m5 l5">
-          <div class="client-message-left-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
-            <br><br>
-            <b>Juan Dela Cruz,</b><br>
-            University of Sto. Tomas
-          </div>
-        </div>
-        <div class="col s12 m7 l7">
-          <div class="client-message-right-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            <br>
-            <b>Juan Dela Cruz,</b>
-            University of Sto. Tomas
-          </div>
-          <div class="client-message-right-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            <br>
-            <b>Juan Dela Cruz,</b>
-            University of Sto. Tomas
-          </div>
-        </div> --}}
-    
-    
-  
-    {{-- <a class="carousel-item" href="#one!">
-      <div class="row">
-        <div class="col s12 m5 l5">
-          <div class="client-message-left-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
-            <br><br>
-            <b>Juan Dela Cruz,</b><br>
-            University of Sto. Tomas
-          </div>
-        </div>
-        <div class="col s12 m7 l7">
-          <div class="client-message-right-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            <br>
-            <b>Juan Dela Cruz,</b>
-            University of Sto. Tomas
-          </div>
-          <div class="client-message-right-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            <br>
-            <b>Juan Dela Cruz,</b>
-            University of Sto. Tomas
-          </div>
-        </div>
-      </div>
-    </a>
-    <a class="carousel-item" href="#two!">
-      <div class="row">
-        <div class="col s12 m5">
-          <div class="client-message-left-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas aliquet gravida lorem sit amet posuere."
-            <br><br>
-            <b>Juan Dela Cruz,</b><br>
-            University of Sto. Tomas
-          </div>
-        </div>
-        <div class="col s12 m7">
-          <div class="client-message-right-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            <br>
-            <b>Juan Dela Cruz,</b>
-            University of Sto. Tomas
-          </div>
-          <div class="client-message-right-card">
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-            <br>
-            <b>Juan Dela Cruz,</b>
-            University of Sto. Tomas
-          </div>
-        </div>
-      </div>
-    </a> --}}
+        </a>
+      @endforeach
+    @else
+      <a class="carousel-item"></a>
+    @endif
   </div>
   <h4 class="text-bold center-align top-title" >
     Latest Updates
