@@ -60,7 +60,7 @@ class CarouselController extends Controller {
    * @return \Illuminate\Http\Response
    */
   public function show($id) {
-    //
+    return Carousel::findOrFail($id);
   }
 
   /**

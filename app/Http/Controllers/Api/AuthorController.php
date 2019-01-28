@@ -55,7 +55,7 @@ class AuthorController extends Controller {
 
     $author->fill($request->only(['display_name']));
     $profile->filename = uniqid($filename . '-') . '.' . $extension;
-    $request->image->move(public_path('img\profile'), $profile->filename);
+    $request->image->move(public_path('img/profile'), $profile->filename);
 
     if ($profile->save() && $author->save()) {
       return response()->json(['success' => true]);
