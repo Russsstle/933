@@ -33,15 +33,15 @@
     <div class="col l6 contact-info">
       <h5><b> Address</b></h5>
       <p style="font-size:20px;text-align:left">
-        933 Main branch<br>
+        933 Main Branch<br>
         933 G.M Tolentino St. Sampaloc<br>
         11:00 am - 5:00 am<br><br>
         933 Creatives<br>
-        1042 G.M Tolentino St. Sampaloc<br>
+        <span style="font-size:19px;" >1042 G.M Tolentino St. Sampaloc</span><br>
         8:00 am - 5:00 am
       </p>
       <h5><b>Email</b></h5>
-      <p style="font-size: 20px;text-align:left">Info@933mnl.com</p>
+      <p style="font-size: 20px;text-align:left">info@933mnl.com</p>
       <h5><b>Phone</b></h5>
       <p style="font-size: 15px;text-align:left">+63 945 217 6021<br/>+63 995 338 3313</p>
     </div>
