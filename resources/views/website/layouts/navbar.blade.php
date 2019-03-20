@@ -6,7 +6,7 @@
       <li class="{{ active('/') }}"><a href="{{ url('/') }}">Home</a></li>
       <li class="{{ active('services/*') }}">
         <a class="dropdown-trigger" data-target='dropdown2'>Branches<i class="material-icons right">arrow_drop_down</i></a>
-      </li>
+      </li>    
       <li class="{{ active('blog*') }}"><a  href="{{ url('blog') }}">Blog</a></li>
       <li class="{{ active('about') }}"><a  href="{{ url('about') }}">About</a></li>
       <li class="{{ active('contact') }}"><a  href="{{ url('contact') }}">Contact</a></li>

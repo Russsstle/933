@@ -34,7 +34,7 @@
       <h5><b> Address</b></h5>
       <p style="font-size:20px;text-align:left">
         933 Main Branch<br>
-        933 G.M Tolentino St. Sampaloc<br>
+        933 G.M Tolentino St.Sampaloc<br>
         11:00 am - 5:00 am<br><br>
         933 Creatives<br>
         <span style="font-size:19px;" >1042 G.M Tolentino St. Sampaloc</span><br>
